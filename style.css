@@ -1,0 +1,234 @@
+/* ==========================================================================
+   SHI ZHENG - Global Design System
+   ========================================================================== */
+
+:root {
+    /* Core Colors - Subpage Sync (Deep Midnight) */
+    --primary: #00C838;
+    --primary-glow: rgba(0, 200, 56, 0.4);
+    --secondary: #10b981;
+    --accent: #34d399;
+    --dark: #000212;
+    /* 从子页面提取的更深邃背景色 */
+    --card-bg: rgba(62, 71, 88, 0.2);
+    --card-border: rgba(78, 78, 94, 0.6);
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-muted: #8A8A98;
+    /* 子页面的辅助文字色 */
+
+    /* Glassmorphism */
+    --glass-bg: rgba(0, 2, 18, 0.85);
+    /* 匹配深空背景 */
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Base Reset --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--text-secondary);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+.selection\:bg-primary\/30 ::selection {
+    background-color: rgba(0, 200, 56, 0.3);
+}
+
+/* --- Background Decor --- */
+.bg-decor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.bg-glow-top {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 40%;
+    height: 40%;
+    background: rgba(0, 200, 56, 0.1);
+    border-radius: 9999px;
+    filter: blur(120px);
+}
+
+.bg-glow-bottom {
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 30%;
+    height: 30%;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 9999px;
+    filter: blur(120px);
+}
+
+/* --- Typography --- */
+.font-outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+.font-space {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.glow-text {
+    text-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* --- Navigation --- */
+#navbar.scrolled,
+#navbar.scrolled-always {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* --- Components: Cards --- */
+.glass-card {
+    position: relative;
+    border-radius: 8px;
+    /* 应用用户提供的 Figma 填充背景 */
+    background: var(--lp-card_filling, linear-gradient(109deg, rgba(48, 45, 51, 0.41) 18.05%, rgba(59, 56, 63, 0.34) 43.42%, rgba(80, 80, 81, 0.18) 100.26%));
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+}
+
+/* 渐变边框实现：左上角明显，右下角消失 */
+.glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 1px;
+    /* 边框厚度 */
+    background: linear-gradient(135deg, rgba(78, 78, 94, 0.6) 0%, rgba(78, 78, 94, 0) 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.glass-card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(109deg, rgba(60, 57, 63, 0.5) 18.05%, rgba(71, 68, 75, 0.43) 43.42%, rgba(92, 92, 93, 0.25) 100.26%);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6),
+        0 18px 36px -18px rgba(0, 0, 0, 0.4);
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+.project-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    /* 采用与玻璃卡片一致的基础渐变 */
+    background: linear-gradient(109deg, rgba(48, 45, 51, 0.3) 18.05%, rgba(59, 56, 63, 0.25) 43.42%, rgba(80, 80, 81, 0.1) 100.26%);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(78, 78, 94, 0.4) 0%, rgba(78, 78, 94, 0) 50%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(109deg, rgba(60, 57, 63, 0.4) 18.05%, rgba(71, 68, 75, 0.33) 43.42%, rgba(92, 92, 93, 0.2) 100.26%);
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7),
+        0 0 20px -5px rgba(0, 0, 0, 0.3);
+    border-color: rgba(148, 163, 184, 0.3);
+}
+
+/* --- Reveal Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.2s;
+}
+
+/* --- Metrics --- */
+.metric-value {
+    font-size: 1.5rem;
+    /* 2xl */
+    font-weight: 900;
+    color: var(--text-primary);
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    /* xs */
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+/* --- Animations --- */
+@keyframes pulse-soft {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-soft 3s infinite ease-in-out;
+}

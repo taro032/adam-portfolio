@@ -1,0 +1,23 @@
+# Python 虚拟环境
+.venv/
+
+# AI Agent 配置
+.agent/
+.agents/
+
+# 备份文件
+*.bak
+
+# 个人隐私文档
+resources/
+
+# 临时文件
+temp_*.txt
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 操作系统文件
+.DS_Store
+Thumbs.db

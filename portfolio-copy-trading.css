@@ -1,0 +1,612 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #000212;
+    --brand-green: #00C838;
+    --text-primary: #FFFFFF;
+    --text-auxiliary: #8A8A98;
+    --card-border: rgba(78, 78, 94, 0.6);
+    --card-bg: rgba(62, 71, 88, 0.2);
+    /* 统一全局字体：英文优先使用 Space Grotesk，中文使用 Noto Sans SC */
+    --font-main: "Space Grotesk", "Noto Sans SC", "Inter", sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    /* 同步全局抗锯齿 */
+    overflow-x: hidden;
+}
+
+/* 移除旧 Header 样式，使用全局 style.css 的 Navbar 标准 */
+.candlestick-header {
+    display: none;
+}
+
+.homepage {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.icon-house img {
+    width: 16px;
+    height: 16px;
+}
+
+.text-home {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-auxiliary);
+}
+
+.top-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item-strategy {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 11px 16px;
+}
+
+.arrow img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.4;
+}
+
+.arrow-left img {
+    transform: rotate(180deg);
+}
+
+.title-copy-trading {
+    font-size: 14px;
+    font-weight: 700;
+    width: 160px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--brand-green);
+    border-radius: 100px;
+    padding: 9px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0px 10px 12px 0px rgba(1, 148, 42, 0.13);
+    cursor: pointer;
+}
+
+.header-line {
+    height: 1px;
+    background: rgba(138, 138, 152, 0.1);
+}
+
+/* Main 内容布局 */
+.main-container {
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* 背景切图等比缩放 */
+/* 背景容器：高度固定 780px */
+.first-screen-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 780px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* 主背景：等比缩放覆盖 */
+.first-screen-bg img.main-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* 底部渐变层：高度固定不变 (如 200px)，宽度始终撑满容器 */
+.first-screen-bg img.bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    /* 固定高度，不随拉伸变化 */
+    object-fit: fill;
+    /* 强制拉伸宽度以撑满 */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+/* 文本区域 */
+.texts {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px;
+    width: 100%;
+}
+
+.gradient-title {
+    font-size: 56px;
+    font-weight: 700;
+    background: var(--Linear-Frosty-sky---light-green, linear-gradient(90deg, #06D7F6 0%, #20E30A 97.04%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 20px;
+    opacity: 0.8;
+    line-height: 32px;
+    max-width: 1152px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+/* [strategies] 卡片网格 */
+.strategies-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.strategy-card {
+    flex: 1;
+    height: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.strategy-card:hover {
+    border-color: var(--brand-green);
+}
+
+.strategy-card.active {
+    background: rgba(0, 200, 56, 0.1);
+    border-color: var(--brand-green);
+}
+
+.card-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.strategy-card.active h3 {
+    color: var(--brand-green);
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.4;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.strategy-card.active .subtitle {
+    opacity: 0.6;
+}
+
+.points {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.badge {
+    background: rgba(0, 200, 56, 0.1);
+    color: #4bd269;
+    padding: 4px 8px;
+    border-radius: 100px;
+    font-size: 12px;
+}
+
+.connector-arrow img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+/* Connector 切图 */
+.connector-divider {
+    width: 100%;
+    height: 120px;
+}
+
+.connector-divider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* [detail] 联动区域 */
+.detail-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0px 0px 60px 0px;
+    transition: height 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* 水平轨道容器 */
+.detail-wrapper {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1), height 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    width: 300%;
+    /* 三个 section，每个 100% */
+    align-items: flex-start;
+}
+
+.detail-content {
+    width: 33.333%;
+    /* 每个内容占轨道的 1/3 */
+    flex-shrink: 0;
+    opacity: 0.3;
+    scale: 0.95;
+    transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    padding: 0 10px;
+    /* 轻微间距防止内容紧贴 */
+    height: auto;
+}
+
+/* 轨道激活状态下的内容样式 */
+.detail-content.active {
+    opacity: 1;
+    scale: 1;
+}
+
+.detail-grid {
+    display: flex;
+    gap: 24px;
+}
+
+.detail-card {
+    flex: 1;
+    padding: 48px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    /* 采用与全局 glass-card 一致的基础渐变 */
+    background: linear-gradient(109deg, rgba(48, 45, 51, 0.41) 18.05%, rgba(59, 56, 63, 0.34) 43.42%, rgba(80, 80, 81, 0.18) 100.26%);
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    height: min-content;
+}
+
+/* 渐变边框实现：左上角明显，右下角消失 */
+.detail-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(78, 78, 94, 0.6) 0%, rgba(78, 78, 94, 0) 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.detail-card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(109deg, rgba(60, 57, 63, 0.5) 18.05%, rgba(71, 68, 75, 0.43) 43.42%, rgba(92, 92, 93, 0.25) 100.26%);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+}
+
+.card-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* 针对跟单执行卡片的特殊处理：移除标题下边距，因为没有副文本 */
+#detail-execution .card-text h2 {
+    margin-bottom: 0 !important;
+}
+
+#detail-execution .card-text {
+    margin-bottom: 0 !important;
+}
+
+.card-text h2 span {
+    color: var(--brand-green);
+}
+
+.card-text ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--text-auxiliary);
+}
+
+.card-text p {
+    color: var(--text-auxiliary);
+}
+
+.preview-img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#detail-legos .preview-img {
+    height: 220px;
+}
+
+.placeholder {
+    padding: 100px;
+    text-align: center;
+    color: var(--text-auxiliary);
+    border: 1px dashed var(--card-border);
+    border-radius: 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 1100px) {
+    .content {
+        width: 90%;
+    }
+
+    .gradient-title {
+        font-size: 40px;
+    }
+
+    .detail-grid {
+        flex-direction: column;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Flow Tabs & Views                             */
+/* -------------------------------------------------------------------------- */
+
+.tab-btn {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.tab-btn.active {
+    background: rgba(0, 200, 56, 0.1) !important;
+    color: #4bd269 !important;
+}
+
+.tab-btn:hover:not(.active) {
+    color: #4bd269 !important;
+}
+
+.flow-view {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flow-view.active {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.flow-view.hidden {
+    display: none;
+}
+
+.flow-view.opacity-0 {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Features Section                              */
+/* -------------------------------------------------------------------------- */
+
+.features-section h2,
+.mobile-demo-section h2,
+.web-showcase-section h2 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.features-section {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.feature-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon-wrapper img {
+    transform: scale(1.1);
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--brand-green);
+    margin-bottom: 12px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: var(--text-auxiliary);
+    line-height: 1.6;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Mobile Demo Section                           */
+/* -------------------------------------------------------------------------- */
+
+.mobile-demo-section {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.mobile-container {
+    position: relative;
+    width: 100%;
+    min-width: 480px;
+    height: 870px;
+    background-size: auto 870px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.mobile-mockup {
+    width: calc(100% - 40px);
+    max-width: 280px;
+    min-width: 360px;
+    aspect-ratio: 1 / 2.07;
+    /* 保持与原有尺寸 280/580 约略一致的比例 */
+    background: #000;
+    border: 2px solid #2c2c35;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-mockup img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.mobile-mockup iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Web Showcase Section                          */
+/* -------------------------------------------------------------------------- */
+
+.web-showcase-section {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.web-image-container {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.web-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* 响应式调整 */
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-mockup {
+        width: 240px;
+        height: 500px;
+    }
+}

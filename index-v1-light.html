@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>施政 | 个人网站 - 复杂产品架构师</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="施政的个人官网，展示从 Web3 交易终端到大规模 SaaS 供应链系统的产品架构与设计案例。">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS (for layout utilities) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#4f46e5',
+                        accent: '#06b6d4',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', '"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/20 overflow-x-hidden">
+    <!-- Background Decor -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-accent/5 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
+            <div class="flex items-center gap-4">
+                <div class="font-outfit font-black text-2xl tracking-tighter text-slate-900 group cursor-pointer">
+                    SHI <span class="text-primary group-hover:text-secondary transition-colors">ZHENG</span>
+                </div>
+                <!-- Vibe Coded & Language Switcher -->
+                <div class="flex items-center gap-3 pt-1.5 hidden md:flex">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest select-none opacity-80">Design
+                        To
+                        Code</span>
+                    <div class="h-3 w-px bg-slate-200"></div>
+                    <div class="flex items-center gap-2 text-[10px] font-black text-slate-300">
+                        <a href="?lang=cn" class="text-slate-900 hover:text-primary transition-colors">CN</a>
+                        <span>/</span>
+                        <a href="?lang=en" class="hover:text-slate-900 transition-colors">EN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-10 font-semibold text-slate-500">
+                <a href="#about" class="nav-link hover:text-slate-900 transition-all">关于我</a>
+                <a href="#experience" class="nav-link hover:text-slate-900 transition-all">工作履历</a>
+                <a href="#portfolio" class="nav-link hover:text-slate-900 transition-all">作品集</a>
+                <a href="#skills" class="nav-link hover:text-slate-900 transition-all">能力矩阵</a>
+                <a href="#contact"
+                    class="px-6 py-2.5 bg-slate-900 text-white rounded-full hover:bg-primary hover:shadow-lg transition-all font-bold">联系方式</a>
+
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-slate-900">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="pt-32 md:pt-48 pb-20 px-6 relative">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                    <!-- Left Content -->
+                    <div class="lg:col-span-8 reveal">
+                        <!-- 3 Key Points -->
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span
+                                class="px-3 py-1 rounded-full bg-blue-100 text-blue-500 text-xs font-medium tracking-tight">Product
+                                Design</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-blue-100 text-blue-500 text-xs font-medium tracking-tight">System
+                                Architect</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-blue-100 text-blue-500 text-xs font-medium tracking-tight">Founder
+                                Mindset</span>
+                        </div>
+
+                        <h1
+                            class="text-3xl md:text-5xl font-outfit font-black mb-10 tracking-tight leading-tight text-slate-900 max-w-4xl flex flex-col gap-6">
+                            <span class="text-primary">在复杂中构建秩序：</span>
+                            <span>从SaaS中台到链上数据交易引擎</span>
+                        </h1>
+
+                        <div class="text-lg text-slate-500 mb-12 leading-relaxed max-w-3xl font-medium">
+                            Hi，我是施政，4年Web3创业合伙人，3年SaaS产品总监。擅长在快节奏迭代中拆解复杂业务，构建标准化产品体系，致力于打通从商业需求到产品交付的完整价值闭环。
+                        </div>
+
+                        <!-- Horizontal Metrics -->
+                        <div class="flex flex-wrap gap-12 pt-8 border-t border-slate-200">
+                            <!-- Web3 Metrics -->
+                            <div class="space-y-2">
+                                <div
+                                    class="text-[10px] font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                                    <i data-lucide="rocket" class="w-3 h-3 text-primary"></i> Web3项目成绩
+                                </div>
+                                <div class="flex gap-6 items-baseline">
+                                    <div class="text-2xl font-black text-slate-900">$2.1M+ <span
+                                            class="text-xs font-bold text-slate-400 ml-1">融资</span></div>
+                                    <div class="text-2xl font-black text-slate-900">$500k+ <span
+                                            class="text-xs font-bold text-slate-400 ml-1">ARR</span></div>
+                                </div>
+                            </div>
+                            <!-- SaaS Metrics -->
+                            <div class="space-y-2">
+                                <div
+                                    class="text-[10px] font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                                    <i data-lucide="layout" class="w-3 h-3 text-primary"></i> SaaS商业表现
+                                </div>
+                                <div class="flex gap-10 items-baseline">
+                                    <div class="text-2xl font-black text-slate-900">千万级<span
+                                            class="text-xs font-bold text-slate-400 ml-1">营收</span></div>
+                                    <div class="text-xs font-bold text-slate-400">交付5+ <span
+                                            class="text-2xl font-black text-slate-900 ml-1">百万级 KA</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Photo -->
+                    <div class="lg:col-span-4 reveal-delay-1">
+                        <div class="relative group mx-auto max-w-[320px]">
+                            <div
+                                class="absolute -inset-2 bg-gradient-to-b from-primary/20 to-transparent rounded-[3rem] blur-xl opacity-50">
+                            </div>
+                            <div
+                                class="relative bg-white aspect-[4/5] rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl flex items-center justify-center">
+                                <!-- User provided image -->
+                                <img src="profile.png" class="w-full h-full object-cover" alt="施政">
+                            </div>
+                            <!-- Visual Accent -->
+                            <div
+                                class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 px-5 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-black mb-20 flex items-center gap-3 tracking-tight font-outfit">
+                    <i data-lucide="briefcase" class="text-primary"></i> 工作履历
+                </h2>
+
+                <div class="space-y-28">
+
+                    <!-- Intelfinity -->
+                    <div class="relative pl-0 md:pl-16 group reveal">
+                        <div class="hidden md:block absolute left-6 top-2 bottom-0 w-0.5 bg-slate-100"></div>
+                        <div
+                            class="hidden md:block absolute left-[17px] top-2 w-4 h-4 rounded-full bg-white border-4 border-primary group-hover:scale-125 transition-transform z-10">
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center mb-3 gap-x-4 gap-y-2">
+                            <h3 class="text-2xl font-black text-slate-900">Intelfinity Labs Limited</h3>
+                            <span class="text-slate-300">|</span>
+                            <span class="text-slate-400 font-bold text-sm">Web3 数据分析和交易终端</span>
+                            <span class="text-slate-300">|</span>
+                            <span class="text-slate-400 font-bold text-sm">获 BoostVC/AllianceDAO 等累计 $2.1M+ 投资</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span
+                                class="text-primary font-black bg-blue-50/50 px-3 py-1 rounded-lg text-sm tracking-tight">Product
+                                Lead & Co-founder</span>
+                            <span class="text-slate-400 font-bold text-sm">2021.09 - 2025.04</span>
+                        </div>
+
+                        <div class="text-slate-600 mb-5 text-sm md:text-base leading-relaxed">
+                            作为创始合伙人从0到1搭建产品与10+人研发团队，主导两款核心产品（SaaS数据分析与Copy Trading交易系统）从概念到商业化落地，累计实现 $500k+ ARR。
+                        </div>
+
+                        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+                            <div
+                                class="bg-slate-50 py-12 px-10 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-center mb-8">
+                                        <h4 class="text-lg font-bold text-slate-900 flex items-center gap-3">
+                                            Copy Trading 多链自动跟单系统
+                                        </h4>
+                                        <a href="#portfolio"
+                                            class="flex items-center gap-1 text-slate-400 font-bold text-xs hover:text-primary transition-colors">作品精选
+                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                    </div>
+                                    <ul class="space-y-5 mb-4">
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>基于数据分析优势，主导产品从“信息层”向“交易层”的战略转型，设计多链跟单执行引擎，帮用户一键复刻聪明钱的盈利战绩。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>集成token安全信息服务和自研多维过滤模型建立风控引擎，保障高净值交易安全。</span>
+                                        </li>
+                                    </ul>
+                                    <div class="flex items-center gap-4 pt-4">
+                                        <i data-lucide="bar-chart-2" class="w-4 h-4 text-primary shrink-0"></i>
+                                        <div class="flex flex-wrap gap-16">
+                                            <div>
+                                                <div class="text-2xl font-black text-primary mb-0.5">$1.2M+</div>
+                                                <div class="text-xs font-bold text-slate-400">AUM (管理资产)</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-2xl font-black text-primary mb-0.5">$7M+</div>
+                                                <div class="text-xs font-bold text-slate-400">单月交易额</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-2xl font-black text-primary mb-0.5">$400K+</div>
+                                                <div class="text-xs font-bold text-slate-400">跟单分润峰值</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-slate-50 py-12 px-10 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-center mb-8">
+                                        <h4 class="text-lg font-bold text-slate-900 flex items-center gap-3">
+                                            Candlestick.io 链上数据分析产品
+                                        </h4>
+                                        <a href="#portfolio"
+                                            class="flex items-center gap-1 text-slate-400 font-bold text-xs hover:text-primary transition-colors">作品精选
+                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                    </div>
+                                    <ul class="space-y-5 mb-4">
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>针对链上数据复杂难读的痛点，主导研发 TraderScan 核心算法，清洗并解析 1亿+ 链上地址，将trader战绩可视化。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>构建 Smart Money
+                                                多维画像模型（胜率/PnL/交易风格），将海量数据转化为可执行的交易信号，打造职业交易员的“生产力桌面”。</span>
+                                        </li>
+                                    </ul>
+                                    <div class="flex items-center gap-4 pt-4">
+                                        <i data-lucide="bar-chart-2" class="w-4 h-4 text-primary shrink-0"></i>
+                                        <div class="flex flex-wrap gap-16">
+                                            <div>
+                                                <div class="text-2xl font-black text-primary mb-0.5">$22k+</div>
+                                                <div class="text-xs font-bold text-slate-400">SaaS月收入</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-2xl font-black text-primary mb-0.5">31,000+</div>
+                                                <div class="text-xs font-bold text-slate-400">月度独立用户</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-2xl font-black text-primary mb-0.5">1,000+</div>
+                                                <div class="text-xs font-bold text-slate-400">DAU</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="md:col-span-1 lg:col-span-2 bg-slate-50 py-12 px-10 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500">
+                                <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-3">
+                                    研发管理与效能提升
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li
+                                        class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                        <span>建立敏捷开发流程与工程化标准，推行模块化组件库，提升代码复用率与 50% 迭代速度。</span>
+                                    </li>
+                                    <li
+                                        class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                        <span>主导产品生命周期管理，交付 20+ 次重大版本更新与 100+ 次功能迭代。</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regentsoft -->
+                    <div class="relative pl-0 md:pl-16 group reveal">
+                        <div class="hidden md:block absolute left-6 top-2 bottom-0 w-0.5 bg-slate-100"></div>
+                        <div
+                            class="hidden md:block absolute left-[17px] top-2 w-4 h-4 rounded-full bg-white border-4 border-primary group-hover:scale-125 transition-transform z-10">
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center mb-3 gap-x-4 gap-y-2">
+                            <h3 class="text-2xl font-black text-slate-900">广州丽晶软件</h3>
+                            <span class="text-slate-300">|</span>
+                            <span class="text-slate-400 font-bold text-sm">服装行业头部 ERP/SaaS 供应商</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span
+                                class="text-primary font-black bg-blue-50/50 px-3 py-1 rounded-lg text-sm tracking-wider">产品总监</span>
+                            <span class="text-slate-400 font-bold text-sm">2017.07 - 2021.08</span>
+                        </div>
+
+                        <div class="text-slate-600 mb-5 text-sm md:text-base leading-relaxed">
+                            协同 50+ 人团队负责公司云供应链业务线的需求研发与商业化落地，同时带领 10+ 人产品团队主导传统 ERP
+                            向“云+中台”架构的数字化转型，支撑公司每年千万级营收盘子。
+                        </div>
+
+                        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+                            <div
+                                class="bg-slate-50 py-12 px-10 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-center mb-8">
+                                        <h4 class="text-lg font-bold text-slate-900 flex items-center gap-3">
+                                            eSCM 云供应链 (全业务 0-1 )
+                                        </h4>
+                                        <a href="#portfolio"
+                                            class="flex items-center gap-1 text-slate-400 font-bold text-xs hover:text-primary transition-colors">作品精选
+                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                    </div>
+                                    <ul class="space-y-5">
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>主导研发涵盖 企划-PLM-物料-MES 的大规模业务协同系统，实现供应链全链路数字化。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>将不同客户的差异化需求抽象设计成乐高式组合配置的 SaaS 解决方案，构建了高适配度的业务抽象模型。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>深度参与售前支持，输出产品白皮书、行业解决方案和实施SOP，作为核心专家助力销售团队拿下伊芙丽、梦燕、雅鹿等头部品牌百万级大单。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>服务 10+ 头部品牌及近百家 ODM 工厂，日均处理百万级 MES 产能数据，成为公司第二增长曲线。</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-slate-50 py-12 px-10 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-center mb-8">
+                                        <h4 class="text-lg font-bold text-slate-900 flex items-center gap-3">
+                                            产研体系建设与团队管理
+                                        </h4>
+                                        <a href="#portfolio"
+                                            class="flex items-center gap-1 text-slate-400 font-bold text-xs hover:text-primary transition-colors">相关作品
+                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                    </div>
+                                    <ul class="space-y-5">
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>建立全公司统一的 B 端交互规范和组件库，统一 4 条主业务线的产品设计方法论，显著降低重复开发成本。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>指导下级产品经理完成公司业务中台的重构与革新，在微服务架构转型、底层设施建设等关键难题上提供架构设计与方案兜底，提升系统的快速扩展性。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>搭建产品经理内训体系和胜任力模型，培养并向各业务线输送 10+ 名骨干产品经理。</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Juwan -->
+                    <div class="relative pl-0 md:pl-16 group reveal">
+                        <div class="hidden md:block absolute left-6 top-2 bottom-0 w-0.5 bg-slate-100"></div>
+                        <div
+                            class="hidden md:block absolute left-[17px] top-2 w-4 h-4 rounded-full bg-white border-4 border-primary group-hover:scale-125 transition-transform z-10">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center mb-3 gap-x-4 gap-y-2">
+                            <h3 class="text-2xl font-black text-slate-900">广州巨旺互联网技术有限公司</h3>
+                            <span class="text-slate-300">|</span>
+                            <span class="text-slate-400 font-bold text-sm">头部移动端批发管理工具</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span
+                                class="text-primary font-black bg-blue-50/50 px-3 py-1 rounded-lg text-sm tracking-wider">产品经理</span>
+                            <span class="text-slate-400 font-bold text-sm">2015.11 - 2017.07</span>
+                        </div>
+
+                        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+                            <div
+                                class="bg-slate-50 py-12 px-10 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-center mb-8">
+                                        <h4 class="text-lg font-bold text-slate-900 flex items-center gap-3">
+                                            巨牛旺铺
+                                        </h4>
+                                        <a href="#portfolio"
+                                            class="flex items-center gap-1 text-slate-400 font-bold text-xs hover:text-primary transition-colors">作品精选
+                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                    </div>
+                                    <ul class="space-y-5">
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>主导产品 0-1 搭建与功能迭代，帮助传统服装档口实现移动化管理。</span>
+                                        </li>
+                                        <li
+                                            class="text-slate-600 leading-relaxed flex items-start gap-4 text-sm md:text-base">
+                                            <i data-lucide="check-circle-2"
+                                                class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                                            <span>推动产品从种子期发展至行业市占率前三，实现月开单金额数亿级，客户年续费率超 90%。</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-24 px-6 bg-slate-900 text-white rounded-[4rem] mx-4 mb-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-4 px-4">
+                    <div>
+                        <h2 class="text-3xl font-black mb-4 tracking-tight">精选案例集</h2>
+                        <p class="text-slate-400">展示从业务逻辑到最终交付的设计全过程</p>
+                    </div>
+                    <div
+                        class="text-slate-500 text-[10px] uppercase tracking-widest border-l border-slate-700 pl-4 py-1 self-start md:self-auto">
+                        Data Desensitized Case Studies
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Item 1: Candlestick.io -->
+                    <div
+                        class="group bg-slate-800/40 rounded-[3rem] overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all flex flex-col">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800"
+                                alt="Candlestick.io"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                            <div class="absolute top-8 left-8">
+                                <span
+                                    class="px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-xl">SaaS
+                                    Product</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex-grow">
+                            <div class="text-blue-400 text-[10px] font-black mb-4 uppercase tracking-[0.2em]">Web3 /
+                                Analytics</div>
+                            <h3
+                                class="text-xl font-bold mb-6 group-hover:text-blue-400 transition-colors leading-tight">
+                                Candlestick.io Dashboard</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-10 opacity-80">
+                                Visualizing 100M+ heterogeneous address data to help traders optimize decisions.
+                            </p>
+                            <button
+                                class="w-full py-5 bg-slate-700/50 hover:bg-blue-600 text-white rounded-2xl text-[11px] font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> View Case Study
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Copy Trading -->
+                    <div
+                        class="group bg-slate-800/40 rounded-[3rem] overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all flex flex-col">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?auto=format&fit=crop&q=80&w=800"
+                                alt="Copy Trading System"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                            <div class="absolute top-8 left-8">
+                                <span
+                                    class="px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-xl">Fintech</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex-grow">
+                            <div class="text-blue-400 text-[10px] font-black mb-4 uppercase tracking-[0.2em]">Trading
+                                System</div>
+                            <h3
+                                class="text-xl font-bold mb-6 group-hover:text-blue-400 transition-colors leading-tight">
+                                Multi-chain Copy Trading</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-10 opacity-80">
+                                Cross-chain execution engine with &lt;5s latency, enabling one-click replication.
+                            </p>
+                            <button
+                                class="w-full py-5 bg-slate-700/50 hover:bg-blue-600 text-white rounded-2xl text-[11px] font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> View Case Study
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Regentsoft eSCM -->
+                    <div
+                        class="group bg-slate-800/40 rounded-[3rem] overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all flex flex-col">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
+                                alt="Regentsoft eSCM"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                            <div class="absolute top-8 left-8">
+                                <span
+                                    class="px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-xl">B2B
+                                    SaaS</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex-grow">
+                            <div class="text-blue-400 text-[10px] font-black mb-4 uppercase tracking-[0.2em]">Supply
+                                Chain</div>
+                            <h3
+                                class="text-xl font-bold mb-6 group-hover:text-blue-400 transition-colors leading-tight">
+                                Regentsoft eSCM</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-10 opacity-80">
+                                Digitalizing the full lifecycle for 10+ top fashion brands and 100+ factories.
+                            </p>
+                            <button
+                                class="w-full py-5 bg-slate-700/50 hover:bg-blue-600 text-white rounded-2xl text-[11px] font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> View Case Study
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-32 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-black mb-20 text-center tracking-tight">能力矩阵与技术栈</h2>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-slate-50 p-12 rounded-[3rem] border border-slate-100">
+                        <div class="flex items-center gap-4 mb-10 text-blue-600">
+                            <i data-lucide="database" class="w-8 h-8" stroke-width="2.5"></i>
+                            <h3 class="font-black text-xl text-slate-900 tracking-tight">产品领域</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">链上数据分析</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">交易策略</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">供应链
+                                SaaS</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">业务中台</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-12 rounded-[3rem] border border-slate-100">
+                        <div class="flex items-center gap-4 mb-10 text-blue-600">
+                            <i data-lucide="code" class="w-8 h-8" stroke-width="2.5"></i>
+                            <h3 class="font-black text-xl text-slate-900 tracking-tight">专业技能</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">复杂系统架构</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">B端方法论</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">UI/UX
+                                设计</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">Figma</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">Axure</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-12 rounded-[3rem] border border-slate-100">
+                        <div class="flex items-center gap-4 mb-10 text-blue-600">
+                            <i data-lucide="award" class="w-8 h-8" stroke-width="2.5"></i>
+                            <h3 class="font-black text-xl text-slate-900 tracking-tight">通用能力</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">项目全生命周期</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">跨部门协作</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">系统逻辑思维</span>
+                            <span
+                                class="px-5 py-2.5 bg-white text-slate-800 text-xs font-black rounded-xl shadow-sm border border-slate-100 uppercase">极速学习</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-4xl md:text-5xl font-outfit font-black mb-8 tracking-tight">联系我，开启合作</h2>
+                <p class="text-slate-500 mb-16 text-lg">期待与您探讨 Web3、SaaS 及 复杂系统产品架构的可能性。</p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="mailto:taro032@live.com" class="contact-card">
+                        <div class="icon-box"><i data-lucide="mail"></i></div>
+                        <div class="text-left">
+                            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">Email
+                            </div>
+                            <div class="text-lg font-bold">taro032@live.com</div>
+                        </div>
+                    </a>
+                    <a href="tel:17612001458" class="contact-card">
+                        <div class="icon-box"><i data-lucide="phone"></i></div>
+                        <div class="text-left">
+                            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">Phone
+                            </div>
+                            <div class="text-lg font-bold">176 1200 1458</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-100 mt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-[10px] font-bold uppercase tracking-[0.5em]">
+            Designed & Coded by SHI ZHENG © 2026 ALL RIGHTS RESERVED
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+            /**
+             * 多维流折叠动效 (Stream Folding) - 增强能见度版本
+             * 隐喻：将波动、复杂的原始信号（左侧波浪），通过逻辑门收拢折叠，输出为确定、标准的有序结果（右侧平行流）
+             */
+            (function () {
+                const container = document.getElementById('about');
+                if (!container) return;
+
+                const canvas = document.createElement('canvas');
+                canvas.style.position = 'absolute';
+                canvas.style.inset = '0';
+                canvas.style.pointerEvents = 'none';
+                canvas.style.zIndex = '0';
+                canvas.style.opacity = '0.55'; // 提升整体可见度 (原 0.35)
+                container.insertBefore(canvas, container.firstChild);
+
+                const ctx = canvas.getContext('2d');
+                let frame = 0;
+                let streams = [];
+
+                const CONFIG = {
+                    streamCount: 16, // 稍微增加线条密度
+                    primaryColor: '#2563eb', // 主题蓝
+                    neutralColor: '#64748b', // 加深灰色以提高对比度 (原 #94a3b8)
+                    gateX: 0.45,
+                    yLevels: 6
+                };
+
+                function resize() {
+                    canvas.width = container.offsetWidth;
+                    canvas.height = container.offsetHeight;
+                }
+                window.addEventListener('resize', resize);
+                resize();
+
+                class Particle {
+                    constructor(stream) {
+                        this.stream = stream;
+                        this.progress = Math.random();
+                        this.speed = 0.001 + Math.random() * 0.0015;
+                        this.size = Math.random() * 1.8 + 0.6;
+                    }
+                    draw() {
+                        this.progress += this.speed;
+                        if (this.progress > 1) this.progress = 0;
+
+                        const x = this.progress * canvas.width;
+                        const gatePx = canvas.width * CONFIG.gateX;
+                        let y;
+
+                        if (x < gatePx) {
+                            const amp = this.stream.amp * (1 - x / gatePx);
+                            y = this.stream.yBase + Math.sin(x * 0.01 + this.stream.phase) * amp;
+                        } else {
+                            const t = Math.min((x - gatePx) / 50, 1);
+                            y = this.stream.yBase * (1 - t) + this.stream.targetY * t;
+                        }
+
+                        ctx.beginPath();
+                        ctx.fillStyle = this.progress > CONFIG.gateX ? CONFIG.primaryColor : CONFIG.neutralColor;
+                        // 提升粒子不透明度 (原左侧 0.3/右侧 0.7)
+                        ctx.globalAlpha = this.progress > CONFIG.gateX ? 0.9 : 0.5;
+                        ctx.arc(x, y, this.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+
+                function initStreams() {
+                    streams = [];
+                    const levelHeight = canvas.height / (CONFIG.yLevels + 1);
+                    for (let i = 0; i < CONFIG.streamCount; i++) {
+                        const s = {
+                            yBase: Math.random() * canvas.height,
+                            targetY: (Math.floor(Math.random() * CONFIG.yLevels) + 1) * levelHeight,
+                            amp: 30 + Math.random() * 50,
+                            phase: Math.random() * 10,
+                            particles: []
+                        };
+                        for (let j = 0; j < 6; j++) s.particles.push(new Particle(s));
+                        streams.push(s);
+                    }
+                }
+
+                initStreams();
+                window.addEventListener('resize', initStreams);
+
+                function draw() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    frame++;
+
+                    streams.forEach(s => {
+                        ctx.beginPath();
+                        ctx.strokeStyle = CONFIG.neutralColor;
+                        ctx.lineWidth = 0.8; // 稍微加粗线条
+                        ctx.globalAlpha = 0.15; // 显著提高引导线透明度 (原 0.05)
+                        ctx.moveTo(0, s.yBase);
+                        const gatePx = canvas.width * CONFIG.gateX;
+
+                        for (let x = 0; x <= gatePx; x += 15) {
+                            const amp = s.amp * (1 - x / gatePx);
+                            const y = s.yBase + Math.sin(x * 0.01 + s.phase) * amp;
+                            ctx.lineTo(x, y);
+                        }
+                        ctx.lineTo(canvas.width, s.targetY);
+                        ctx.stroke();
+
+                        s.phase += 0.012; // 控制波浪滚动感
+                        s.particles.forEach(p => p.draw());
+                    });
+
+                    requestAnimationFrame(draw);
+                }
+
+                draw();
+            })();
+    </script>
+</body>
+
+</html>

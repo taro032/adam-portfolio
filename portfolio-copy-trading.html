@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聪明钱跟单引擎 | Portfolio-Copy Trading</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS (Missing in subpage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00C838',
+                        secondary: '#10b981',
+                        accent: '#34d399',
+                        dark: '#000212',
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', '"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio-copy-trading.css">
+</head>
+
+<body class="selection:bg-primary/30" data-name="Portfolio-Copy_Trading-forIDE" data-node-id="46862:21790">
+    <!-- Background Decor (Dark Mode) -->
+    <div class="bg-decor">
+        <div class="bg-glow-top"></div>
+        <div class="bg-glow-bottom"></div>
+    </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-6 scrolled-always">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
+            <div class="flex items-center gap-4">
+                <div class="font-outfit font-black text-2xl tracking-tighter text-white group cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    SHI <span class="text-primary transition-colors">ZHENG</span>
+                </div>
+                <div class="flex items-center gap-3 pt-1.5 hidden md:flex">
+                    <span
+                        class="text-[10px] font-bold text-slate-500 uppercase tracking-widest select-none opacity-80">Portfolio
+                        Case</span>
+                    <div class="h-3 w-px bg-slate-800"></div>
+                    <span class="text-[10px] font-black text-primary uppercase">Copy Trading</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-10 font-semibold text-slate-400">
+                <a href="#overview" class="nav-link hover:text-white transition-all">项目概述</a>
+                <a href="#mobile-demo" class="nav-link hover:text-white transition-all">移动端Demo</a>
+                <a href="#web-showcase" class="nav-link hover:text-white transition-all">Web端</a>
+                <a href="mailto:contact@shizheng.me"
+                    class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">立即咨询</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="overview" class="main-container" data-name="container" data-node-id="46862:21826">
+        <!-- [first-screen-bg] 切图引入 -->
+        <div class="first-screen-bg" data-name="first-screen-bg" data-node-id="46924:2056">
+            <img src="images/first-screen-bg.png" alt="Background" class="main-bg">
+            <img src="images/first-screen-bottom-linear.png" alt="Bottom Linear" class="bottom-gradient">
+        </div>
+
+        <section class="max-w-6xl mx-auto px-6 py-20" data-name="content">
+            <div class="texts mb-20 flex flex-col items-center">
+                <h1 class="text-5xl md:text-7xl font-outfit font-black mb-8 tracking-tight gradient-title">聪明钱跟单引擎</h1>
+                <p class="description mx-auto">基于 Strategy + Investment 解耦架构开发，将高频波动的链上信号，<br>通过插件化的风控矩阵转化为标准化的交易指令</p>
+            </div>
+
+            <!-- [strategies] 三个卡片 -->
+            <div class="strategies-grid" data-name="strategies" data-node-id="46862:21832">
+                <!-- 卡片 1 (激活态) -->
+                <div class="strategy-card active" data-id="strategies" data-name="1" data-node-id="46862:21833">
+                    <div class="card-icon">
+                        <img src="images/icon-smart.svg" alt="Smart">
+                    </div>
+                    <div class="card-content">
+                        <h3>Smart Strategies</h3>
+                        <p class="subtitle">丰富的聪明钱地址集</p>
+                        <div class="points" data-name="points">
+                            <span class="badge">ROI</span>
+                            <span class="badge">PnL</span>
+                            <span class="badge">Win Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connector-arrow">
+                    <img src="images/right_arrow.svg" alt="arrow">
+                </div>
+
+                <!-- 卡片 2 -->
+                <div class="strategy-card" data-id="legos" data-name="legos" data-node-id="46924:2064">
+                    <div class="card-icon">
+                        <img src="images/icon-lego.svg" alt="Legos">
+                    </div>
+                    <div class="card-content">
+                        <h3>乐高式跟单配置</h3>
+                        <p class="subtitle">一键套用符合自己的交易风格 / DIY自设</p>
+                        <div class="points">
+                            <span class="badge">Risk Control</span>
+                            <span class="badge">TP/SL</span>
+                            <span class="badge">Preferences</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connector-arrow">
+                    <img src="images/right_arrow.svg" alt="arrow">
+                </div>
+
+                <!-- 卡片 3 -->
+                <div class="strategy-card" data-id="execution" data-name="execution" data-node-id="46924:2078">
+                    <div class="card-icon">
+                        <img src="images/icon-execution.svg" alt="Execution">
+                    </div>
+                    <div class="card-content">
+                        <h3>上链执行</h3>
+                        <p class="subtitle">从监控到上链执行的延迟低至&lt;5s</p>
+                        <div class="points">
+                            <span class="badge">Real-time</span>
+                            <span class="badge">Auto</span>
+                            <span class="badge">Permissionless</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- [connector] 切图 -->
+            <div class="connector-divider" data-name="connector" data-node-id="46924:2062">
+                <img src="images/connector.png" alt="Connector">
+            </div>
+
+            <!-- [detail] 联动区域 -->
+            <div class="detail-container" id="detail-section" data-name="detail" data-node-id="46921:2785">
+                <div class="detail-wrapper" id="detail-wrapper">
+                    <!-- 默认显示第一个 Section 的内容 -->
+                    <div class="detail-content active" id="detail-strategies">
+                        <div class="detail-grid" data-name="strategies" data-node-id="46922:2965">
+                            <div class="detail-card glass-morphism" data-name="1" data-node-id="46922:2966">
+                                <div class="card-text">
+                                    <h2>一键<span>跟单聪明钱</span></h2>
+                                    <ul>
+                                        <li>系统算法生成各种风格的 stategies；</li>
+                                        <li>通过多维筛选 / 热门 token 的 top traders 交叉挖掘；</li>
+                                    </ul>
+                                </div>
+                                <img src="images/detail-1.png" alt="UI 1" class="preview-img">
+                            </div>
+                            <div class="detail-card glass-morphism" data-name="strategy-2" data-node-id="46922:2971">
+                                <div class="card-text">
+                                    <h2>10 倍放大<span>你的机会</span></h2>
+                                    <p>单个策略即可跟单 10 个地址，每个地址交易记录透明可追踪，无需再自己四处追逐 Alpha。</p>
+                                </div>
+                                <img src="images/detail-2.png" alt="UI 2" class="preview-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 乐高式跟单配置 -->
+                    <div class="detail-content" id="detail-legos">
+                        <div class="detail-grid">
+                            <div class="detail-card glass-morphism">
+                                <div class="card-text">
+                                    <h2>全链路<span>风控矩阵</span></h2>
+                                    <p>多维保障跟单交易和用户资产的安全</p>
+                                </div>
+                                <img src="images/legos-protections.png" alt="Risk Control" class="preview-img">
+                            </div>
+                            <div class="detail-card glass-morphism">
+                                <div class="card-text">
+                                    <h2>多维度<span>交易风格</span>设定</h2>
+                                    <p>基于风险偏好与预期收益分布，个性化定制跟单策略</p>
+                                </div>
+                                <img src="images/legos-trading-params.png" alt="Preferences" class="preview-img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 链上执行 -->
+                    <div class="detail-content" id="detail-execution">
+                        <div class="detail-card glass-morphism w-full" style="max-width: 100%; min-height: 600px;">
+                            <div class="card-text flex items-center justify-between w-full">
+                                <h2><span>跟单执行</span>泳道图</h2>
+                                <div class="flow-tabs flex gap-2 p-1 rounded-lg">
+                                    <button class="tab-btn active px-4 py-1.5 rounded-md transition-all text-sm"
+                                        data-tab="buy">跟买</button>
+                                    <button
+                                        class="tab-btn px-4 py-1.5 rounded-md transition-all text-sm text-gray-400 hover:text-white"
+                                        data-tab="sell">跟卖</button>
+                                </div>
+                            </div>
+                            <!-- 视图容器 -->
+                            <div class="view-container relative w-full">
+                                <!-- 跟买视图 -->
+                                <div id="view-buy" class="flow-view active">
+                                    <div
+                                        class="w-full flex justify-center bg-slate-900/20 p-12 rounded-xl border border-dashed border-white/10 overflow-hidden transition-all duration-500">
+                                        <img src="images/copy_buy_execution-light.svg" alt="Copy Buy Flow"
+                                            class="w-full h-auto object-contain max-h-[800px] opacity-90">
+                                    </div>
+                                </div>
+                                <!-- 跟卖视图 -->
+                                <div id="view-sell" class="flow-view hidden opacity-0 translate-y-4">
+                                    <div
+                                        class="w-full flex justify-center bg-slate-900/20 p-12 rounded-xl border border-dashed border-white/10 overflow-hidden transition-all duration-500">
+                                        <img src="images/copy_sell_execution.svg" alt="Copy Sell Flow"
+                                            class="w-full h-auto object-contain max-h-[800px] opacity-90">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="features-section">
+                <div class="texts mb-12">
+                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight"><span
+                            class="text-white">最智能的套件让你从</span><span class="text-primary">枯坐中解放</span></h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <img src="images/autopilot.svg" alt="全自动执行">
+                        </div>
+                        <h3>全自动执行</h3>
+                        <p>跟单按您的条件自动触发<br>无需手动干预</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <img src="images/fast_mode.svg" alt="快速模式">
+                        </div>
+                        <h3>快速模式</h3>
+                        <p>轻松启动策略<br>可选等多种模式</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <img src="images/elastic.svg" alt="弹性控制">
+                        </div>
+                        <h3>弹性控制</h3>
+                        <p>随时手动卖出、暂停跟单<br>自由增减地址</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <img src="images/on_track.svg" alt="全程追踪">
+                        </div>
+                        <h3>全程追踪</h3>
+                        <p>随时查看整体策略或每个代币的盈亏明细<br>掌控一切</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mobile-demo" class="mobile-demo-section">
+                <div class="texts mb-12">
+                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white">移动端主流程Demo</h2>
+                </div>
+                <div class="mobile-container" style="background-image: url('images/copy_trading-mobile_demo_bg.png');">
+                    <div class="mobile-mockup">
+                        <img src="images/chrome_header.svg" alt="Chrome Header" width="auto">
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                            src="https://embed.figma.com/proto/xmDD2wi4HNKC0dYPD78V66/Portfolio---Candlestick?node-id=40226-268708&viewport=468%2C977%2C0.37&scaling=contain&content-scaling=responsive&starting-point-node-id=40226%3A268708&page-id=38753%3A64927&hide-ui=1&embed-host=share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section id="web-showcase" class="web-showcase-section">
+                <div class="texts mb-12">
+                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white">Web端节点页面/组件</h2>
+                </div>
+                <div class="web-image-container">
+                    <img src="images/copy_trading-web_pages.png" alt="Web Pages Showcase">
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="portfolio-copy-trading.js"></script>
+</body>
+
+</html>
