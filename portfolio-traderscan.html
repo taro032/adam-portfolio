@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraderScan | 作品集-TraderScan</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00C838',
+                        secondary: '#10b981',
+                        accent: '#34d399',
+                        dark: '#000212',
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', '"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                        muller: ['Muller', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio-copy-trading.css">
+    <style>
+        /* Hero Section Background - 同步 portfolio-copy-trading.html 逻辑 */
+        .first-screen-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 780px;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .first-screen-bg img.main-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .first-screen-bg img.bottom-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            object-fit: fill;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .gradient-text-traderscan {
+            background: linear-gradient(90deg, #06D7F6 0%, #20E30A 97.04%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Stats card */
+        .stats-card {
+            background: linear-gradient(119.33deg, rgba(48, 45, 51, 0.416) 18.05%, rgba(59, 56, 63, 0.34) 43.42%, rgba(80, 80, 81, 0.184) 100.26%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(78, 78, 94, 0.6);
+            border-radius: 8px;
+            box-shadow: 0px 4px 40px rgba(14, 0, 46, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 40px rgba(14, 0, 46, 0.8), 0 0 20px rgba(0, 200, 56, 0.2);
+            border-color: rgba(0, 200, 56, 0.4);
+        }
+
+        .feature-card-large {
+            position: relative;
+            background: linear-gradient(109deg, rgba(48, 45, 51, 0.41) 18.05%, rgba(59, 56, 63, 0.34) 43.42%, rgba(80, 80, 81, 0.18) 100.26%);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            overflow: hidden;
+        }
+
+        /* 渐变边框实现：仿照 detail-card */
+        .feature-card-large::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(78, 78, 94, 0.6) 0%, rgba(78, 78, 94, 0) 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .feature-card-large:hover {
+            transform: translateY(-6px);
+            background: linear-gradient(109deg, rgba(60, 57, 63, 0.5) 18.05%, rgba(71, 68, 75, 0.43) 43.42%, rgba(92, 92, 93, 0.25) 100.26%);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .font-muller {
+            font-family: 'Muller', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary/30 bg-[#000212]">
+
+    <!-- Navigation (Copied from index.html) -->
+    <nav id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-500 py-4 lg:py-6 scrolled-always bg-[#000212]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
+            <div class="flex items-center gap-4">
+                <div class="font-outfit font-black text-2xl tracking-tighter text-white group cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    SHI <span class="text-primary group-hover:text-blue-400 transition-colors">ZHENG</span>
+                </div>
+                <!-- Vibe Coded & Language Switcher & Breadcrumb -->
+                <div class="flex items-center gap-3 pt-1.5 hidden md:flex">
+                    <div class="h-3 w-px bg-slate-800"></div>
+                    <span
+                        class="text-[10px] font-bold text-slate-500 uppercase tracking-widest select-none opacity-80">Portfolio
+                        Case</span>
+                    <div class="h-3 w-px bg-slate-800"></div>
+                    <span class="text-[10px] font-black text-primary uppercase">TraderScan</span>
+                    <div class="h-3 w-px bg-slate-800"></div>
+                    <div class="flex items-center gap-2 text-[10px] font-black text-slate-500">
+                        <a href="portfolio-traderscan-cn.html"
+                            class="text-white hover:text-primary transition-colors">CN</a>
+                        <span>/</span>
+                        <a href="portfolio-traderscan.html" class="hover:text-white transition-colors">EN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-10 font-semibold text-slate-400">
+                <a href="#overview" class="nav-link hover:text-white transition-all">概述</a>
+                <a href="#features" class="nav-link hover:text-white transition-all">核心功能</a>
+                <a href="mailto:contact@shizheng.me"
+                    class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">立即咨询</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="overview" class="main-container relative w-full overflow-hidden">
+        <!-- [first-screen-bg] 切图引入 -->
+        <div class="first-screen-bg" data-name="first-screen-bg">
+            <img src="images/first-screen-bg.png" alt="Background" class="main-bg">
+            <img src="images/first-screen-bottom-linear.png" alt="Bottom Linear" class="bottom-gradient">
+        </div>
+        <!-- Hero Section -->
+        <section class="relative w-full flex flex-col items-center">
+            <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl px-6">
+                <div class="flex flex-col items-center gap-6 text-center w-full">
+                    <h1
+                        class="font-outfit font-bold text-5xl md:text-[56px] leading-[1.2] tracking-tight gradient-text-traderscan m-0 pb-2 uppercase">
+                        Candlestick.io - TraderScan
+                    </h1>
+                    <p class="font-sans text-xl text-white/80 leading-relaxed max-w-3xl m-0">
+                        首创三层级可视化战绩，精准画像亿级链上交易员
+                    </p>
+                </div>
+
+                <div
+                    class="relative w-full max-w-5xl mt-8 flex justify-center transform hover:scale-[1.02] transition-transform duration-500">
+                    <img src="images/traderscan-diagram-cn.png" alt="TraderScan Architecture Diagram"
+                        class="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section id="features" class="relative w-full flex flex-col items-center py-[120px] z-10">
+            <!-- content-bg_halo -->
+            <div
+                class="absolute top-[-160px] left-1/2 -translate-x-1/2 w-[1794px] h-[2940px] z-0 pointer-events-none opacity-60 mix-blend-screen">
+                <img src="images/traderscan/content-bg_halo.png" alt=""
+                    class="w-full h-full object-cover mix-blend-screen">
+            </div>
+
+            <div class="relative z-10 w-full max-w-[1200px] px-6 mx-auto flex flex-col gap-[120px]">
+
+                <!-- Feature 1: Explore Top Addresses -->
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 py-10 w-full">
+                    <div class="flex flex-col gap-6 w-full lg:w-[500px] shrink-0">
+                        <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-white m-0">
+                            多维度筛选<br>
+                            发现<span class="text-primary">顶级地址</span>
+                        </h2>
+
+                        <div class="flex flex-col gap-6 w-full mt-4">
+                            <!-- Row 1 -->
+                            <div class="flex gap-6 w-full">
+                                <div class="flex flex-1 gap-[12px] items-center relative rounded-[8px]">
+                                    <div class="relative shrink-0 w-[30px] h-[30px] overflow-hidden">
+                                        <div class="absolute inset-[8.33%_8.54%_13.91%_8.33%]">
+                                            <svg preserveAspectRatio="none" width="100%" height="100%"
+                                                viewBox="0 0 24.9375 23.3275" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.5 12.5C2.5 15.6587 3.96375 18.475 6.25 20.3075V23.3275C2.51375 21.1663 0 17.1275 0 12.5H2.5ZM12.5 0C18.9812 0 24.3113 4.93375 24.9375 11.25H22.4225C21.8075 6.3175 17.6 2.5 12.5 2.5C9.0625 2.5 6.03 4.23375 4.23125 6.875H7.5V9.375H0V1.875H2.5V5C4.78 1.9625 8.41125 0 12.5 0Z"
+                                                    fill="#00C838" />
+                                            </svg>
+                                        </div>
+                                        <div class="absolute inset-[51.7%_6.8%_11.85%_33.33%]">
+                                            <svg preserveAspectRatio="none" width="100%" height="100%"
+                                                viewBox="0 0 17.9589 10.935" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.85887 10.74V0.195H12.2139L12.1539 5.13L11.1189 4.38H16.6989L15.6639 5.13L15.6039 0.195H17.9589V10.74H15.6039L15.6639 5.64L16.6989 6.39H11.1189L12.1539 5.64L12.2139 10.74H9.85887Z"
+                                                    fill="#00C838" />
+                                                <path
+                                                    d="M3.9 10.935C3.41 10.935 2.945 10.885 2.505 10.785C2.075 10.695 1.685 10.585 1.335 10.455C0.985 10.325 0.695 10.205 0.465 10.095C0.235 9.985 0.08 9.91 0 9.87L0.705 8.19C0.825 8.22 1.01 8.275 1.26 8.355C1.52 8.435 1.815 8.515 2.145 8.595C2.475 8.675 2.81 8.745 3.15 8.805C3.49 8.865 3.81 8.895 4.11 8.895C4.55 8.895 4.845 8.805 4.995 8.625C5.155 8.435 5.235 8.145 5.235 7.755C5.235 7.165 5.105 6.755 4.845 6.525C4.595 6.295 4.2 6.18 3.66 6.18H1.68V4.23C2.31 4.18 2.835 4.135 3.255 4.095C3.685 4.055 4.025 4 4.275 3.93C4.525 3.86 4.7 3.75 4.8 3.6C4.91 3.45 4.965 3.25 4.965 3C4.965 2.79 4.945 2.625 4.905 2.505C4.875 2.385 4.83 2.3 4.77 2.25C4.68 2.17 4.515 2.115 4.275 2.085C4.045 2.045 3.755 2.025 3.405 2.025C3.225 2.025 3.03 2.035 2.82 2.055C2.62 2.065 2.365 2.085 2.055 2.115C1.745 2.145 1.335 2.19 0.825 2.25L0.555 0.374999C0.835 0.294999 1.15 0.229999 1.5 0.179999C1.86 0.119999 2.215 0.0749993 2.565 0.0449991C2.925 0.0149995 3.24 0 3.51 0C4.24 0 4.895 0.0899994 5.475 0.27C6.055 0.439999 6.51 0.73 6.84 1.14C7.18 1.55 7.35 2.12 7.35 2.85C7.35 3.15 7.315 3.415 7.245 3.645C7.185 3.875 7.1 4.08 6.99 4.26C6.89 4.43 6.77 4.575 6.63 4.695C6.5 4.815 6.365 4.92 6.225 5.01V5.1C6.415 5.19 6.595 5.305 6.765 5.445C6.945 5.575 7.1 5.74 7.23 5.94C7.37 6.14 7.48 6.38 7.56 6.66C7.64 6.93 7.68 7.25 7.68 7.62C7.68 8.22 7.555 8.77 7.305 9.27C7.065 9.77 6.67 10.175 6.12 10.485C5.57 10.785 4.83 10.935 3.9 10.935Z"
+                                                    fill="#00C838" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
+                                        <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
+                                            高回报率</div>
+                                        <div class="font-sans text-[14px] text-[#8A8A98]">
+                                            更新频率：3小时</div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-1 gap-[12px] items-center relative rounded-[8px]">
+                                    <div class="relative shrink-0 w-[30px] h-[30px] overflow-hidden">
+                                        <div class="absolute inset-[8.33%_8.54%_13.91%_8.33%]">
+                                            <svg preserveAspectRatio="none" width="100%" height="100%"
+                                                viewBox="0 0 24.9375 23.3275" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.5 12.5C2.5 15.6587 3.96375 18.475 6.25 20.3075V23.3275C2.51375 21.1663 0 17.1275 0 12.5H2.5ZM12.5 0C18.9812 0 24.3113 4.93375 24.9375 11.25H22.4225C21.8075 6.3175 17.6 2.5 12.5 2.5C9.0625 2.5 6.03 4.23375 4.23125 6.875H7.5V9.375H0V1.875H2.5V5C4.78 1.9625 8.41125 0 12.5 0Z"
+                                                    fill="#00C838" />
+                                            </svg>
+                                        </div>
+                                        <div class="absolute inset-[51.7%_6.8%_11.85%_33.33%]">
+                                            <svg preserveAspectRatio="none" width="100%" height="100%"
+                                                viewBox="0 0 17.9589 10.935" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.85887 10.74V0.195H12.2139L12.1539 5.13L11.1189 4.38H16.6989L15.6639 5.13L15.6039 0.195H17.9589V10.74H15.6039L15.6639 5.64L16.6989 6.39H11.1189L12.1539 5.64L12.2139 10.74H9.85887Z"
+                                                    fill="#00C838" />
+                                                <path
+                                                    d="M3.9 10.935C3.41 10.935 2.945 10.885 2.505 10.785C2.075 10.695 1.685 10.585 1.335 10.455C0.985 10.325 0.695 10.205 0.465 10.095C0.235 9.985 0.08 9.91 0 9.87L0.705 8.19C0.825 8.22 1.01 8.275 1.26 8.355C1.52 8.435 1.815 8.515 2.145 8.595C2.475 8.675 2.81 8.745 3.15 8.805C3.49 8.865 3.81 8.895 4.11 8.895C4.55 8.895 4.845 8.805 4.995 8.625C5.155 8.435 5.235 8.145 5.235 7.755C5.235 7.165 5.105 6.755 4.845 6.525C4.595 6.295 4.2 6.18 3.66 6.18H1.68V4.23C2.31 4.18 2.835 4.135 3.255 4.095C3.685 4.055 4.025 4 4.275 3.93C4.525 3.86 4.7 3.75 4.8 3.6C4.91 3.45 4.965 3.25 4.965 3C4.965 2.79 4.945 2.625 4.905 2.505C4.875 2.385 4.83 2.3 4.77 2.25C4.68 2.17 4.515 2.115 4.275 2.085C4.045 2.045 3.755 2.025 3.405 2.025C3.225 2.025 3.03 2.035 2.82 2.055C2.62 2.065 2.365 2.085 2.055 2.115C1.745 2.145 1.335 2.19 0.825 2.25L0.555 0.374999C0.835 0.294999 1.15 0.229999 1.5 0.179999C1.86 0.119999 2.215 0.0749993 2.565 0.0449991C2.925 0.0149995 3.24 0 3.51 0C4.24 0 4.895 0.0899994 5.475 0.27C6.055 0.439999 6.51 0.73 6.84 1.14C7.18 1.55 7.35 2.12 7.35 2.85C7.35 3.15 7.315 3.415 7.245 3.645C7.185 3.875 7.1 4.08 6.99 4.26C6.89 4.43 6.77 4.575 6.63 4.695C6.5 4.815 6.365 4.92 6.225 5.01V5.1C6.415 5.19 6.595 5.305 6.765 5.445C6.945 5.575 7.1 5.74 7.23 5.94C7.37 6.14 7.48 6.38 7.56 6.66C7.64 6.93 7.68 7.25 7.68 7.62C7.68 8.22 7.555 8.77 7.305 9.27C7.065 9.77 6.67 10.175 6.12 10.485C5.57 10.785 4.83 10.935 3.9 10.935Z"
+                                                    fill="#00C838" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
+                                        <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
+                                            高胜率</div>
+                                        <div class="font-sans text-[14px] text-[#8A8A98]">
+                                            更新频率：3小时</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="flex gap-6 w-full">
+                                <div class="flex flex-1 gap-[12px] items-center relative rounded-[8px]">
+                                    <div class="relative shrink-0 w-[30px] h-[30px] overflow-hidden">
+                                        <div class="absolute inset-[8.33%_8.54%_13.91%_8.33%]">
+                                            <svg preserveAspectRatio="none" width="100%" height="100%"
+                                                viewBox="0 0 24.9375 23.3275" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2.5 12.5C2.5 15.6587 3.96375 18.475 6.25 20.3075V23.3275C2.51375 21.1663 0 17.1275 0 12.5H2.5ZM12.5 0C18.9812 0 24.3113 4.93375 24.9375 11.25H22.4225C21.8075 6.3175 17.6 2.5 12.5 2.5C9.0625 2.5 6.03 4.23375 4.23125 6.875H7.5V9.375H0V1.875H2.5V5C4.78 1.9625 8.41125 0 12.5 0Z"
+                                                    fill="#00C838" />
+                                            </svg>
+                                        </div>
+                                        <div class="absolute inset-[51.7%_6.8%_11.85%_33.33%]">
+                                            <svg preserveAspectRatio="none" width="100%" height="100%"
+                                                viewBox="0 0 17.9589 10.935" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.85887 10.74V0.195H12.2139L12.1539 5.13L11.1189 4.38H16.6989L15.6639 5.13L15.6039 0.195H17.9589V10.74H15.6039L15.6639 5.64L16.6989 6.39H11.1189L12.1539 5.64L12.2139 10.74H9.85887Z"
+                                                    fill="#00C838" />
+                                                <path
+                                                    d="M3.9 10.935C3.41 10.935 2.945 10.885 2.505 10.785C2.075 10.695 1.685 10.585 1.335 10.455C0.985 10.325 0.695 10.205 0.465 10.095C0.235 9.985 0.08 9.91 0 9.87L0.705 8.19C0.825 8.22 1.01 8.275 1.26 8.355C1.52 8.435 1.815 8.515 2.145 8.595C2.475 8.675 2.81 8.745 3.15 8.805C3.49 8.865 3.81 8.895 4.11 8.895C4.55 8.895 4.845 8.805 4.995 8.625C5.155 8.435 5.235 8.145 5.235 7.755C5.235 7.165 5.105 6.755 4.845 6.525C4.595 6.295 4.2 6.18 3.66 6.18H1.68V4.23C2.31 4.18 2.835 4.135 3.255 4.095C3.685 4.055 4.025 4 4.275 3.93C4.525 3.86 4.7 3.75 4.8 3.6C4.91 3.45 4.965 3.25 4.965 3C4.965 2.79 4.945 2.625 4.905 2.505C4.875 2.385 4.83 2.3 4.77 2.25C4.68 2.17 4.515 2.115 4.275 2.085C4.045 2.045 3.755 2.025 3.405 2.025C3.225 2.025 3.03 2.035 2.82 2.055C2.62 2.065 2.365 2.085 2.055 2.115C1.745 2.145 1.335 2.19 0.825 2.25L0.555 0.374999C0.835 0.294999 1.15 0.229999 1.5 0.179999C1.86 0.119999 2.215 0.0749993 2.565 0.0449991C2.925 0.0149995 3.24 0 3.51 0C4.24 0 4.895 0.0899994 5.475 0.27C6.055 0.439999 6.51 0.73 6.84 1.14C7.18 1.55 7.35 2.12 7.35 2.85C7.35 3.15 7.315 3.415 7.245 3.645C7.185 3.875 7.1 4.08 6.99 4.26C6.89 4.43 6.77 4.575 6.63 4.695C6.5 4.815 6.365 4.92 6.225 5.01V5.1C6.415 5.19 6.595 5.305 6.765 5.445C6.945 5.575 7.1 5.74 7.23 5.94C7.37 6.14 7.48 6.38 7.56 6.66C7.64 6.93 7.68 7.25 7.68 7.62C7.68 8.22 7.555 8.77 7.305 9.27C7.065 9.77 6.67 10.175 6.12 10.485C5.57 10.785 4.83 10.935 3.9 10.935Z"
+                                                    fill="#00C838" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
+                                        <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
+                                            高利润</div>
+                                        <div class="font-sans text-[14px] text-[#8A8A98]">
+                                            更新频率：3小时</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-1 gap-[12px] items-center relative rounded-[8px]">
+                                    <div class="relative shrink-0 w-[30px] h-[30px] overflow-hidden">
+                                        <div class="absolute inset-[12.5%]">
+                                            <svg preserveAspectRatio="none" width="100%" height="100%"
+                                                viewBox="0 0 22.5 22.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 0H10V10H0V0ZM0 12.5H10V22.5H0V12.5ZM12.5 0H22.5V10H12.5V0ZM12.5 12.5H22.5V22.5H12.5V12.5ZM15 2.5V7.5H20V2.5H15ZM15 15V20H20V15H15ZM2.5 2.5V7.5H7.5V2.5H2.5ZM2.5 15V20H7.5V15H2.5Z"
+                                                    fill="#00C838" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
+                                        <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
+                                            更多</div>
+                                        <div class="font-sans text-[14px] text-[#8A8A98]">
+                                            自定义筛选</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative w-full lg:w-[584px] h-[343px] shrink-0 flex items-center justify-center group">
+                        <img src="images/traderscan/address_explorer.png" alt="Address Explorer UI"
+                            class="w-[115%] h-[115%] object-contain max-w-none transition-transform duration-700 mx-auto opacity-100 drop-shadow-2xl">
+                    </div>
+                </div>
+
+                <!-- Feature 2: Stealth Money -->
+                <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-10 w-full">
+                    <div
+                        class="relative w-full lg:w-[680px] h-[356px] shrink-0 flex items-center justify-center -ml-10 group">
+                        <img src="images/traderscan/stealth_money.png" alt="Stealth Money Flow"
+                            class="w-full h-full object-contain transition-transform duration-700 opacity-100 drop-shadow-2xl filter brightness-110">
+                    </div>
+
+                    <div class="flex flex-col gap-4 w-full lg:max-w-[500px]">
+                        <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-white tracking-[-0.8px] m-0">
+                            通过关联地址分析<br>
+                            洞察<span class="text-primary">非公开信号</span>
+                        </h2>
+
+                        <p class="font-sans font-bold text-base text-[#8A8A98] leading-relaxed m-0 mt-2">
+                            当某个实体试图隐匿其行踪时，通常会通过创建关联地址来实现。我们将细微的资金流向置于雷达之下，让您可以深入挖掘隐藏活动背后的真相。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Token Metrics -->
+                <div class="relative w-full flex flex-col items-center gap-10 py-10 mt-10">
+                    <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-center text-white m-0">
+                        通过 <span class="text-primary">40+ 动态图表</span><br>
+                        实时监控您的持仓
+                    </h2>
+
+                    <div
+                        class="relative w-full max-w-[1200px] h-auto min-h-[400px] md:h-[532px] flex justify-center items-center group">
+                        <img src="images/traderscan/metrics.png" alt="40+ Actionable Charts Dashboard"
+                            class="w-[105%] h-[105%] max-w-none ml-[-2.5%] object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)] group-hover:drop-shadow-[0_30px_70px_rgba(0,200,56,0.15)] transition-all duration-700">
+                    </div>
+                </div>
+
+                <!-- Feature 4: Watchlist & Alerts -->
+                <div class="flex flex-col items-center gap-12 py-10 w-full mt-10">
+                    <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-center text-white m-0">
+                        自定义自选列表<br>
+                        <span class="text-primary">获取实时信号推送</span>
+                    </h2>
+
+                    <div class="flex flex-col md:flex-row gap-6 w-full justify-center items-stretch">
+                        <!-- Card 1 -->
+                        <div class="feature-card-large flex flex-col p-10 gap-6 w-full md:w-1/2 group overflow-hidden">
+                            <h3 class="font-muller font-bold text-2xl text-[#F5F5FF] leading-snug m-0 capitalize">
+                                构建与管理
+                            </h3>
+                            <div class="relative w-full aspect-[2.2/1] mt-auto">
+                                <img src="images/traderscan/watchlist.png" alt="Watchlist UI"
+                                    class="absolute inset-0 w-full h-full object-contain object-top opacity-100 transition-all duration-500">
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="feature-card-large flex flex-col p-10 gap-6 w-full md:w-1/2 group overflow-hidden">
+                            <h3 class="font-muller font-bold text-2xl text-[#F5F5FF] leading-snug m-0 capitalize">
+                                随时随地接收
+                            </h3>
+                            <div class="relative w-full aspect-[2.2/1] mt-auto">
+                                <img src="images/traderscan/alerts.png" alt="Real-time Alerts UI"
+                                    class="absolute inset-0 w-full h-full object-contain object-top opacity-100 transition-all duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA / Footer padding -->
+        <section class="py-20 text-center relative z-10 w-full">
+            <a href="index.html#portfolio"
+                class="inline-flex items-center gap-2 px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-white transition-all font-outfit font-bold">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回主页
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer (Copied from index.html) -->
+    <footer class="py-12 border-t border-slate-800 relative z-20 bg-[#000212]">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-4">
+            <div class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.5em] text-center">
+                Designed & Coded by SHI ZHENG © 2026 ALL RIGHTS RESERVED
+            </div>
+            <div class="flex gap-4">
+                <div class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse-slow"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse-slow" style="animation-delay: 0.2s">
+                </div>
+                <div class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse-slow" style="animation-delay: 0.4s">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script shadow>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scrolled Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg', 'shadow-primary/5', 'bg-[#000212]/95');
+                navbar.classList.remove('bg-[#000212]/80');
+            } else {
+                navbar.classList.remove('shadow-lg', 'shadow-primary/5', 'bg-[#000212]/95');
+                navbar.classList.add('bg-[#000212]/80');
+            }
+        });
+    </script>
+</body>
+
+</html>

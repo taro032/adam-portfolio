@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
@@ -35,15 +35,12 @@
     </script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- OGL Library for LightRays (Local Copy) -->
+    <script src="node_modules/ogl/dist/ogl.umd.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-[#000212] text-slate-300 selection:bg-primary/30 overflow-x-hidden">
-    <!-- Background Decor (Dark Mode) -->
-    <div class="bg-decor">
-        <div class="bg-glow-top"></div>
-        <div class="bg-glow-bottom"></div>
-    </div>
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-4">
@@ -68,7 +65,7 @@
             <div class="hidden md:flex items-center gap-10 font-semibold text-slate-400">
                 <a href="#about" class="nav-link hover:text-white transition-all">关于我</a>
                 <a href="#experience" class="nav-link hover:text-white transition-all">工作履历</a>
-                <a href="#portfolio" class="nav-link hover:text-white transition-all">作品集</a>
+                <a href="#portfolio" class="nav-link hover:text-white transition-all">精选作品</a>
                 <a href="#skills" class="nav-link hover:text-white transition-all">能力矩阵</a>
                 <a href="#contact"
                     class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">联系方式</a>
@@ -155,8 +152,8 @@
         <!-- Experience Section -->
         <section id="experience" class="py-24 px-5">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-20 flex items-center gap-3 tracking-tight font-outfit text-white">
-                    <i data-lucide="briefcase" class="text-primary"></i> 工作履历
+                <h2 class="text-3xl font-black mb-20 flex items-center gap-4 tracking-tight font-outfit text-white">
+                    <div class="w-1.5 h-8 bg-primary shadow-[0_0_12px_rgba(0,200,56,0.6)]"></div> 工作履历
                 </h2>
 
                 <div class="space-y-28">
@@ -183,16 +180,18 @@
                         </div>
 
                         <div class="text-slate-400 mb-5 text-sm md:text-base leading-relaxed">
-                            作为创始合伙人从0到1搭建产品与10+人研发团队，主导两款核心产品（SaaS数据分析与Copy Trading交易系统）从概念到商业化落地，累计实现 $500k+ ARR。
+                            作为创始合伙人从0到1搭建产品与10+人研发团队，主导 Candlestick.io
+                            两款核心产品从概念到商业化落地，涵盖跟单算法、智能钱包、swap/限价单、trader战绩分析、token指标等业务，累计实现
+                            $500k+ ARR。
                         </div>
 
-                        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
                             <div class="glass-card flex flex-col justify-between group/card">
                                 <div>
-                                    <div class="flex justify-between items-center mb-8">
+                                    <div class="flex justify-between items-center mb-6">
                                         <h4
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
-                                            Copy Trading 多链自动跟单系统
+                                            Copy Trading 多链自动跟单平台
                                         </h4>
                                         <a href="portfolio-copy-trading.html" target="_blank"
                                             class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">产品概述
@@ -233,12 +232,12 @@
                             </div>
                             <div class="glass-card flex flex-col justify-between group/card">
                                 <div>
-                                    <div class="flex justify-between items-center mb-8">
+                                    <div class="flex justify-between items-center mb-6">
                                         <h4
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
-                                            Candlestick.io 链上数据分析产品
+                                            TraderScan 链上数据分析产品
                                         </h4>
-                                        <a href="#portfolio"
+                                        <a href="portfolio-traderscan.html" target="_blank"
                                             class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">产品概述
                                             <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
                                     </div>
@@ -277,7 +276,7 @@
                                 </div>
                             </div>
                             <div class="md:col-span-1 lg:col-span-2 glass-card">
-                                <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-3 transition-colors">
+                                <h4 class="text-lg font-bold text-white mb-6 flex items-center gap-3 transition-colors">
                                     研发管理与效能提升
                                 </h4>
                                 <ul class="space-y-2">
@@ -319,10 +318,10 @@
                             向“云+中台”架构的数字化转型，支撑公司每年千万级营收盘子。
                         </div>
 
-                        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
                             <div class="glass-card flex flex-col justify-between group/card">
                                 <div>
-                                    <div class="flex justify-between items-center mb-8">
+                                    <div class="flex justify-between items-center mb-6">
                                         <h4
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
                                             eSCM 云供应链 (全业务 0-1 )
@@ -361,7 +360,7 @@
                             </div>
                             <div class="glass-card flex flex-col justify-between group/card">
                                 <div>
-                                    <div class="flex justify-between items-center mb-8">
+                                    <div class="flex justify-between items-center mb-6">
                                         <h4
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
                                             产研体系建设与团队管理
@@ -415,7 +414,7 @@
                         <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
                             <div class="glass-card flex flex-col justify-between group/card">
                                 <div>
-                                    <div class="flex justify-between items-center mb-8">
+                                    <div class="flex justify-between items-center mb-6">
                                         <h4
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
                                             巨牛旺铺
@@ -448,172 +447,78 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="py-24 px-6 mt-16 relative">
-            <!-- 增加环境光晕增强张力 -->
-            <div
-                class="absolute inset-0 bg-gradient-to-b from-[#09090b] via-indigo-900/10 to-[#09090b] pointer-events-none">
-            </div>
+        <section id="portfolio" class="py-24 px-5">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-black mb-20 flex items-center gap-4 tracking-tight font-outfit text-white">
+                    <div class="w-1.5 h-8 bg-primary shadow-[0_0_12px_rgba(0,200,56,0.6)]"></div> 精选作品
+                </h2>
 
-            <div class="max-w-6xl mx-auto relative z-10">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-4 px-4">
-                    <div>
-                        <h2
-                            class="text-4xl md:text-5xl font-outfit font-black mb-6 tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                            精选案例集</h2>
-                        <p class="text-slate-400 text-lg">展示从复杂业务逻辑到标准化交付的设计与重构全过程</p>
-                    </div>
-                    <div
-                        class="text-slate-500 text-[10px] uppercase tracking-widest border-l-2 border-primary/30 pl-4 py-1 self-start md:self-auto font-black">
-                        Data Desensitized Case Studies
-                    </div>
-                </div>
-
-                <!-- 调整为 2 列大卡片展现更大张力 -->
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Item 1: Candlestick.io / TraderScan -->
-                    <a href="portfolio-1.html" class="project-card block group">
-                        <!-- 悬停光晕 -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10">
-                        </div>
-                        <div class="relative h-80 overflow-hidden bg-slate-900">
-                            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800"
-                                alt="Candlestick.io"
-                                class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-transform duration-1000 opacity-60 group-hover:opacity-90 mix-blend-luminosity group-hover:mix-blend-normal" />
-                            <div class="absolute top-8 left-8 z-20">
-                                <span
-                                    class="px-5 py-2 bg-[#09090b]/80 backdrop-blur-md border border-slate-700 text-white text-[10px] font-black rounded-full uppercase tracking-widest">SaaS
-                                    Data Product</span>
-                            </div>
-                        </div>
-                        <div class="p-10 relative z-20 backdrop-blur-sm">
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Web3 /
-                                    Analytics</div>
-                                <div class="h-px bg-slate-700 flex-grow"></div>
-                            </div>
-                            <h3
-                                class="text-3xl font-black mb-4 text-white group-hover:text-blue-400 transition-colors leading-tight drop-shadow-sm font-outfit">
-                                TraderScan: 1亿+地址画像解析引擎</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-10">
-                                将海量噪音的异构链上数据清洗重组，构建 Smart Money 胜率/PnL 多维画像，支撑 Candlestick.io SaaS $22k+ 月收入的底层基石。
-                            </p>
-                            <div
-                                class="inline-flex items-center gap-3 text-white text-xs font-black uppercase tracking-widest group-hover:text-blue-400 transition-colors">
-                                查看深度重构案例 <i data-lucide="arrow-right"
-                                    class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Item 2: Copy Trading -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Item 1: Copy Trading -->
                     <a href="portfolio-copy-trading.html" target="_blank"
-                        class="block group relative rounded-[3rem] overflow-hidden bg-slate-800/20 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.3)]">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-transparent to-cyan-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10">
-                        </div>
-                        <div class="relative h-80 overflow-hidden bg-slate-900">
-                            <img src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?auto=format&fit=crop&q=80&w=800"
-                                alt="Copy Trading System"
-                                class="w-full h-full object-cover group-hover:scale-105 group-hover:-rotate-1 transition-transform duration-1000 opacity-60 group-hover:opacity-90 mix-blend-luminosity group-hover:mix-blend-normal" />
-                            <div class="absolute top-8 left-8 z-20">
-                                <span
-                                    class="px-5 py-2 bg-[#09090b]/80 backdrop-blur-md border border-slate-700 text-white text-[10px] font-black rounded-full uppercase tracking-widest">Trading
-                                    Engine</span>
+                        class="glass-card !p-6 group flex flex-col justify-between">
+                        <div>
+                            <div class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/50">
+                                <img src="images/thumbnails-copy_trading.png" alt="Copy Trading System"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
                             </div>
-                        </div>
-                        <div class="p-10 relative z-20 backdrop-blur-sm">
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="text-cyan-400 text-[10px] font-black uppercase tracking-[0.2em]">DeFi /
-                                    Trading</div>
-                                <div class="h-px bg-slate-700 flex-grow"></div>
-                            </div>
-                            <h3
-                                class="text-3xl font-black mb-4 text-white group-hover:text-cyan-400 transition-colors leading-tight drop-shadow-sm font-outfit">
-                                跨链自动跟单与风控系统</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-10">
-                                设计 &lt;5s 延迟的高并发执行引擎。覆盖多维过滤模型保障高净值安全，管理资金超 $1.2M+，单月交易额峰值超 $7M。
-                            </p>
-                            <div
-                                class="inline-flex items-center gap-3 text-white text-xs font-black uppercase tracking-widest group-hover:text-cyan-400 transition-colors">
-                                查看复杂设计文档 <i data-lucide="arrow-right"
-                                    class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                    Copy Trading 自动跟单系统
+                                </h4>
+                                <i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
                             </div>
                         </div>
                     </a>
 
-                    <!-- Item 3: Regentsoft eSCM -->
-                    <a href="portfolio-3.html"
-                        class="block group relative rounded-[3rem] overflow-hidden bg-slate-800/20 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(168,85,247,0.3)]">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-transparent to-purple-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10">
-                        </div>
-                        <div class="relative h-80 overflow-hidden bg-slate-900">
-                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
-                                alt="Regentsoft eSCM"
-                                class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-transform duration-1000 opacity-60 group-hover:opacity-90 mix-blend-luminosity group-hover:mix-blend-normal" />
-                            <div class="absolute top-8 left-8 z-20">
-                                <span
-                                    class="px-5 py-2 bg-[#09090b]/80 backdrop-blur-md border border-slate-700 text-white text-[10px] font-black rounded-full uppercase tracking-widest">Enterprise
-                                    SaaS</span>
+                    <!-- Item 2: Candlestick.io / TraderScan -->
+                    <a href="portfolio-traderscan.html" target="_blank"
+                        class="glass-card !p-6 group flex flex-col justify-between">
+                        <div>
+                            <div class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/50">
+                                <img src="images/thumbnails-TraderScan.png" alt="Candlestick.io"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
                             </div>
-                        </div>
-                        <div class="p-10 relative z-20 backdrop-blur-sm">
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="text-purple-400 text-[10px] font-black uppercase tracking-[0.2em]">Supply
-                                    Chain / ERP</div>
-                                <div class="h-px bg-slate-700 flex-grow"></div>
-                            </div>
-                            <h3
-                                class="text-3xl font-black mb-4 text-white group-hover:text-purple-400 transition-colors leading-tight drop-shadow-sm font-outfit">
-                                eSCM: 从传统ERP到乐高式云中台</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-10">
-                                将企业级大规模差异化需求抽象为乐高式配置模型，完成企划-PLM-MES的数字化重构，交付头部品牌百万级 KA。
-                            </p>
-                            <div
-                                class="inline-flex items-center gap-3 text-white text-xs font-black uppercase tracking-widest group-hover:text-purple-400 transition-colors">
-                                了解中台架构演进 <i data-lucide="arrow-right"
-                                    class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                    Candlestick.io - TraderScan 链上数据分析
+                                </h4>
+                                <i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
                             </div>
                         </div>
                     </a>
 
-                    <!-- Item 4: Juwan App -->
-                    <a href="portfolio-4.html"
-                        class="block group relative rounded-[3rem] overflow-hidden bg-slate-800/20 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.3)]">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-transparent to-emerald-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10">
-                        </div>
-                        <div class="relative h-80 overflow-hidden bg-slate-900">
-                            <!-- 使用偏科技绿的图片占位 -->
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-                                alt="Juwan App"
-                                class="w-full h-full object-cover group-hover:scale-105 group-hover:-rotate-1 transition-transform duration-1000 opacity-60 group-hover:opacity-90 mix-blend-luminosity group-hover:mix-blend-normal" />
-                            <div class="absolute top-8 left-8 z-20">
-                                <span
-                                    class="px-5 py-2 bg-[#09090b]/80 backdrop-blur-md border border-slate-700 text-white text-[10px] font-black rounded-full uppercase tracking-widest">Mobile
-                                    B2B</span>
-                            </div>
-                        </div>
-                        <div class="p-10 relative z-20 backdrop-blur-sm">
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">Product
-                                    0-1</div>
-                                <div class="h-px bg-slate-700 flex-grow"></div>
-                            </div>
-                            <h3
-                                class="text-3xl font-black mb-4 text-white group-hover:text-emerald-400 transition-colors leading-tight drop-shadow-sm font-outfit">
-                                巨牛旺铺：移动端批发管理基石</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-10">
-                                主导移动端批发管理极速开发与迭代。帮助传统服装档口实现移动化管理，实现产品市占率前三及月度开单数亿。
-                            </p>
+                    <!-- Item 3: Placeholder -->
+                    <div
+                        class="glass-card !p-6 group flex flex-col justify-between opacity-50 grayscale cursor-not-allowed">
+                        <div>
                             <div
-                                class="inline-flex items-center gap-3 text-white text-xs font-black uppercase tracking-widest group-hover:text-emerald-400 transition-colors">
-                                查看移动端设计历程 <i data-lucide="arrow-right"
-                                    class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                                class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/30 flex items-center justify-center border-b border-dashed border-slate-700">
+                                <i data-lucide="plus" class="w-10 h-10 text-slate-700"></i>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-slate-600">即将推出...</h4>
+                                <i data-lucide="lock" class="w-5 h-5 text-slate-700"></i>
                             </div>
                         </div>
-                    </a>
+                    </div>
+
+                    <!-- Item 4: Placeholder -->
+                    <div
+                        class="glass-card !p-6 group flex flex-col justify-between opacity-50 grayscale cursor-not-allowed">
+                        <div>
+                            <div
+                                class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/30 flex items-center justify-center border-b border-dashed border-slate-700">
+                                <i data-lucide="plus" class="w-10 h-10 text-slate-700"></i>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-slate-600">即将推出...</h4>
+                                <i data-lucide="lock" class="w-5 h-5 text-slate-700"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -621,71 +526,69 @@
         <!-- Skills Section -->
         <section id="skills" class="py-32 px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-20 text-center tracking-tight text-white">能力矩阵</h2>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div
-                        class="bg-slate-800/40 p-12 rounded-[3rem] border border-slate-700/50 hover:bg-slate-800 transition-colors">
-                        <div class="flex items-center gap-4 mb-10 text-primary">
-                            <i data-lucide="database" class="w-8 h-8 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
+                <h2 class="text-3xl font-black mb-20 flex items-center gap-4 tracking-tight font-outfit text-white">
+                    <div class="w-1.5 h-8 bg-primary shadow-[0_0_12px_rgba(0,200,56,0.6)]"></div> 能力矩阵
+                </h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="glass-card reveal">
+                        <div class="flex items-center gap-2 mb-4 text-primary">
+                            <i data-lucide="database" class="w-6 h-6 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
                                 stroke-width="2.5"></i>
-                            <h3 class="font-black text-xl text-white tracking-tight">产品领域</h3>
+                            <h3 class="font-bold text-xl text-white tracking-tight">产品领域</h3>
                         </div>
                         <div class="flex flex-wrap gap-3">
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">B端方法论</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">链上数据分析</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">链上数据分析</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">交易策略</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">交易策略</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">SaaS</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">业务中台</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">2B产品</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">供应链</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">供应链</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">权限体系</span>
-
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">权限体系</span>
                         </div>
                     </div>
-                    <div
-                        class="bg-slate-800/40 p-12 rounded-[3rem] border border-slate-700/50 hover:bg-slate-800 transition-colors">
-                        <div class="flex items-center gap-4 mb-10 text-primary">
-                            <i data-lucide="code" class="w-8 h-8 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
+                    <div class="glass-card reveal">
+                        <div class="flex items-center gap-2 mb-4 text-primary">
+                            <i data-lucide="code" class="w-6 h-6 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
                                 stroke-width="2.5"></i>
-                            <h3 class="font-black text-xl text-white tracking-tight">专业技能</h3>
+                            <h3 class="font-bold text-xl text-white tracking-tight">专业技能</h3>
                         </div>
                         <div class="flex flex-wrap gap-3">
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">Notion</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Notion</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">Figma</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Figma</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">Antigravity</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Antigravity</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">Gemini</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Gemini</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">NotebookLM</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">NotebookLM</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">Axure</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Axure</span>
                         </div>
                     </div>
-                    <div
-                        class="bg-slate-800/40 p-12 rounded-[3rem] border border-slate-700/50 hover:bg-slate-800 transition-colors">
-                        <div class="flex items-center gap-4 mb-10 text-primary">
-                            <i data-lucide="award" class="w-8 h-8 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
+                    <div class="glass-card reveal">
+                        <div class="flex items-center gap-2 mb-4 text-primary">
+                            <i data-lucide="award" class="w-6 h-6 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
                                 stroke-width="2.5"></i>
-                            <h3 class="font-black text-xl text-white tracking-tight">通用能力</h3>
+                            <h3 class="font-bold text-xl text-white tracking-tight">通用能力</h3>
                         </div>
                         <div class="flex flex-wrap gap-3">
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">项目全生命周期管理</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">项目全生命周期管理</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">跨部门协作</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">跨部门协作</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">系统性思维</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">系统性思维</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">逻辑建模</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">逻辑建模</span>
                             <span
-                                class="px-5 py-2.5 bg-slate-900/50 text-slate-300 text-xs font-black rounded-xl border border-slate-700 uppercase">极速学习</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">极速学习</span>
                         </div>
                     </div>
                 </div>
@@ -696,15 +599,14 @@
         <section id="contact" class="py-32 px-6">
             <div class="max-w-4xl mx-auto text-center reveal border-t border-slate-800/50 pt-24">
                 <h2
-                    class="text-4xl md:text-5xl font-outfit font-black mb-8 tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                    class="text-4xl md:text-5xl font-outfit font-black mb-[60px] tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
                     联系我，开启合作</h2>
-                <p class="text-slate-400 mb-16 text-lg">期待与您探讨 Web3、SaaS 及 复杂系统产品架构的可能性。</p>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <a href="mailto:taro032@live.com"
-                        class="group bg-slate-800/20 p-8 rounded-[2rem] border border-slate-700/50 hover:border-blue-500/50 flex items-center gap-6 transition-all hover:bg-slate-800/40 hover:-translate-y-1">
+                        class="group bg-slate-800/20 p-8 rounded-[2rem] border border-slate-700/50 hover:border-green-500/50 flex items-center gap-6 transition-all hover:bg-slate-800/40 hover:-translate-y-1">
                         <div
-                            class="w-14 h-14 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                            class="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
                             <i data-lucide="mail"></i>
                         </div>
                         <div class="text-left">
@@ -714,15 +616,16 @@
                         </div>
                     </a>
                     <a href="tel:17612001458"
-                        class="group bg-slate-800/20 p-8 rounded-[2rem] border border-slate-700/50 hover:border-cyan-500/50 flex items-center gap-6 transition-all hover:bg-slate-800/40 hover:-translate-y-1">
+                        class="group bg-slate-800/20 p-8 rounded-[2rem] border border-slate-700/50 hover:border-green-500/50 flex items-center gap-6 transition-all hover:bg-slate-800/40 hover:-translate-y-1">
                         <div
-                            class="w-14 h-14 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                            class="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
                             <i data-lucide="phone"></i>
                         </div>
                         <div class="text-left">
-                            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-1">Phone
+                            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-1">Phone /
+                                Wechat
                             </div>
-                            <div class="text-lg font-bold text-white">176 1200 1458</div>
+                            <div class="text-lg font-bold text-white">(+86) 176 1200 1458</div>
                         </div>
                     </a>
                 </div>
@@ -736,10 +639,10 @@
                 Designed & Coded by SHI ZHENG © 2026 ALL RIGHTS RESERVED
             </div>
             <div class="flex gap-4">
-                <div class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse-slow"></div>
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse-slow" style="animation-delay: 0.2s">
+                <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse-slow"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse-slow" style="animation-delay: 0.2s">
                 </div>
-                <div class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse-slow" style="animation-delay: 0.4s">
+                <div class="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse-slow" style="animation-delay: 0.4s">
                 </div>
             </div>
         </div>
@@ -748,119 +651,250 @@
     <script src="script.js"></script>
     <script>
             /**
-             * 多维流折叠动效 (Stream Folding) - 增强能见度版本
-             * 隐喻：将波动、复杂的原始信号（左侧波浪），通过逻辑门收拢折叠，输出为确定、标准的有序结果（右侧平行流）
+             * ReactBits Aurora 背景 - 原生 WebGL2 实现（移植自官方 React 组件）
+             * 颜色：#2d931f (深绿), #565fa4 (靛蓝), #148899 (青蓝)
+             * 参数：amplitude=1.0, blend=0.5, speed=1.0
              */
             (function () {
                 const container = document.getElementById('about');
                 if (!container) return;
 
                 const canvas = document.createElement('canvas');
-                canvas.style.position = 'absolute';
-                canvas.style.inset = '0';
-                canvas.style.pointerEvents = 'none';
-                canvas.style.zIndex = '0';
-                canvas.style.opacity = '0.55'; // 提升整体可见度 (原 0.35)
+                canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;';
+                container.style.position = 'relative';
                 container.insertBefore(canvas, container.firstChild);
 
-                const ctx = canvas.getContext('2d');
-                let frame = 0;
-                let streams = [];
+                // 优先使用 WebGL2（#version 300 es），降级到 WebGL1
+                const gl2 = canvas.getContext('webgl2');
+                const gl = gl2 || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (!gl) return;
+                const isGL2 = !!gl2;
 
-                const CONFIG = {
-                    streamCount: 22, // 更密集的科技流
-                    primaryColor: '#00C838', // 高亮绿
-                    neutralColor: '#1e291e', // 深绿灰背景 
-                    gateX: 0.50,
-                    yLevels: 8
-                };
+                // ===== 顶点着色器 =====
+                const vertSrc = isGL2 ? `#version 300 es
+in vec2 position;
+void main() {
+    gl_Position = vec4(position, 0.0, 1.0);
+}` : `
+attribute vec2 position;
+void main() {
+    gl_Position = vec4(position, 0.0, 1.0);
+}`;
+
+                // ===== 片元着色器（完整移植自 ReactBits 官方源码）=====
+                const fragSrc = isGL2 ? `#version 300 es
+precision highp float;
+
+uniform float uTime;
+uniform float uAmplitude;
+uniform vec3 uColorStops[3];
+uniform vec2 uResolution;
+uniform float uBlend;
+
+out vec4 fragColor;
+
+vec3 permute(vec3 x) {
+    return mod(((x * 34.0) + 1.0) * x, 289.0);
+}
+
+float snoise(vec2 v) {
+    const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+    vec2 i  = floor(v + dot(v, C.yy));
+    vec2 x0 = v - i + dot(i, C.xx);
+    vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+    vec4 x12 = x0.xyxy + C.xxzz;
+    x12.xy -= i1;
+    i = mod(i, 289.0);
+    vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+    vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+    m = m * m; m = m * m;
+    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+    vec3 h = abs(x) - 0.5;
+    vec3 ox = floor(x + 0.5);
+    vec3 a0 = x - ox;
+    m *= 1.79284291400159 - 0.85373472095314 * (a0*a0 + h*h);
+    vec3 g;
+    g.x  = a0.x  * x0.x   + h.x  * x0.y;
+    g.yz = a0.yz * x12.xz  + h.yz * x12.yw;
+    return 130.0 * dot(m, g);
+}
+
+struct ColorStop { vec3 color; float position; };
+
+#define COLOR_RAMP(colors, factor, finalColor) {  \
+    int index = 0;                                \
+    for (int i = 0; i < 2; i++) {                \
+        ColorStop currentColor = colors[i];       \
+        bool isInBetween = currentColor.position <= factor; \
+        index = int(mix(float(index), float(i), float(isInBetween))); \
+    }                                             \
+    ColorStop currentColor = colors[index];       \
+    ColorStop nextColor = colors[index + 1];      \
+    float range = nextColor.position - currentColor.position; \
+    float lerpFactor = (factor - currentColor.position) / range; \
+    finalColor = mix(currentColor.color, nextColor.color, lerpFactor); \
+}
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / uResolution;
+
+    ColorStop colors[3];
+    colors[0] = ColorStop(uColorStops[0], 0.0);
+    colors[1] = ColorStop(uColorStops[1], 0.5);
+    colors[2] = ColorStop(uColorStops[2], 1.0);
+
+    vec3 rampColor;
+    COLOR_RAMP(colors, uv.x, rampColor);
+
+    float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
+    height = exp(height);
+    height = (uv.y * 2.0 - height + 0.2);
+    float intensity = 0.6 * height;
+
+    float midPoint = 0.20;
+    float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
+
+    vec3 auroraColor = intensity * rampColor;
+    fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
+}` : `
+precision highp float;
+
+uniform float uTime;
+uniform float uAmplitude;
+uniform vec3 uColorStops[3];
+uniform vec2 uResolution;
+uniform float uBlend;
+
+vec3 permute(vec3 x) {
+    return mod(((x * 34.0) + 1.0) * x, 289.0);
+}
+
+float snoise(vec2 v) {
+    const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+    vec2 i  = floor(v + dot(v, C.yy));
+    vec2 x0 = v - i + dot(i, C.xx);
+    vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+    vec4 x12 = x0.xyxy + C.xxzz;
+    x12.xy -= i1;
+    i = mod(i, 289.0);
+    vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+    vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+    m = m * m; m = m * m;
+    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+    vec3 h = abs(x) - 0.5;
+    vec3 ox = floor(x + 0.5);
+    vec3 a0 = x - ox;
+    m *= 1.79284291400159 - 0.85373472095314 * (a0*a0 + h*h);
+    vec3 g;
+    g.x  = a0.x  * x0.x   + h.x  * x0.y;
+    g.yz = a0.yz * x12.xz  + h.yz * x12.yw;
+    return 130.0 * dot(m, g);
+}
+
+/* WebGL1 不支持宏内 loops，改用普通函数 */
+vec3 colorRamp(vec3 c0, vec3 c1, vec3 c2, float x) {
+    float t = clamp(x, 0.0, 1.0);
+    if (t < 0.5) return mix(c0, c1, t * 2.0);
+    return mix(c1, c2, (t - 0.5) * 2.0);
+}
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / uResolution;
+    vec3 rampColor = colorRamp(uColorStops[0], uColorStops[1], uColorStops[2], uv.x);
+
+    float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
+    height = exp(height);
+    height = (uv.y * 2.0 - height + 0.2);
+    float intensity = 0.6 * height;
+
+    float midPoint = 0.20;
+    float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
+
+    vec3 auroraColor = intensity * rampColor;
+    gl_FragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
+}`;
+
+                // ===== 编译和链接 =====
+                function compile(type, src) {
+                    const s = gl.createShader(type);
+                    gl.shaderSource(s, src);
+                    gl.compileShader(s);
+                    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+                        console.error('Shader error:', gl.getShaderInfoLog(s));
+                        return null;
+                    }
+                    return s;
+                }
+                const vert = compile(gl.VERTEX_SHADER, vertSrc);
+                const frag = compile(gl.FRAGMENT_SHADER, fragSrc);
+                if (!vert || !frag) return;
+
+                const prog = gl.createProgram();
+                gl.attachShader(prog, vert);
+                gl.attachShader(prog, frag);
+                gl.linkProgram(prog);
+                if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+                    console.error('Link error:', gl.getProgramInfoLog(prog));
+                    return;
+                }
+                gl.useProgram(prog);
+
+                // 全屏三角形（OGL Triangle 等价）
+                const buf = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+                const posLoc = gl.getAttribLocation(prog, 'position');
+                gl.enableVertexAttribArray(posLoc);
+                gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
+
+                // 与 ReactBits 源码一致的混合设置
+                gl.clearColor(0, 0, 0, 0);
+                gl.enable(gl.BLEND);
+                gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+
+                // ===== 颜色转换（hex → RGB float [0-1]）=====
+                function hexToRgb(hex) {
+                    const r = parseInt(hex.slice(1, 3), 16) / 255;
+                    const g = parseInt(hex.slice(3, 5), 16) / 255;
+                    const b = parseInt(hex.slice(5, 7), 16) / 255;
+                    return [r, g, b];
+                }
+
+                // 用户指定颜色
+                const colorStops = ['#2d931f', '#565fa4', '#148899'];
+                const flatColors = colorStops.flatMap(hexToRgb); // 展平为 [r0,g0,b0, r1,g1,b1, r2,g2,b2]
+
+                const uTime = gl.getUniformLocation(prog, 'uTime');
+                const uAmplitude = gl.getUniformLocation(prog, 'uAmplitude');
+                const uColorStops = gl.getUniformLocation(prog, 'uColorStops');
+                const uResolution = gl.getUniformLocation(prog, 'uResolution');
+                const uBlend = gl.getUniformLocation(prog, 'uBlend');
+
+                gl.uniform1f(uAmplitude, 1.0);
+                gl.uniform1f(uBlend, 0.5);
+                gl.uniform3fv(uColorStops, flatColors);
 
                 function resize() {
-                    canvas.width = container.offsetWidth;
-                    canvas.height = container.offsetHeight;
+                    const w = container.clientWidth;
+                    const h = container.clientHeight;
+                    canvas.width = w;
+                    canvas.height = h;
+                    gl.viewport(0, 0, w, h);
+                    gl.uniform2f(uResolution, w, h);
                 }
                 window.addEventListener('resize', resize);
                 resize();
 
-                class Particle {
-                    constructor(stream) {
-                        this.stream = stream;
-                        this.progress = Math.random();
-                        this.speed = 0.001 + Math.random() * 0.0015;
-                        this.size = Math.random() * 1.8 + 0.6;
-                    }
-                    draw() {
-                        this.progress += this.speed;
-                        if (this.progress > 1) this.progress = 0;
-
-                        const x = this.progress * canvas.width;
-                        const gatePx = canvas.width * CONFIG.gateX;
-                        let y;
-
-                        if (x < gatePx) {
-                            const amp = this.stream.amp * (1 - x / gatePx);
-                            y = this.stream.yBase + Math.sin(x * 0.01 + this.stream.phase) * amp;
-                        } else {
-                            const t = Math.min((x - gatePx) / 50, 1);
-                            y = this.stream.yBase * (1 - t) + this.stream.targetY * t;
-                        }
-
-                        ctx.beginPath();
-                        ctx.fillStyle = this.progress > CONFIG.gateX ? CONFIG.primaryColor : CONFIG.neutralColor;
-                        // 提升粒子不透明度 (原左侧 0.3/右侧 0.7)
-                        ctx.globalAlpha = this.progress > CONFIG.gateX ? 0.9 : 0.5;
-                        ctx.arc(x, y, this.size, 0, Math.PI * 2);
-                        ctx.fill();
-                    }
+                // 渲染循环
+                const speed = 1.0;
+                function render(ms) {
+                    gl.clear(gl.COLOR_BUFFER_BIT);
+                    gl.uniform1f(uTime, ms * 0.001 * speed * 1.0); // 增加速度倍率，让流动更明显
+                    gl.drawArrays(gl.TRIANGLES, 0, 3);
+                    requestAnimationFrame(render);
                 }
+                requestAnimationFrame(render);
 
-                function initStreams() {
-                    streams = [];
-                    const levelHeight = canvas.height / (CONFIG.yLevels + 1);
-                    for (let i = 0; i < CONFIG.streamCount; i++) {
-                        const s = {
-                            yBase: Math.random() * canvas.height,
-                            targetY: (Math.floor(Math.random() * CONFIG.yLevels) + 1) * levelHeight,
-                            amp: 30 + Math.random() * 50,
-                            phase: Math.random() * 10,
-                            particles: []
-                        };
-                        for (let j = 0; j < 6; j++) s.particles.push(new Particle(s));
-                        streams.push(s);
-                    }
-                }
-
-                initStreams();
-                window.addEventListener('resize', initStreams);
-
-                function draw() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    frame++;
-
-                    streams.forEach(s => {
-                        ctx.beginPath();
-                        ctx.strokeStyle = CONFIG.neutralColor;
-                        ctx.lineWidth = 0.8; // 稍微加粗线条
-                        ctx.globalAlpha = 0.15; // 显著提高引导线透明度 (原 0.05)
-                        ctx.moveTo(0, s.yBase);
-                        const gatePx = canvas.width * CONFIG.gateX;
-
-                        for (let x = 0; x <= gatePx; x += 15) {
-                            const amp = s.amp * (1 - x / gatePx);
-                            const y = s.yBase + Math.sin(x * 0.01 + s.phase) * amp;
-                            ctx.lineTo(x, y);
-                        }
-                        ctx.lineTo(canvas.width, s.targetY);
-                        ctx.stroke();
-
-                        s.phase += 0.012; // 控制波浪滚动感
-                        s.particles.forEach(p => p.draw());
-                    });
-
-                    requestAnimationFrame(draw);
-                }
-
-                draw();
             })();
     </script>
 </body>
