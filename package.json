@@ -1,4 +1,5 @@
 {
+  "name": "adam-portfolio",
   "dependencies": {
     "ogl": "^1.0.11"
   }

@@ -148,18 +148,30 @@
                     <span class="text-[10px] font-black text-primary uppercase">TraderScan</span>
                     <div class="h-3 w-px bg-slate-800"></div>
                     <div class="flex items-center gap-2 text-[10px] font-black text-slate-500">
-                        <a href="portfolio-traderscan-cn.html"
+                        <a href="portfolio-traderscan.html"
                             class="text-white hover:text-primary transition-colors">CN</a>
                         <span>/</span>
-                        <a href="portfolio-traderscan.html" class="hover:text-white transition-colors">EN</a>
+                        <a href="portfolio-traderscan-en.html" class="hover:text-white transition-colors">EN</a>
                     </div>
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-10 font-semibold text-slate-400">
                 <a href="#overview" class="nav-link hover:text-white transition-all">概述</a>
                 <a href="#features" class="nav-link hover:text-white transition-all">核心功能</a>
-                <a href="mailto:contact@shizheng.me"
-                    class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">立即咨询</a>
+                <div class="contact-wrapper">
+                    <a href="javascript:void(0)"
+                        class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">联系我</a>
+                    <div class="contact-popup">
+                        <div class="contact-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">taro032@live.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Phone / Wechat</div>
+                            <div class="contact-value">17612001458</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Mobile Menu Toggle -->
             <button class="md:hidden text-white">
@@ -179,11 +191,11 @@
             <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl px-6">
                 <div class="flex flex-col items-center gap-6 text-center w-full">
                     <h1
-                        class="font-outfit font-bold text-5xl md:text-[56px] leading-[1.2] tracking-tight gradient-text-traderscan m-0 pb-2 uppercase">
+                        class="font-outfit font-bold text-5xl md:text-[56px] leading-[1.2] tracking-tight gradient-text-traderscan m-0 pb-2">
                         Candlestick.io - TraderScan
                     </h1>
                     <p class="font-sans text-xl text-white/80 leading-relaxed max-w-3xl m-0">
-                        首创三层级可视化战绩，精准画像亿级链上交易员
+                        首创三级数据结构可视化交易战绩，构建1亿+链上交易员画像
                     </p>
                 </div>
 
@@ -210,8 +222,7 @@
                 <div class="flex flex-col lg:flex-row items-center justify-between gap-12 py-10 w-full">
                     <div class="flex flex-col gap-6 w-full lg:w-[500px] shrink-0">
                         <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-white m-0">
-                            多维度筛选<br>
-                            发现<span class="text-primary">顶级地址</span>
+                            多维度筛选发现<span class="text-primary">顶级Trader</span>
                         </h2>
 
                         <div class="flex flex-col gap-6 w-full mt-4">
@@ -243,9 +254,9 @@
                                     </div>
                                     <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
                                         <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
-                                            高回报率</div>
+                                            Top ROI</div>
                                         <div class="font-sans text-[14px] text-[#8A8A98]">
-                                            更新频率：3小时</div>
+                                            每3h更新</div>
                                     </div>
                                 </div>
                                 <div class="flex flex-1 gap-[12px] items-center relative rounded-[8px]">
@@ -274,9 +285,9 @@
                                     </div>
                                     <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
                                         <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
-                                            高胜率</div>
+                                            Top Win Rate</div>
                                         <div class="font-sans text-[14px] text-[#8A8A98]">
-                                            更新频率：3小时</div>
+                                            每3h更新</div>
                                     </div>
                                 </div>
                             </div>
@@ -308,9 +319,9 @@
                                     </div>
                                     <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
                                         <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
-                                            高利润</div>
+                                            Top Profit</div>
                                         <div class="font-sans text-[14px] text-[#8A8A98]">
-                                            更新频率：3小时</div>
+                                            每3h更新</div>
                                     </div>
                                 </div>
 
@@ -327,7 +338,7 @@
                                     </div>
                                     <div class="flex flex-col gap-[4px] justify-center flex-1 min-w-0">
                                         <div class="font-sans font-bold text-[16px] text-[#F5F5FF]">
-                                            更多</div>
+                                            More</div>
                                         <div class="font-sans text-[14px] text-[#8A8A98]">
                                             自定义筛选</div>
                                     </div>
@@ -336,7 +347,7 @@
                         </div>
                     </div>
 
-                    <div class="relative w-full lg:w-[584px] h-[343px] shrink-0 flex items-center justify-center group">
+                    <div class="relative w-full lg:w-[500px] h-[294px] shrink-0 flex items-center justify-center group">
                         <img src="images/traderscan/address_explorer.png" alt="Address Explorer UI"
                             class="w-[115%] h-[115%] object-contain max-w-none transition-transform duration-700 mx-auto opacity-100 drop-shadow-2xl">
                     </div>
@@ -345,15 +356,14 @@
                 <!-- Feature 2: Stealth Money -->
                 <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-10 w-full">
                     <div
-                        class="relative w-full lg:w-[680px] h-[356px] shrink-0 flex items-center justify-center -ml-10 group">
+                        class="relative w-full lg:w-[611px] h-[320px] shrink-0 flex items-center justify-center -ml-10 group">
                         <img src="images/traderscan/stealth_money.png" alt="Stealth Money Flow"
                             class="w-full h-full object-contain transition-transform duration-700 opacity-100 drop-shadow-2xl filter brightness-110">
                     </div>
 
                     <div class="flex flex-col gap-4 w-full lg:max-w-[500px]">
                         <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-white tracking-[-0.8px] m-0">
-                            通过关联地址分析<br>
-                            洞察<span class="text-primary">非公开信号</span>
+                            通过关联地址分析<br>洞察<span class="text-primary">非公开信号</span>
                         </h2>
 
                         <p class="font-sans font-bold text-base text-[#8A8A98] leading-relaxed m-0 mt-2">
@@ -365,8 +375,7 @@
                 <!-- Feature 3: Token Metrics -->
                 <div class="relative w-full flex flex-col items-center gap-10 py-10 mt-10">
                     <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-center text-white m-0">
-                        通过 <span class="text-primary">40+ 动态图表</span><br>
-                        实时监控您的持仓
+                        通过 <span class="text-primary">40+ 动态图表</span>实时监控您的持仓
                     </h2>
 
                     <div
@@ -379,15 +388,14 @@
                 <!-- Feature 4: Watchlist & Alerts -->
                 <div class="flex flex-col items-center gap-12 py-10 w-full mt-10">
                     <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-center text-white m-0">
-                        自定义自选列表<br>
-                        <span class="text-primary">获取实时信号推送</span>
+                        自定义观察列表，<span class="text-primary">获取实时信号推送</span>
                     </h2>
 
                     <div class="flex flex-col md:flex-row gap-6 w-full justify-center items-stretch">
                         <!-- Card 1 -->
                         <div class="feature-card-large flex flex-col p-10 gap-6 w-full md:w-1/2 group overflow-hidden">
                             <h3 class="font-muller font-bold text-2xl text-[#F5F5FF] leading-snug m-0 capitalize">
-                                构建与管理
+                                轻松构建/维护观察列表
                             </h3>
                             <div class="relative w-full aspect-[2.2/1] mt-auto">
                                 <img src="images/traderscan/watchlist.png" alt="Watchlist UI"
@@ -398,7 +406,7 @@
                         <!-- Card 2 -->
                         <div class="feature-card-large flex flex-col p-10 gap-6 w-full md:w-1/2 group overflow-hidden">
                             <h3 class="font-muller font-bold text-2xl text-[#F5F5FF] leading-snug m-0 capitalize">
-                                随时随地接收
+                                随时随地接收信号
                             </h3>
                             <div class="relative w-full aspect-[2.2/1] mt-auto">
                                 <img src="images/traderscan/alerts.png" alt="Real-time Alerts UI"

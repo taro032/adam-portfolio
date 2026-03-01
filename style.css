@@ -232,3 +232,96 @@ body {
 .animate-pulse-slow {
     animation: pulse-soft 3s infinite ease-in-out;
 }
+
+/* --- Contact Hover Popup --- */
+.contact-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.contact-popup {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 260px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 100;
+    color: #fff;
+    text-align: left;
+}
+
+.contact-wrapper:hover .contact-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.contact-popup::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 32px;
+    border: 8px solid transparent;
+    border-bottom-color: rgba(15, 23, 42, 0.95);
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-item:not(:last-child) {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 800;
+}
+
+.contact-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Light Theme Adapter for e-SCM */
+.escm-theme-light .contact-popup {
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.escm-theme-light .contact-popup::after {
+    border-top-color: transparent;
+    border-bottom-color: #fff;
+}
+
+.escm-theme-light .contact-label {
+    color: #64748b;
+}
+
+.escm-theme-light .contact-value {
+    color: #0f172a;
+}
+
+.escm-theme-light .contact-item:not(:last-child) {
+    border-bottom-color: #f1f5f9;
+}

@@ -1,12 +1,17 @@
+# 依赖
+node_modules/
+
 # Python 虚拟环境
 .venv/
 
 # AI Agent 配置
 .agent/
 .agents/
+.cursor/
 
 # 备份文件
 *.bak
+*.bak-ripple
 
 # 个人隐私文档
 resources/
@@ -21,3 +26,13 @@ __pycache__/
 # 操作系统文件
 .DS_Store
 Thumbs.db
+
+# 部署脚本和测试文件
+deploy_from_github.sh
+diag_server.ps1
+final_deploy.ps1
+ssh_deploy.ps1
+test_gemini_api.py
+
+# shadcn 配置
+components.json

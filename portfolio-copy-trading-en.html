@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聪明钱跟单引擎 | Portfolio-Copy Trading</title>
+    <title>Smart Money Execution Engine | Portfolio-Copy Trading</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <!-- Tailwind CSS (Missing in subpage) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -37,13 +37,13 @@
     <link rel="stylesheet" href="portfolio-copy-trading.css">
 </head>
 
-<body class="selection:bg-primary/30" data-name="Portfolio-Copy_Trading-forIDE" data-node-id="46862:21790">
+<body class="selection:bg-primary/30">
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-6 scrolled-always">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
             <div class="flex items-center gap-4">
                 <div class="font-outfit font-black text-2xl tracking-tighter text-white group cursor-pointer"
-                    onclick="window.location.href='index.html'">
+                    onclick="window.location.href='index-en.html'">
                     SHI <span class="text-primary transition-colors">ZHENG</span>
                 </div>
                 <div class="flex items-center gap-3 pt-1.5 hidden md:flex">
@@ -54,20 +54,21 @@
                     <span class="text-[10px] font-black text-primary uppercase">Copy Trading</span>
                     <div class="h-3 w-px bg-slate-800"></div>
                     <div class="flex items-center gap-2 text-[10px] font-black text-slate-500">
-                        <a href="portfolio-copy-trading.html"
-                            class="text-white hover:text-primary transition-colors">CN</a>
+                        <a href="portfolio-copy-trading.html" class="hover:text-white transition-colors">CN</a>
                         <span>/</span>
-                        <a href="portfolio-copy-trading-en.html" class="hover:text-white transition-colors">EN</a>
+                        <a href="portfolio-copy-trading-en.html"
+                            class="text-white hover:text-primary transition-colors">EN</a>
                     </div>
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-10 font-semibold text-slate-400">
-                <a href="#overview" class="nav-link hover:text-white transition-all">项目概述</a>
-                <a href="#mobile-demo" class="nav-link hover:text-white transition-all">移动端Demo</a>
-                <a href="#web-showcase" class="nav-link hover:text-white transition-all">Web端</a>
+                <a href="#overview" class="nav-link hover:text-white transition-all">Overview</a>
+                <a href="#mobile-demo" class="nav-link hover:text-white transition-all">Mobile Demo</a>
+                <a href="#web-showcase" class="nav-link hover:text-white transition-all">Web Showcase</a>
                 <div class="contact-wrapper">
                     <a href="javascript:void(0)"
-                        class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">联系我</a>
+                        class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">Contact
+                        Me</a>
                     <div class="contact-popup">
                         <div class="contact-item">
                             <div class="contact-label">Email</div>
@@ -83,30 +84,33 @@
         </div>
     </nav>
 
-    <main id="overview" class="main-container" data-name="container" data-node-id="46862:21826">
-        <!-- [first-screen-bg] 切图引入 -->
-        <div class="first-screen-bg" data-name="first-screen-bg" data-node-id="46924:2056">
+    <main id="overview" class="main-container">
+        <!-- Background -->
+        <div class="first-screen-bg">
             <img src="images/first-screen-bg.png" alt="Background" class="main-bg">
             <img src="images/first-screen-bottom-linear.png" alt="Bottom Linear" class="bottom-gradient">
         </div>
 
-        <section class="max-w-6xl mx-auto px-6 py-20" data-name="content">
-            <div class="texts mb-20 flex flex-col items-center">
-                <h1 class="text-5xl md:text-7xl font-outfit font-black mb-8 tracking-tight gradient-title">聪明钱跟单引擎</h1>
-                <p class="description mx-auto">基于 Strategy + Investment 解耦架构开发，将高频波动的链上信号，<br>通过插件化的风控矩阵转化为标准化的交易指令</p>
+        <section class="max-w-6xl mx-auto px-6 py-20">
+            <div class="texts mb-20 flex flex-col items-center text-center">
+                <h1 class="text-5xl md:text-7xl font-outfit font-black mb-8 tracking-tight gradient-title">Smart Money
+                    Execution Engine</h1>
+                <p class="description mx-auto max-w-3xl text-slate-400 text-lg">Developed based on a decoupled Strategy
+                    + Investment architecture. High-frequency on-chain signals are converted into standardized trading
+                    commands through a pluggable risk control matrix.</p>
             </div>
 
-            <!-- [strategies] 三个卡片 -->
-            <div class="strategies-grid" data-name="strategies" data-node-id="46862:21832">
-                <!-- 卡片 1 (激活态) -->
-                <div class="strategy-card active" data-id="strategies" data-name="1" data-node-id="46862:21833">
+            <!-- Strategies Grid -->
+            <div class="strategies-grid">
+                <!-- Card 1 -->
+                <div class="strategy-card active">
                     <div class="card-icon">
                         <img src="images/icon-smart.svg" alt="Smart">
                     </div>
                     <div class="card-content">
                         <h3>Smart Strategies</h3>
-                        <p class="subtitle">丰富的聪明钱地址集</p>
-                        <div class="points" data-name="points">
+                        <p class="subtitle">Curated Smart Money addresses</p>
+                        <div class="points">
                             <span class="badge">ROI</span>
                             <span class="badge">PnL</span>
                             <span class="badge">Win Rate</span>
@@ -118,14 +122,14 @@
                     <img src="images/right_arrow.svg" alt="arrow">
                 </div>
 
-                <!-- 卡片 2 -->
-                <div class="strategy-card" data-id="legos" data-name="legos" data-node-id="46924:2064">
+                <!-- Card 2 -->
+                <div class="strategy-card">
                     <div class="card-icon">
                         <img src="images/icon-lego.svg" alt="Legos">
                     </div>
                     <div class="card-content">
-                        <h3>乐高式跟单配置</h3>
-                        <p class="subtitle">一键套用符合自己的交易风格 / DIY自设</p>
+                        <h3>Modular Config</h3>
+                        <p class="subtitle">One-click style application / DIY setup</p>
                         <div class="points">
                             <span class="badge">Risk Control</span>
                             <span class="badge">TP/SL</span>
@@ -138,14 +142,14 @@
                     <img src="images/right_arrow.svg" alt="arrow">
                 </div>
 
-                <!-- 卡片 3 -->
-                <div class="strategy-card" data-id="execution" data-name="execution" data-node-id="46924:2078">
+                <!-- Card 3 -->
+                <div class="strategy-card">
                     <div class="card-icon">
                         <img src="images/icon-execution.svg" alt="Execution">
                     </div>
                     <div class="card-content">
-                        <h3>上链执行</h3>
-                        <p class="subtitle">从监控到上链执行的延迟低至&lt;5s</p>
+                        <h3>On-chain Execution</h3>
+                        <p class="subtitle">Latency from monitoring to execution &lt;5s</p>
                         <div class="points">
                             <span class="badge">Real-time</span>
                             <span class="badge">Auto</span>
@@ -155,72 +159,74 @@
                 </div>
             </div>
 
-            <!-- [connector] 切图 -->
-            <div class="connector-divider" data-name="connector" data-node-id="46924:2062">
+            <!-- Connector -->
+            <div class="connector-divider">
                 <img src="images/connector.png" alt="Connector">
             </div>
 
-            <!-- [detail] 联动区域 -->
-            <div class="detail-container" id="detail-section" data-name="detail" data-node-id="46921:2785">
+            <!-- Detail Section -->
+            <div class="detail-container" id="detail-section">
                 <div class="detail-wrapper" id="detail-wrapper">
-                    <!-- 默认显示第一个 Section 的内容 -->
+                    <!-- Section 1 -->
                     <div class="detail-content active" id="detail-strategies">
-                        <div class="detail-grid" data-name="strategies" data-node-id="46922:2965">
-                            <div class="detail-card glass-morphism" data-name="1" data-node-id="46922:2966">
+                        <div class="detail-grid">
+                            <div class="detail-card glass-morphism">
                                 <div class="card-text">
-                                    <h2>一键<span>跟单聪明钱</span></h2>
+                                    <h2>Follow<span> Smart Money</span></h2>
                                     <ul>
-                                        <li>系统算法生成各种风格的 stategies；</li>
-                                        <li>通过多维筛选 / 热门 token 的 top traders 交叉挖掘；</li>
+                                        <li>System algorithms generate diverse strategies;</li>
+                                        <li>Cross-mining through multi-dimensional filters / top traders of trending
+                                            tokens;</li>
                                     </ul>
                                 </div>
                                 <img src="images/detail-1.png" alt="UI 1" class="preview-img">
                             </div>
-                            <div class="detail-card glass-morphism" data-name="strategy-2" data-node-id="46922:2971">
+                            <div class="detail-card glass-morphism">
                                 <div class="card-text">
-                                    <h2>10 倍放大<span>你的机会</span></h2>
-                                    <p>单个策略即可跟单 10 个地址，每个地址交易记录透明可追踪，无需再自己四处追逐 Alpha。</p>
+                                    <h2>10x Your<span> Opportunities</span></h2>
+                                    <p>A single strategy can follow up to 10 addresses. Every trade is transparent and
+                                        trackable—no more chasing Alpha manually.</p>
                                 </div>
                                 <img src="images/detail-2.png" alt="UI 2" class="preview-img">
                             </div>
                         </div>
                     </div>
 
-                    <!-- 乐高式跟单配置 -->
+                    <!-- Section 2 -->
                     <div class="detail-content" id="detail-legos">
                         <div class="detail-grid">
                             <div class="detail-card glass-morphism">
                                 <div class="card-text">
-                                    <h2>全链路<span>风控矩阵</span></h2>
-                                    <p>多维保障跟单交易和用户资产的安全</p>
+                                    <h2>Full-link<span> Risk Matrix</span></h2>
+                                    <p>Multi-dimensional protection for copy-trading transactions and user assets.</p>
                                 </div>
                                 <img src="images/legos-protections.png" alt="Risk Control" class="preview-img">
                             </div>
                             <div class="detail-card glass-morphism">
                                 <div class="card-text">
-                                    <h2>多维度<span>交易风格</span>设定</h2>
-                                    <p>基于风险偏好与预期收益分布，个性化定制跟单策略</p>
+                                    <h2>Custom<span> Trading Styles</span></h2>
+                                    <p>Personalized copy-trading strategies based on risk tolerance and expected ROI
+                                        distribution.</p>
                                 </div>
                                 <img src="images/legos-trading-params.png" alt="Preferences" class="preview-img">
                             </div>
                         </div>
                     </div>
-                    <!-- 链上执行 -->
+
+                    <!-- Section 3 -->
                     <div class="detail-content" id="detail-execution">
                         <div class="detail-card glass-morphism w-full" style="max-width: 100%; min-height: 600px;">
                             <div class="card-text flex items-center justify-between w-full">
-                                <h2><span>跟单执行</span>泳道图</h2>
+                                <h2><span>Execution</span> Flow</h2>
                                 <div class="flow-tabs flex gap-2 p-1 rounded-lg">
                                     <button class="tab-btn active px-4 py-1.5 rounded-md transition-all text-sm"
-                                        data-tab="buy">跟买</button>
+                                        data-tab="buy">Copy Buy</button>
                                     <button
                                         class="tab-btn px-4 py-1.5 rounded-md transition-all text-sm text-gray-400 hover:text-white"
-                                        data-tab="sell">跟卖</button>
+                                        data-tab="sell">Copy Sell</button>
                                 </div>
                             </div>
-                            <!-- 视图容器 -->
                             <div class="view-container relative w-full">
-                                <!-- 跟买视图 -->
                                 <div id="view-buy" class="flow-view active">
                                     <div
                                         class="w-full flex justify-center bg-slate-900/20 p-12 rounded-xl border border-dashed border-white/10 overflow-hidden transition-all duration-500">
@@ -228,7 +234,6 @@
                                             class="w-full h-auto object-contain max-h-[800px] opacity-90">
                                     </div>
                                 </div>
-                                <!-- 跟卖视图 -->
                                 <div id="view-sell" class="flow-view hidden opacity-0 translate-y-4">
                                     <div
                                         class="w-full flex justify-center bg-slate-900/20 p-12 rounded-xl border border-dashed border-white/10 overflow-hidden transition-all duration-500">
@@ -242,46 +247,49 @@
                 </div>
             </div>
 
+            <!-- Features -->
             <section class="features-section">
                 <div class="texts mb-12">
-                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight"><span
-                            class="text-white">最智能的套件让你从</span><span class="text-primary">枯坐中解放</span></h2>
+                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight"><span class="text-white">Smart
+                            suite lets you</span> <span class="text-primary">break free</span></h2>
                 </div>
                 <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/autopilot.svg" alt="全自动执行">
+                            <img src="images/autopilot.svg" alt="Automation">
                         </div>
-                        <h3>全自动执行</h3>
-                        <p>跟单按您的条件自动触发<br>无需手动干预</p>
+                        <h3>Autopilot</h3>
+                        <p>Triggered exactly as you set<br>Zero manual intervention</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/fast_mode.svg" alt="快速模式">
+                            <img src="images/fast_mode.svg" alt="Fast Modes">
                         </div>
-                        <h3>快速模式</h3>
-                        <p>轻松启动策略<br>可选等多种模式</p>
+                        <h3>Fast Modes</h3>
+                        <p>Launch strategies easily<br>with preset optimized modes</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/elastic.svg" alt="弹性控制">
+                            <img src="images/elastic.svg" alt="Elastic">
                         </div>
-                        <h3>弹性控制</h3>
-                        <p>随时手动卖出、暂停跟单<br>自由增减地址</p>
+                        <h3>Elastic Control</h3>
+                        <p>Manual sell/pause anytime<br>Flexible address management</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/on_track.svg" alt="全程追踪">
+                            <img src="images/on_track.svg" alt="On Track">
                         </div>
-                        <h3>全程追踪</h3>
-                        <p>随时查看整体策略或每个代币的盈亏明细<br>掌控一切</p>
+                        <h3>On Track</h3>
+                        <p>Real-time PnL tracking for<br>strategies and tokens</p>
                     </div>
                 </div>
             </section>
 
+            <!-- Demo -->
             <section id="mobile-demo" class="mobile-demo-section">
                 <div class="texts mb-12">
-                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white">移动端主流程Demo</h2>
+                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white">Mobile Workflow Demo
+                    </h2>
                 </div>
                 <div class="mobile-container" style="background-image: url('images/copy_trading-mobile_demo_bg.png');">
                     <div class="mobile-mockup">
@@ -294,9 +302,11 @@
                 </div>
             </section>
 
+            <!-- Web Showcase -->
             <section id="web-showcase" class="web-showcase-section">
-                <div class="texts mb-12">
-                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white">Web端节点页面/组件</h2>
+                <div class="texts mb-12 text-center items-center flex flex-col">
+                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white text-center">Web Node
+                        Pages & Components</h2>
                 </div>
                 <div class="web-image-container">
                     <img src="images/copy_trading-web_pages.png" alt="Web Pages Showcase">
@@ -304,19 +314,19 @@
             </section>
         </section>
 
-        <!-- CTA / Footer padding -->
+        <!-- CTA -->
         <section class="py-20 text-center relative z-10 w-full">
-            <a href="index.html#portfolio"
+            <a href="index-en.html#portfolio"
                 class="inline-flex items-center gap-2 px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-white transition-all font-outfit font-bold">
-                <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回主页
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
             </a>
         </section>
 
     </main>
 
-    <!-- Footer (Copied from index.html) -->
+    <!-- Footer -->
     <footer class="py-12 border-t border-slate-800 relative z-20 bg-[#000212]">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-4">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-4 text-center">
             <div class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.5em] text-center">
                 Designed & Coded by SHI ZHENG © 2026 ALL RIGHTS RESERVED
             </div>
@@ -331,10 +341,7 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-    </script>
+    <script> lucide.createIcons(); </script>
     <script src="portfolio-copy-trading.js"></script>
 </body>
 

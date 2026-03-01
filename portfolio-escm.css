@@ -1,0 +1,924 @@
+/* ===================================================================
+   portfolio-escm.css
+   适用于 e-SCM 作品集页面（Light 版 / 蓝色主题 / 2B 理性风格）
+   =================================================================== */
+
+/* ------------------------------------------------------------------
+   1. CSS 变量 / 设计 Token
+   ------------------------------------------------------------------ */
+:root {
+    /* 主题色 */
+    --escm-primary: #0687ef;
+    --escm-primary-dark: #0570c8;
+    --escm-primary-light: rgba(6, 135, 239, 0.10);
+    --escm-primary-ultra: rgba(6, 135, 239, 0.05);
+
+    /* 文字颜色 */
+    --escm-text-main: #0e002e;
+    --escm-text-body: #2c2c3a;
+    --escm-text-muted: #7e7e8f;
+    --escm-text-light: #b0b0be;
+
+    /* 背景 */
+    --escm-bg: #ffffff;
+    --escm-bg-light: #f5f7fa;
+    --escm-bg-section: #f8f9fb;
+
+    /* 边框 */
+    --escm-border: #e4e6ed;
+    --escm-border-strong: #c8cad4;
+
+    /* 模块色彩（Figma 精准还原） */
+    --escm-module-blue: rgba(33, 118, 255, 0.15);
+    --escm-module-blue-bd: rgba(33, 118, 255, 0.35);
+    --escm-module-green: #b8d9c8;
+    --escm-module-orange: #fbdeb5;
+    --escm-module-orange-bd: #e8a84a;
+    --escm-tag-green-bg: rgba(75, 210, 105, 0.18);
+    --escm-tag-green-txt: #2ea851;
+
+    /* 阴影 */
+    --escm-shadow-card: 0 2px 16px rgba(14, 0, 46, 0.06);
+    --escm-shadow-hover: 0 8px 32px rgba(3, 82, 148, 0.3);
+
+    /* 字体 */
+    --escm-font: "Inter", "Space Grotesk", "Noto Sans SC", sans-serif;
+
+    /* Navbar 高度（用于首屏 padding 补偿） */
+    --escm-navbar-h: 73px;
+}
+
+/* ------------------------------------------------------------------
+   2. body 全局覆盖
+   ------------------------------------------------------------------ */
+body.escm-theme-light {
+    background-color: var(--escm-bg) !important;
+    color: var(--escm-text-body) !important;
+    font-family: var(--escm-font);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* ------------------------------------------------------------------
+   3. Navbar（Light 版）
+   ------------------------------------------------------------------ */
+.escm-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    padding: 16px 0;
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--escm-border);
+    box-shadow: 0 1px 0 rgba(14, 0, 46, 0.04);
+}
+
+.escm-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.escm-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.escm-nav-logo {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: var(--escm-text-main);
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s;
+}
+
+.escm-nav-logo:hover {
+    opacity: 0.75;
+}
+
+.escm-nav-logo span {
+    color: var(--escm-primary);
+}
+
+.escm-nav-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 2px;
+}
+
+.breadcrumb-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--escm-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.breadcrumb-divider {
+    width: 1px;
+    height: 12px;
+    background: var(--escm-border-strong);
+}
+
+.breadcrumb-page {
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--escm-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.escm-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.escm-nav-link {
+    color: var(--escm-text-muted);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.25s;
+}
+
+.escm-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--escm-primary);
+    transition: width 0.25s ease;
+}
+
+.escm-nav-link:hover {
+    color: var(--escm-primary);
+}
+
+.escm-nav-link:hover::after {
+    width: 100%;
+}
+
+.escm-nav-cta {
+    padding: 9px 22px;
+    background: var(--escm-primary);
+    color: #fff;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(6, 135, 239, 0.25);
+}
+
+.escm-nav-cta:hover {
+    background: var(--escm-primary-dark);
+    box-shadow: 0 6px 24px rgba(6, 135, 239, 0.35);
+    transform: translateY(-1px);
+}
+
+/* ------------------------------------------------------------------
+   4. 主布局容器
+   ------------------------------------------------------------------ */
+.escm-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section 通用 — Figma: gap 24px between title/content, padding 120px between sections */
+.escm-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+    opacity: 0;
+    transform: translateY(28px);
+    animation: escm-fade-in 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.escm-section:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.escm-section:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.escm-section:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.escm-section:nth-child(4) {
+    animation-delay: 0.35s;
+}
+
+.escm-section:nth-child(5) {
+    animation-delay: 0.45s;
+}
+
+/* Hero 首屏 — Figma: gap 60px */
+.escm-hero-section {
+    padding-top: calc(var(--escm-navbar-h) + 60px);
+    padding-bottom: 60px;
+    gap: 60px;
+    position: relative;
+    overflow: visible;
+}
+
+/* Dashboard 区域紧跟 Hero */
+.escm-dashboard-section {
+    padding-top: 0;
+}
+
+@keyframes escm-fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------------------------------------------
+   5. Threads Background (WebGL shader)
+   ------------------------------------------------------------------ */
+.threads-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    min-height: 600px;
+    opacity: 0.7;
+    pointer-events: auto;
+    z-index: 0;
+    overflow: hidden;
+    /* 上下两端渐隐，视觉重心在中部（与标题对齐） */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 55%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 55%, transparent 90%);
+}
+
+/* Hero 区域顶层内容需要在背景动效上方 */
+.escm-hero-section>*:not(.threads-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------------
+   6. 文字系统
+   ------------------------------------------------------------------ */
+.escm-title-main {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 72px;
+    color: var(--escm-primary);
+    text-align: center;
+    margin: 0;
+}
+
+.escm-title-secondary {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 72px;
+    color: var(--escm-primary);
+    text-align: center;
+    margin: 0;
+}
+
+.escm-desc-main {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    color: var(--escm-text-main);
+    opacity: 0.8;
+    text-align: center;
+}
+
+.escm-text-muted {
+    font-size: 15px;
+    color: var(--escm-text-muted);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.escm-texts {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------
+   7. 标签 (Tag)
+   ------------------------------------------------------------------ */
+.escm-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.outline-tag {
+    background: var(--escm-primary-light);
+    color: var(--escm-primary);
+    border: 1px solid rgba(6, 135, 239, 0.4);
+}
+
+.method-tag {
+    background: rgba(35, 200, 17, 0.2);
+    color: #00C838;
+    border: none;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+/* ------------------------------------------------------------------
+   8. 图片占位容器
+   ------------------------------------------------------------------ */
+.escm-image-placeholder {
+    width: 100%;
+    background: var(--escm-bg-light);
+    border: 2px dashed var(--escm-border-strong);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.escm-image-placeholder:hover {
+    border-color: var(--escm-primary);
+    background: var(--escm-primary-ultra);
+}
+
+.escm-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.placeholder-text {
+    font-size: 13px;
+    color: var(--escm-text-light);
+    font-weight: 500;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+}
+
+.placeholder-feature {
+    max-width: 787px;
+    background: linear-gradient(135deg, #eef4fb 0%, #f5f7fb 100%);
+}
+
+.placeholder-dashboard {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--escm-border);
+}
+
+.placeholder-workflows {
+    max-width: 1024px;
+    background: linear-gradient(135deg, #eef4fb 0%, #f5f7fb 100%);
+}
+
+.placeholder-rbac {
+    background: linear-gradient(135deg, #eef4fb 0%, #f5f7fb 100%);
+}
+
+/* ------------------------------------------------------------------
+   9. Dashboard 卡片
+   ------------------------------------------------------------------ */
+.escm-dashboard-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.escm-card-desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.escm-desc-label {
+    color: var(--escm-primary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.escm-desc-text {
+    color: var(--escm-text-muted);
+    white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------
+   10. 方法论三阶段
+   ------------------------------------------------------------------ */
+.escm-methodologies {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.escm-method-card {
+    width: 240px;
+    flex-shrink: 0;
+    background: #f2f3f7;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.escm-method-card:hover {
+    box-shadow: var(--escm-shadow-hover);
+    transform: translateY(-4px);
+    outline: 1px valid rgb(11, 112, 194);
+}
+
+.escm-method-card p {
+    font-size: 16px;
+    color: var(--escm-text-muted);
+    line-height: 22px;
+    margin: 0;
+}
+
+.escm-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--escm-border-strong);
+    width: 24px;
+}
+
+/* ------------------------------------------------------------------
+   11. 多板块业务协作图（精确还原设计稿布局）
+   ------------------------------------------------------------------ */
+.escm-collaboration-frame {
+    width: 1000px;
+    max-width: 100%;
+    height: 385px;
+    border: 2px solid var(--escm-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+}
+
+/* 左侧：业务模块 — Figma: 820px */
+.collaboration-left {
+    width: 820px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 右侧：应用模块 */
+.collaboration-right {
+    width: 180px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 列标题 — Figma: 18px bold, px-24 py-16 */
+.collab-header {
+    padding: 16px 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--escm-text-main);
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* 竖向分割线 — Figma: 2px */
+.collab-divider {
+    width: 2px;
+    background: var(--escm-primary);
+    flex-shrink: 0;
+}
+
+/* 列内容区 */
+.collab-body {
+    flex: 1;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 通用行 */
+.collab-row {
+    display: flex;
+    align-items: center;
+}
+
+/* 第一行：4 个主链路模块横向排列 */
+.collab-row-main {
+    gap: 0;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+/* 横向箭头 */
+.module-arrow-h {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    opacity: 0.7;
+}
+
+/* 第二行：左侧 PMC、中央业务结算、右侧成衣库存 */
+.collab-row-mid {
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 4px;
+}
+
+.collab-mid-left,
+.collab-mid-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    flex: 1;
+}
+
+/* 中央：业务结算 + 下箭头 */
+.collab-mid-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding-top: 4px;
+    flex-shrink: 0;
+    min-width: 60px;
+}
+
+/* 竖向箭头容器 */
+.arrow-v-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* 竖线 */
+.arrow-v-line {
+    width: 1.5px;
+    height: 24px;
+    background: var(--escm-primary);
+    opacity: 0.6;
+}
+
+/* 箭头头部（三角） */
+.arrow-v-head {
+    font-size: 10px;
+    color: var(--escm-primary);
+    line-height: 1;
+    margin-top: -1px;
+}
+
+.arrow-v-head-orange {
+    color: #c87a00;
+    font-size: 16px;
+}
+
+/* 业务结算标签 */
+.biz-settlement-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--escm-text-muted);
+    white-space: nowrap;
+    padding-bottom: 4px;
+}
+
+/* 第三行：财务中心（橙色背景全宽） */
+.collab-row-finance {
+    margin-top: 4px;
+}
+
+/* 通用模块 — Figma: 160px, 18px bold, opacity 0.8 */
+.module-item {
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--escm-text-main);
+    opacity: 0.8;
+    text-align: center;
+    white-space: nowrap;
+    cursor: default;
+    width: 160px;
+    transition: box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+/* 蓝色模块 — Figma: rgba(33,118,255,0.2) */
+.blue-module {
+    background: rgba(33, 118, 255, 0.2);
+    border: none;
+}
+
+.blue-module:hover {
+    box-shadow: 0 2px 12px rgba(6, 135, 239, 0.2);
+    opacity: 0.85;
+}
+
+/* 财务中心 — Figma: #fbdeb5, 全宽 */
+.finance-center {
+    background: #fbdeb5 !important;
+    border: none !important;
+    width: 100%;
+    flex: 1;
+}
+
+.finance-center:hover {
+    box-shadow: 0 2px 12px rgba(251, 164, 50, 0.3);
+    opacity: 0.9;
+}
+
+/* 右侧应用模块 — Figma: gap 19px */
+.app-modules {
+    gap: 19px;
+}
+
+.app-item {
+    background: #add0c0 !important;
+    border: none !important;
+    text-align: center;
+    width: 100%;
+}
+
+.app-item:hover {
+    box-shadow: 0 2px 12px rgba(130, 180, 155, 0.4);
+    opacity: 0.85;
+}
+
+.ellipsis-item {
+    letter-spacing: 3px;
+    opacity: 0.5;
+    background: transparent !important;
+    border-color: transparent !important;
+}
+
+/* ------------------------------------------------------------------
+   12. CTA / 返回按钮
+   ------------------------------------------------------------------ */
+.escm-cta-section {
+    padding: 60px 0 120px;
+    width: 100%;
+    text-align: center;
+}
+
+.escm-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border: 1.5px solid var(--escm-border-strong);
+    border-radius: 100px;
+    color: var(--escm-text-body);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.25s ease;
+    box-shadow: var(--escm-shadow-card);
+}
+
+.escm-back-btn:hover {
+    border-color: var(--escm-primary);
+    color: var(--escm-primary);
+    background: var(--escm-primary-ultra);
+    transform: translateY(-2px);
+    box-shadow: var(--escm-shadow-hover);
+}
+
+/* ------------------------------------------------------------------
+   13. Footer（Light 版）
+   ------------------------------------------------------------------ */
+.escm-footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--escm-border);
+    background: #fff;
+}
+
+.escm-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.escm-footer-copy {
+    color: var(--escm-text-light);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+.escm-footer-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.dot-blue {
+    background: #3b82f6;
+}
+
+.dot-cyan {
+    background: #06b6d4;
+}
+
+.dot-purple {
+    background: #a855f7;
+}
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.8);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2.8s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------
+   14. 响应式
+   ------------------------------------------------------------------ */
+@media (max-width: 1100px) {
+
+    .escm-main-container,
+    .escm-nav-inner,
+    .escm-footer-inner {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .escm-title-main {
+        font-size: 44px;
+    }
+
+    .escm-title-secondary {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .escm-main-container,
+    .escm-nav-inner,
+    .escm-footer-inner {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .escm-title-main {
+        font-size: 36px;
+    }
+
+    .escm-title-secondary {
+        font-size: 26px;
+    }
+
+    .escm-desc-main {
+        font-size: 17px;
+    }
+
+    .escm-nav-breadcrumb {
+        display: none;
+    }
+
+    .escm-nav-links {
+        gap: 16px;
+    }
+
+    .escm-methodologies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .escm-method-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .escm-arrow {
+        transform: rotate(90deg);
+    }
+
+    .escm-collaboration-frame {
+        flex-direction: column;
+    }
+
+    .collaboration-right {
+        width: 100%;
+        border-left: none;
+        border-top: 1.5px solid var(--escm-primary);
+    }
+
+    .collab-row-main {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .collab-row-mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collab-mid-left,
+    .collab-mid-right,
+    .collab-mid-center {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .escm-nav-links {
+        display: none;
+    }
+
+    .escm-title-main {
+        font-size: 30px;
+    }
+}
