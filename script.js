@@ -67,3 +67,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// 移动端菜单：点击图标展开/收起，点击链接或遮罩关闭
+(function () {
+    const btn = document.getElementById('mobile-menu-btn');
+    const panel = document.getElementById('mobile-menu');
+    const backdrop = document.getElementById('mobile-menu-backdrop');
+    if (!btn || !panel || !backdrop) return;
+
+    const openMenu = () => {
+        panel.classList.remove('hidden');
+        backdrop.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('overflow-hidden');
+    };
+    const closeMenu = () => {
+        panel.classList.add('hidden');
+        backdrop.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('overflow-hidden');
+    };
+
+    btn.addEventListener('click', () => (panel.classList.contains('hidden') ? openMenu() : closeMenu()));
+    backdrop.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-menu-link').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+})();

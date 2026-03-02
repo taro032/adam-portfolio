@@ -139,4 +139,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+    if (mobileMenuBtn && mobileMenu && mobileMenuBackdrop) {
+        const openMenu = () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuBackdrop.classList.remove('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('overflow-hidden');
+        };
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBackdrop.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('overflow-hidden');
+        };
+        mobileMenuBtn.addEventListener('click', () => (mobileMenu.classList.contains('hidden') ? openMenu() : closeMenu()));
+        mobileMenuBackdrop.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-menu-link').forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeMenu();
+                const id = link.getAttribute('href').slice(1);
+                const el = document.getElementById(id);
+                if (el) smoothScroll(el);
+            });
+        });
+    }
 });

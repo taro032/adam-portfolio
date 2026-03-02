@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>施政 | 个人网站 - 复杂产品架构师</title>
+    <title>施政 | 高级产品经理 - 个人网站</title>
+    <!-- 标签页图标 -->
+    <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
     <!-- SEO Meta Tags -->
     <meta name="description" content="施政的个人官网，展示从 Web3 交易终端到大规模 SaaS 供应链系统的产品架构与设计案例。">
     <!-- Fonts -->
@@ -45,20 +47,22 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-4">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
-            <div class="flex items-center gap-4">
+            <!-- 左侧：移动端为 Logo 在上、面包屑在下；桌面端为同一行 -->
+            <div class="flex flex-col items-start gap-0.5 md:flex-row md:items-center md:gap-4">
                 <div class="font-outfit font-black text-2xl tracking-tighter text-white group cursor-pointer">
                     SHI <span class="text-primary group-hover:text-blue-400 transition-colors">ZHENG</span>
                 </div>
-                <!-- Vibe Coded & Language Switcher -->
-                <div class="flex items-center gap-3 pt-1.5 hidden md:flex">
+                <div class="flex flex-col items-start gap-1 pt-0.5 md:flex-row md:items-center md:gap-3 md:pt-1.5">
                     <span
                         class="text-[10px] font-bold text-slate-500 uppercase tracking-widest select-none opacity-100">Designed
                         & Vibe Coded</span>
-                    <div class="h-3 w-px bg-slate-800"></div>
-                    <div class="flex items-center gap-2 text-[10px] font-black text-slate-500">
-                        <a href="index.html" class="text-white hover:text-primary transition-colors">CN</a>
-                        <span>/</span>
-                        <a href="index-en.html" class="hover:text-white transition-colors">EN</a>
+                    <div class="hidden md:flex items-center gap-2">
+                        <div class="h-3 w-px bg-slate-800"></div>
+                        <div class="flex items-center gap-2 text-[10px] font-black text-slate-500">
+                            <a href="index.html" class="text-white hover:text-primary transition-colors">CN</a>
+                            <span>/</span>
+                            <a href="index-en.html" class="hover:text-white transition-colors">EN</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,12 +72,31 @@
                 <a href="#portfolio" class="nav-link hover:text-white transition-all">精选作品</a>
                 <a href="#skills" class="nav-link hover:text-white transition-all">能力矩阵</a>
                 <a href="#contact"
-                    class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">联系方式</a>
+                    class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">联系我</a>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-white">
-                <i data-lucide="menu"></i>
-            </button>
+            <!-- 移动端：联系按钮 + 菜单按钮 -->
+            <div class="flex md:hidden items-center gap-3">
+                <a href="#contact"
+                    class="px-4 py-2 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all">联系我</a>
+                <button type="button" id="mobile-menu-btn" class="p-2 text-white"
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="打开菜单">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端纵向菜单（点击菜单图标展开，点击链接/遮罩关闭）；恢复玻璃态背景但保持近不透明 -->
+        <div id="mobile-menu-backdrop" class="fixed inset-0 top-16 z-30 bg-black/60 hidden md:hidden" aria-hidden="true"></div>
+        <div id="mobile-menu" class="fixed top-16 left-0 right-0 bottom-0 z-40 flex flex-col gap-2 py-6 px-6 bg-[#000212]/30 backdrop-blur-xl hidden md:!hidden" role="dialog" aria-label="导航菜单">
+            <a href="#about" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">关于我</a>
+            <a href="#experience" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">工作履历</a>
+            <a href="#portfolio" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">精选作品</a>
+            <a href="#skills" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">能力矩阵</a>
+            <div class="mt-auto pt-6 border-t border-slate-800 flex items-center gap-2 text-[10px] font-black text-slate-500">
+                <span class="uppercase tracking-widest text-slate-600">Language</span>
+                <a href="index.html" class="text-white hover:text-primary transition-colors">CN</a>
+                <span>/</span>
+                <a href="index-en.html" class="hover:text-white transition-colors">EN</a>
+            </div>
         </div>
     </nav>
 
@@ -85,6 +108,15 @@
 
                     <!-- Left Content -->
                     <div class="lg:col-span-9 reveal">
+                        <div class="flex flex-col md:flex-row md:flex-wrap lg:block gap-8 lg:gap-0">
+                            <!-- 移动端/平板用的人像：小屏在副文案下，宽度自适应(min 120px)，&lt;1024px 时最大 200px，仅 &lt;480px 居中，居中时与下文间距 24px -->
+                            <div class="order-2 md:order-2 lg:hidden flex justify-center md:justify-end shrink-0 w-full min-w-[120px] max-w-[200px] md:w-[200px] max-[480px]:mx-auto max-[480px]:mb-6">
+                                <div class="relative flex items-center justify-center w-full min-w-[120px]">
+                                    <img src="images/avatar.png" class="w-full h-auto object-contain scale-110 min-w-[120px] max-w-[200px]" alt="施政">
+                                </div>
+                            </div>
+                            <!-- 大标题+副文案 -->
+                            <div class="order-1 md:order-1 lg:min-w-0 md:flex-1 min-w-0">
                         <!-- 3 Key Points -->
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
@@ -108,9 +140,10 @@
                             <span
                                 class="text-primary font-bold">擅长在复杂中构建秩序</span>：从SaaS中台到链上数据交易引擎，在快节奏迭代中拆解业务，构建标准化产品体系，打通从商业需求到产品交付的完整价值闭环。
                         </div>
+                            </div>
 
                         <!-- Horizontal Metrics -->
-                        <div class="flex flex-wrap gap-12 mt-12 pt-12 border-t border-slate-800/50">
+                        <div class="order-3 w-full flex flex-wrap gap-12 mt-12 pt-12 border-t border-slate-800/50 lg:mt-12 lg:pt-12">
                             <!-- Web3 Metrics -->
                             <div class="space-y-2">
                                 <div
@@ -134,14 +167,14 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
 
-                    <!-- Right Column: Photo -->
-                    <div class="lg:col-span-3 reveal-delay-1">
-                        <div class="relative mx-auto max-w-[400px]">
-                            <!-- 去除背景光晕和容器限制，让透明头像无缝融入 -->
+                    <!-- Right Column: Photo（仅 lg 以上显示） -->
+                    <div class="hidden lg:block lg:col-span-3 reveal-delay-1">
+                        <div class="relative mx-auto min-w-[120px] max-w-[280px]">
                             <div class="relative flex items-center justify-center">
-                                <img src="images/avatar.png" class="w-full h-auto object-contain scale-110" alt="施政">
+                                <img src="images/avatar.png" class="w-full h-auto object-contain scale-110 min-w-[120px] max-w-[280px]" alt="施政">
                             </div>
                         </div>
                     </div>
@@ -180,7 +213,7 @@
                         </div>
 
                         <div class="text-slate-400 mb-5 text-sm md:text-base leading-relaxed">
-                            作为创始合伙人从0到1搭建产品与10+人研发团队，主导 Candlestick.io
+                            作为合伙人从0到1搭建产品与10+人研发团队，主导 Candlestick.io
                             两款核心产品从概念到商业化落地，涵盖跟单算法、智能钱包、swap/限价单、trader战绩分析、token指标等业务，累计实现
                             $500k+ ARR。
                         </div>
@@ -194,21 +227,21 @@
                                             Copy Trading 多链自动跟单平台
                                         </h4>
                                         <a href="portfolio-copy-trading.html" target="_blank"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">作品展示
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">作品展示
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5 mb-4">
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>基于数据分析优势，主导产品从“信息层”向“交易层”的战略转型，设计多链跟单执行引擎，帮用户一键复刻聪明钱的盈利战绩。</span>
+                                            <span>基于数据分析优势，主导从“信息层”向“交易层”的战略转型，设计多链跟单引擎，帮用户一键复刻聪明钱的盈利战绩。</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>集成token安全信息服务和自研多维过滤模型建立风控引擎，保障高净值交易安全。</span>
+                                            <span>集成token安全信息服务和自研模型建立风控引擎，保障高净值交易安全。</span>
                                         </li>
                                     </ul>
                                     <div class="flex items-center gap-4 pt-4">
@@ -238,8 +271,8 @@
                                             TraderScan 链上数据分析产品
                                         </h4>
                                         <a href="portfolio-traderscan.html" target="_blank"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">作品展示
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">作品展示
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5 mb-4">
                                         <li
@@ -314,7 +347,7 @@
                         </div>
 
                         <div class="text-slate-400 mb-5 text-sm md:text-base leading-relaxed">
-                            协同 50+ 人团队负责公司云供应链业务线的需求研发与商业化落地，同时带领 10+ 人产品团队主导传统 ERP
+                            协同 50+ 人团队负责公司云供应链部门的需求研发与大客户支持，同时带领 10+ 人产品团队主导传统 ERP
                             向“云+中台”架构的数字化转型，支撑公司每年千万级营收盘子。
                         </div>
 
@@ -327,8 +360,8 @@
                                             eSCM 云供应链 (全业务 0-1 )
                                         </h4>
                                         <a href="portfolio-escm.html" target="_blank"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">作品展示
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">作品展示
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5">
                                         <li
@@ -366,8 +399,8 @@
                                             产研体系建设与团队管理
                                         </h4>
                                         <a href="#portfolio"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">标准组件
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">标准组件
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5">
                                         <li
@@ -551,6 +584,8 @@
                             <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">供应链</span>
                             <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">复杂系统架构</span>
+                            <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">权限体系</span>
                         </div>
                     </div>
@@ -561,6 +596,8 @@
                             <h3 class="font-bold text-xl text-white tracking-tight">专业技能</h3>
                         </div>
                         <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">UI/UX</span>
                             <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Notion</span>
                             <span
@@ -592,6 +629,8 @@
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">逻辑建模</span>
                             <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">极速学习</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Ownership</span>
                         </div>
                     </div>
                 </div>

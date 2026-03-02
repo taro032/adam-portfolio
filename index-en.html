@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shi Zheng | Portfolio - Complex Product Architect</title>
+    <title>Shi Zheng | Senior Product Manager - Portfolio</title>
+    <!-- 标签页图标 -->
+    <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="Shi Zheng's personal website, showcasing product architecture and design cases from Web3 trading terminals to large-scale SaaS supply chain systems.">
@@ -46,20 +48,22 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-4">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
-            <div class="flex items-center gap-4">
+            <!-- Left: on mobile logo above, breadcrumb below; on desktop same row -->
+            <div class="flex flex-col items-start gap-0.5 md:flex-row md:items-center md:gap-4">
                 <div class="font-outfit font-black text-2xl tracking-tighter text-white group cursor-pointer">
                     SHI <span class="text-primary group-hover:text-blue-400 transition-colors">ZHENG</span>
                 </div>
-                <!-- Vibe Coded & Language Switcher -->
-                <div class="flex items-center gap-3 pt-1.5 hidden md:flex">
+                <div class="flex flex-col items-start gap-1 pt-0.5 md:flex-row md:items-center md:gap-3 md:pt-1.5">
                     <span
                         class="text-[10px] font-bold text-slate-500 uppercase tracking-widest select-none opacity-100">Designed
                         & Vibe Coded</span>
-                    <div class="h-3 w-px bg-slate-800"></div>
-                    <div class="flex items-center gap-2 text-[10px] font-black text-slate-500">
-                        <a href="index.html" class="hover:text-white transition-colors">CN</a>
-                        <span>/</span>
-                        <a href="index-en.html" class="text-white hover:text-primary transition-colors">EN</a>
+                    <div class="hidden md:flex items-center gap-2">
+                        <div class="h-3 w-px bg-slate-800"></div>
+                        <div class="flex items-center gap-2 text-[10px] font-black text-slate-500">
+                            <a href="index.html" class="hover:text-white transition-colors">CN</a>
+                            <span>/</span>
+                            <a href="index-en.html" class="text-white hover:text-primary transition-colors">EN</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,10 +75,29 @@
                 <a href="#contact"
                     class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">Contact</a>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-white">
-                <i data-lucide="menu"></i>
-            </button>
+            <!-- Mobile: Contact button + Menu button -->
+            <div class="flex md:hidden items-center gap-3">
+                <a href="#contact"
+                    class="px-4 py-2 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all">Contact</a>
+                <button type="button" id="mobile-menu-btn" class="p-2 text-white"
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile vertical menu: near-opaque with blurred background glass effect -->
+        <div id="mobile-menu-backdrop" class="fixed inset-0 top-16 z-30 bg-black/60 hidden md:hidden" aria-hidden="true"></div>
+        <div id="mobile-menu" class="fixed top-16 left-0 right-0 bottom-0 z-40 flex flex-col gap-2 py-6 px-6 bg-[#000212]/30 backdrop-blur-xl hidden md:!hidden" role="dialog" aria-label="Navigation menu">
+            <a href="#about" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">About</a>
+            <a href="#experience" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">Experience</a>
+            <a href="#portfolio" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">Portfolio</a>
+            <a href="#skills" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">Skills</a>
+            <div class="mt-auto pt-6 border-t border-slate-800 flex items-center gap-2 text-[10px] font-black text-slate-500">
+                <span class="uppercase tracking-widest text-slate-600">Language</span>
+                <a href="index.html" class="hover:text-white transition-colors">CN</a>
+                <span>/</span>
+                <a href="index-en.html" class="text-white hover:text-primary transition-colors">EN</a>
+            </div>
         </div>
     </nav>
 
@@ -86,6 +109,15 @@
 
                     <!-- Left Content -->
                     <div class="lg:col-span-9 reveal">
+                        <div class="flex flex-col md:flex-row md:flex-wrap lg:block gap-8 lg:gap-0">
+                            <!-- Portrait for mobile/tablet: below subtitle on small screen; width adaptive (min 120px), max 200px when &lt;1024px; centered only when &lt;480px, 24px gap below when centered -->
+                            <div class="order-2 md:order-2 lg:hidden flex justify-center md:justify-end shrink-0 w-full min-w-[120px] max-w-[200px] md:w-[200px] max-[480px]:mx-auto max-[480px]:mb-6">
+                                <div class="relative flex items-center justify-center w-full min-w-[120px]">
+                                    <img src="images/avatar.png" class="w-full h-auto object-contain scale-110 min-w-[120px] max-w-[200px]" alt="Shi Zheng">
+                                </div>
+                            </div>
+                            <!-- Title + subtitle block -->
+                            <div class="order-1 md:order-1 lg:min-w-0 md:flex-1 min-w-0">
                         <!-- 3 Key Points -->
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
@@ -110,9 +142,10 @@
                             logic in fast-paced environments, building standardized product systems, and closing the
                             value loop from business needs to final delivery.
                         </div>
+                            </div>
 
                         <!-- Horizontal Metrics -->
-                        <div class="flex flex-wrap gap-12 mt-12 pt-12 border-t border-slate-800/50">
+                        <div class="order-3 w-full flex flex-wrap gap-12 mt-12 pt-12 border-t border-slate-800/50 lg:mt-12 lg:pt-12">
                             <!-- Web3 Metrics -->
                             <div class="space-y-2">
                                 <div
@@ -137,14 +170,14 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
 
-                    <!-- Right Column: Photo -->
-                    <div class="lg:col-span-3 reveal-delay-1">
-                        <div class="relative mx-auto max-w-[400px]">
+                    <!-- Right Column: Photo (visible only at lg+) -->
+                    <div class="hidden lg:block lg:col-span-3 reveal-delay-1">
+                        <div class="relative mx-auto min-w-[120px] max-w-[280px]">
                             <div class="relative flex items-center justify-center">
-                                <img src="images/avatar.png" class="w-full h-auto object-contain scale-110"
-                                    alt="Shi Zheng">
+                                <img src="images/avatar.png" class="w-full h-auto object-contain scale-110 min-w-[120px] max-w-[280px]" alt="Shi Zheng">
                             </div>
                         </div>
                     </div>
@@ -199,9 +232,9 @@
                                             Copy Trading Platform
                                         </h4>
                                         <a href="portfolio-copy-trading-en.html" target="_blank"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">Case
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">Case
                                             Study
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5 mb-4">
                                         <li
@@ -248,9 +281,9 @@
                                             TraderScan Data Analytics
                                         </h4>
                                         <a href="portfolio-traderscan-en.html" target="_blank"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">Case
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">Case
                                             Study
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5 mb-4">
                                         <li
@@ -347,9 +380,9 @@
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
                                             eSCM Cloud Supply Chain (0-1)
                                         </h4>
-                                        <a href="#portfolio"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">Portfolio
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                        <a href="portfolio-escm.html" target="_blank"
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">Case Study
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5">
                                         <li
@@ -393,10 +426,9 @@
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
                                             Platform Construction & Team Mgmt
                                         </h4>
-                                        <a href="portfolio-traderscan-en.html" target="_blank"
-                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary transition-colors">Case
-                                            Study
-                                            <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                                        <a href="#portfolio"
+                                            class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">Components
+                                            <i data-lucide="arrow-right" class="w-3 h-3 group-hover/card:translate-x-1 transition-transform"></i></a>
                                     </div>
                                     <ul class="space-y-5">
                                         <li
@@ -525,20 +557,23 @@
                         </div>
                     </a>
 
-                    <!-- Item 3: Placeholder -->
-                    <div
-                        class="glass-card !p-6 group flex flex-col justify-between opacity-50 grayscale cursor-not-allowed">
+                    <!-- Item 3: e-SCM -->
+                    <a href="portfolio-escm.html" target="_blank"
+                        class="glass-card !p-6 group flex flex-col justify-between">
                         <div>
-                            <div
-                                class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/30 flex items-center justify-center border-b border-dashed border-slate-700">
-                                <i data-lucide="plus" class="w-10 h-10 text-slate-700"></i>
+                            <div class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/50">
+                                <img src="images/thumbnails-escm.png" alt="e-SCM Cloud Supply Chain"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
                             </div>
                             <div class="flex justify-between items-center">
-                                <h4 class="text-xl font-bold text-slate-600">Coming Soon...</h4>
-                                <i data-lucide="lock" class="w-5 h-5 text-slate-700"></i>
+                                <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                    e-SCM Cloud Supply Chain (0-1)
+                                </h4>
+                                <i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Item 4: Placeholder -->
                     <div
@@ -587,6 +622,8 @@
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Supply
                                 Chain</span>
                             <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Complex System Architecture</span>
+                            <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">RBAC/Permissions</span>
                         </div>
                     </div>
@@ -598,11 +635,13 @@
                         </div>
                         <div class="flex flex-wrap gap-3">
                             <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">UI/UX</span>
+                            <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Notion</span>
                             <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Figma</span>
                             <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Antigravity</span>
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Cursor</span>
                             <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Gemini</span>
                             <span
@@ -631,6 +670,8 @@
                             <span
                                 class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Rapid
                                 Learning</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Ownership</span>
                         </div>
                     </div>
                 </div>
@@ -828,6 +869,7 @@ float snoise(vec2 v) {
     return 130.0 * dot(m, g);
 }
 
+/* WebGL1: use plain function instead of macro */
 vec3 colorRamp(vec3 c0, vec3 c1, vec3 c2, float x) {
     float t = clamp(x, 0.0, 1.0);
     if (t < 0.5) return mix(c0, c1, t * 2.0);
@@ -844,65 +886,87 @@ void main() {
     float intensity = 0.6 * height;
 
     float midPoint = 0.20;
-    float auroraAlpha =触发 smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
+    float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
 
     vec3 auroraColor = intensity * rampColor;
     gl_FragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
 }`;
 
-                function createShader(gl, type, source) {
-                    const shader = gl.createShader(type);
-                    gl.shaderSource(shader, source);
-                    gl.compileShader(shader);
-                    return shader;
+                function compile(type, src) {
+                    const s = gl.createShader(type);
+                    gl.shaderSource(s, src);
+                    gl.compileShader(s);
+                    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+                        console.error('Shader error:', gl.getShaderInfoLog(s));
+                        return null;
+                    }
+                    return s;
                 }
+                const vert = compile(gl.VERTEX_SHADER, vertSrc);
+                const frag = compile(gl.FRAGMENT_SHADER, fragSrc);
+                if (!vert || !frag) return;
 
-                const program = gl.createProgram();
-                gl.attachShader(program, createShader(gl, gl.VERTEX_SHADER, vertSrc));
-                gl.attachShader(program, createShader(gl, gl.FRAGMENT_SHADER, fragSrc));
-                gl.linkProgram(program);
-                gl.useProgram(program);
+                const prog = gl.createProgram();
+                gl.attachShader(prog, vert);
+                gl.attachShader(prog, frag);
+                gl.linkProgram(prog);
+                if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+                    console.error('Link error:', gl.getProgramInfoLog(prog));
+                    return;
+                }
+                gl.useProgram(prog);
 
-                const vertices = new Float32Array([-1, -1, 3, -1, -1, 3]);
-                const buffer = gl.createBuffer();
-                gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-                gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
-
-                const posLoc = gl.getAttribLocation(program, 'position');
+                const buf = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+                const posLoc = gl.getAttribLocation(prog, 'position');
                 gl.enableVertexAttribArray(posLoc);
                 gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
 
-                const uTime = gl.getUniformLocation(program, 'uTime');
-                const uAmplitude = gl.getUniformLocation(program, 'uAmplitude');
-                const uColorStops = gl.getUniformLocation(program, 'uColorStops');
-                const uResolution = gl.getUniformLocation(program, 'uResolution');
-                const uBlend = gl.getUniformLocation(program, 'uBlend');
+                gl.clearColor(0, 0, 0, 0);
+                gl.enable(gl.BLEND);
+                gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
 
-                const colors = [
-                    0.176, 0.576, 0.121, // #2d931f
-                    0.337, 0.373, 0.643, // #565fa4
-                    0.078, 0.533, 0.6    // #148899
-                ];
+                function hexToRgb(hex) {
+                    const r = parseInt(hex.slice(1, 3), 16) / 255;
+                    const g = parseInt(hex.slice(3, 5), 16) / 255;
+                    const b = parseInt(hex.slice(5, 7), 16) / 255;
+                    return [r, g, b];
+                }
+
+                const colorStops = ['#2d931f', '#565fa4', '#148899'];
+                const flatColors = colorStops.flatMap(hexToRgb);
+
+                const uTime = gl.getUniformLocation(prog, 'uTime');
+                const uAmplitude = gl.getUniformLocation(prog, 'uAmplitude');
+                const uColorStops = gl.getUniformLocation(prog, 'uColorStops');
+                const uResolution = gl.getUniformLocation(prog, 'uResolution');
+                const uBlend = gl.getUniformLocation(prog, 'uBlend');
+
+                gl.uniform1f(uAmplitude, 1.0);
+                gl.uniform1f(uBlend, 0.5);
+                gl.uniform3fv(uColorStops, flatColors);
 
                 function resize() {
-                    canvas.width = container.offsetWidth;
-                    canvas.height = container.offsetHeight;
-                    gl.viewport(0, 0, canvas.width, canvas.height);
+                    const w = container.clientWidth;
+                    const h = container.clientHeight;
+                    canvas.width = w;
+                    canvas.height = h;
+                    gl.viewport(0, 0, w, h);
+                    gl.uniform2f(uResolution, w, h);
                 }
                 window.addEventListener('resize', resize);
                 resize();
 
-                function render(time) {
+                const speed = 1.0;
+                function render(ms) {
                     gl.clear(gl.COLOR_BUFFER_BIT);
-                    gl.uniform1f(uTime, time * 0.001);
-                    gl.uniform1f(uAmplitude, 1.0);
-                    gl.uniform3fv(uColorStops, colors);
-                    gl.uniform2f(uResolution, canvas.width, canvas.height);
-                    gl.uniform1f(uBlend, 0.5);
+                    gl.uniform1f(uTime, ms * 0.001 * speed * 1.0);
                     gl.drawArrays(gl.TRIANGLES, 0, 3);
                     requestAnimationFrame(render);
                 }
                 requestAnimationFrame(render);
+
             })();
     </script>
 </body>

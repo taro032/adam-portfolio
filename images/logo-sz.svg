@@ -1,0 +1,43 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C838" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="zGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="120" height="120" rx="28" fill="#000212" />
+  <rect width="118" height="118" x="1" y="1" rx="27" fill="none" stroke="#00C838" stroke-opacity="0.15" stroke-width="1.5" />
+
+  <g transform="translate(60,60)">
+    <!-- Tech background motif -->
+    <g opacity="0.3">
+      <path d="M-36 -36 L-20 -20 M36 36 L20 20 M-36 36 L-20 20 M36 -36 L20 -20" stroke="#00C838" stroke-width="1" stroke-dasharray="2 3" />
+      <circle cx="-36" cy="-36" r="1.5" fill="#00C838" />
+      <circle cx="36" cy="36" r="1.5" fill="#00C838" />
+      <circle cx="-36" cy="36" r="1.5" fill="#00C838" />
+      <circle cx="36" cy="-36" r="1.5" fill="#00C838" />
+      <rect x="-36" y="-36" width="72" height="72" fill="none" stroke="#00C838" stroke-width="0.5" opacity="0.2" rx="4" />
+    </g>
+
+    <!-- Z shape -->
+    <path d="M 2 0 L 26 0 L 2 24 L 26 24" 
+          fill="none" stroke="url(#zGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="2" cy="0" r="4" fill="#ffffff" filter="url(#glow)" />
+    <circle cx="26" cy="24" r="4" fill="#94a3b8" />
+
+    <!-- S shape -->
+    <path d="M 0 -28 L -20 -28 A 8 8 0 0 0 -28 -20 A 8 8 0 0 0 -20 -12 L -8 -12 A 8 8 0 0 1 0 -4 A 8 8 0 0 1 -8 4 L -28 4" 
+          fill="none" stroke="url(#sGrad)" stroke-width="8" stroke-linecap="round" />
+    <circle cx="0" cy="-28" r="4" fill="#00C838" filter="url(#glow)" />
+    <circle cx="-28" cy="4" r="4" fill="#10b981" />
+  </g>
+</svg>

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TraderScan | 作品集-TraderScan</title>
+    <!-- 标签页图标 -->
+    <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -173,10 +175,32 @@
                     </div>
                 </div>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-white">
-                <i data-lucide="menu"></i>
-            </button>
+            <!-- 移动端：联系我 + 菜单按钮 -->
+            <div class="flex md:hidden items-center gap-3">
+                <div class="contact-wrapper">
+                    <a href="javascript:void(0)"
+                        class="px-4 py-2 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all">联系我</a>
+                    <div class="contact-popup">
+                        <div class="contact-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">taro032@live.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Phone / Wechat</div>
+                            <div class="contact-value">17612001458</div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="mobile-menu-btn" class="p-2 text-white hover:text-primary transition-colors"
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="打开菜单">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-backdrop" class="fixed inset-0 top-16 z-30 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
+        <div id="mobile-menu" class="fixed top-16 left-0 right-0 bottom-0 z-40 flex flex-col gap-2 py-6 px-6 bg-[#000212]/30 backdrop-blur-xl hidden md:!hidden" role="dialog" aria-label="导航菜单">
+            <a href="#overview" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">概述</a>
+            <a href="#features" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">核心功能</a>
         </div>
     </nav>
 
@@ -460,6 +484,19 @@
                 navbar.classList.add('bg-[#000212]/80');
             }
         });
+
+        // Mobile menu toggle
+        (function () {
+            const btn = document.getElementById('mobile-menu-btn');
+            const panel = document.getElementById('mobile-menu');
+            const backdrop = document.getElementById('mobile-menu-backdrop');
+            if (!btn || !panel || !backdrop) return;
+            const openMenu = () => { panel.classList.remove('hidden'); backdrop.classList.remove('hidden'); btn.setAttribute('aria-expanded', 'true'); document.body.classList.add('overflow-hidden'); };
+            const closeMenu = () => { panel.classList.add('hidden'); backdrop.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); document.body.classList.remove('overflow-hidden'); };
+            btn.addEventListener('click', () => (panel.classList.contains('hidden') ? openMenu() : closeMenu()));
+            backdrop.addEventListener('click', closeMenu);
+            document.querySelectorAll('.mobile-menu-link').forEach((link) => { link.addEventListener('click', (e) => { e.preventDefault(); closeMenu(); const id = link.getAttribute('href').slice(1); const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
+        })();
     </script>
 </body>
 

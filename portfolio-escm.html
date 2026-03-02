@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-SCM云供应链 | Portfolio - Shi Zheng</title>
+    <!-- 标签页图标 -->
+    <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
     <meta name="description" content="e-SCM 云供应链——时尚行业供应链环节的高效协同系统，作品集展示">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +34,7 @@
                     <span class="breadcrumb-page">e-SCM 云供应链</span>
                 </div>
             </div>
-            <!-- 右侧导航链接 -->
+            <!-- 右侧导航链接（桌面端） -->
             <div class="escm-nav-links">
                 <a href="#overview" class="escm-nav-link">项目概述</a>
                 <a href="#custom-workflow" class="escm-nav-link">自定义能力</a>
@@ -52,6 +54,32 @@
                     </div>
                 </div>
             </div>
+            <!-- 移动端：联系我 + 菜单按钮 -->
+            <div class="escm-nav-mobile">
+                <div class="contact-wrapper">
+                    <a href="javascript:void(0)" class="escm-nav-cta escm-nav-cta-mobile">联系我</a>
+                    <div class="contact-popup">
+                        <div class="contact-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">taro032@live.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Phone / Wechat</div>
+                            <div class="contact-value">17612001458</div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="escm-mobile-menu-btn" class="escm-menu-btn" aria-expanded="false" aria-controls="escm-mobile-menu" aria-label="打开菜单">
+                    <svg class="escm-menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+        <div id="escm-mobile-menu-backdrop" class="escm-mobile-menu-backdrop" aria-hidden="true"></div>
+        <div id="escm-mobile-menu" class="escm-mobile-menu" role="dialog" aria-label="导航菜单">
+            <a href="#overview" class="escm-mobile-menu-link">项目概述</a>
+            <a href="#custom-workflow" class="escm-mobile-menu-link">自定义能力</a>
+            <a href="#collaboration" class="escm-mobile-menu-link">业务协同</a>
+            <a href="#rbac" class="escm-mobile-menu-link">权限体系</a>
         </div>
     </nav>
 
@@ -69,10 +97,9 @@
                 <p class="escm-desc-main" data-node-id="47385:7947">时尚行业供应链环节的高效协同系统</p>
             </div>
 
-            <!-- [image 73] 图片占位 (w:787 h:206) -->
-            <div class="escm-image-placeholder placeholder-feature" data-name="image 73" data-node-id="47385:8018"
-                style="aspect-ratio: 787 / 206; max-width: 787px;">
-                <span class="placeholder-text">待切图 · 全链路概览插图 (787 × 206)</span>
+            <!-- 全链路概览插图 -->
+            <div class="escm-image-placeholder placeholder-feature" data-name="image 73" data-node-id="47385:8018">
+                <img src="images/escm/diagram-main_product.png" alt="全链路概览插图">
             </div>
 
         </section>
@@ -83,7 +110,7 @@
             <!-- Dashboard 区块 -->
             <div class="escm-dashboard-card" data-name="dashboard" data-node-id="47385:8024">
                 <div class="escm-image-placeholder placeholder-dashboard" data-name="dashboard"
-                    data-node-id="47385:8020" style="aspect-ratio: 1056 / 519;">
+                    data-node-id="47385:8020">
                     <img src="images/escm/dashboard-end_to_end.png" alt="全链路看板截图">
                 </div>
                 <!-- 描述行 — Figma: 纯文本居中, 16px -->
@@ -139,8 +166,8 @@
             </div>
 
             <div class="escm-image-placeholder placeholder-workflows" data-name="diagram-diy_workflows"
-                data-node-id="47385:8238" style="aspect-ratio: 1133 / 1085;">
-                <img src="images/escm/diagram-diy_workflows.svg" alt="自定义工作流示意图">
+                data-node-id="47385:8238">
+                <img src="images/escm/diagram-diy_workflows.png" alt="自定义工作流示意图">
             </div>
 
         </section>
@@ -152,105 +179,10 @@
                 <h2 class="escm-title-secondary" data-node-id="47385:8314">打通孤岛的多板块业务协作平台</h2>
             </div>
 
-            <!-- 业务协作大框 (纯 CSS 精确还原设计稿) -->
-            <div class="escm-collaboration-frame" data-node-id="47385:8452">
-
-                <!-- 左侧: 业务模块 -->
-                <div class="collaboration-left" data-node-id="47386:8473">
-                    <div class="collab-header">业务模块</div>
-
-                    <div class="collab-body" data-node-id="47385:8357">
-
-                        <!-- 第一行：主链路，4 个模块横向连接 -->
-                        <div class="collab-row collab-row-main">
-                            <div class="module-item blue-module">商品企划MD</div>
-                            <div class="module-arrow-h">
-                                <svg width="28" height="16" viewBox="0 0 28 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 8H24M24 8L18 3M24 8L18 13" stroke="#0687ef" stroke-width="1.6"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div class="module-item blue-module">样板设计PLM</div>
-                            <div class="module-arrow-h">
-                                <svg width="28" height="16" viewBox="0 0 28 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 8H24M24 8L18 3M24 8L18 13" stroke="#0687ef" stroke-width="1.6"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div class="module-item blue-module collab-anchor" id="node-po">订单管理PO</div>
-                            <div class="module-arrow-h">
-                                <svg width="28" height="16" viewBox="0 0 28 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 8H24M24 8L18 3M24 8L18 13" stroke="#0687ef" stroke-width="1.6"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div class="module-item blue-module collab-anchor" id="node-mes">生产管理MES</div>
-                        </div>
-
-                        <!-- 第二行：PO 分叉向下到 PMC 和 成衣库存，中间"业务结算"标签 -->
-                        <!--
-                            设计稿逻辑：
-                            - 订单管理PO 向下分叉出两条箭头：→ 物料管理PMC，→ 成衣库存管理
-                            - 生产管理MES 向下也有箭头到 成衣库存管理
-                            - "业务结算" 文字在分叉区域中央，带下方大箭头指向 财务中心
-                        -->
-                        <div class="collab-row collab-row-mid">
-                            <!-- 左侧：PO 正下方 = 物料管理PMC -->
-                            <div class="collab-mid-left">
-                                <!-- 从PO向左下到PMC的竖线 -->
-                                <div class="arrow-v-wrapper">
-                                    <div class="arrow-v-line"></div>
-                                    <div class="arrow-v-head">&#9660;</div>
-                                </div>
-                                <div class="module-item blue-module">物料管理PMC</div>
-                            </div>
-
-                            <!-- 中心：业务结算 + 下箭头 -->
-                            <div class="collab-mid-center">
-                                <div class="biz-settlement-label">业务结算</div>
-                                <div class="arrow-v-wrapper">
-                                    <div class="arrow-v-line"></div>
-                                    <div class="arrow-v-head arrow-v-head-orange">&#9660;</div>
-                                </div>
-                            </div>
-
-                            <!-- 右侧：MES 正下方 = 成衣库存管理 -->
-                            <div class="collab-mid-right">
-                                <!-- 从MES向右下到成衣库存的竖线 -->
-                                <div class="arrow-v-wrapper">
-                                    <div class="arrow-v-line"></div>
-                                    <div class="arrow-v-head">&#9660;</div>
-                                </div>
-                                <div class="module-item blue-module">成衣库存管理</div>
-                            </div>
-                        </div>
-
-                        <!-- 第三行：财务中心（全宽） -->
-                        <div class="collab-row collab-row-finance">
-                            <div class="module-item finance-center">财务中心</div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- 竖向分割线 -->
-                <div class="collab-divider"></div>
-
-                <!-- 右侧: 应用模块 -->
-                <div class="collaboration-right">
-                    <div class="collab-header">应用模块</div>
-                    <div class="collab-body app-modules">
-                        <div class="module-item app-item">移动审核台</div>
-                        <div class="module-item app-item">报表</div>
-                        <div class="module-item app-item">API对接平台</div>
-                        <div class="module-item app-item ellipsis-item">……</div>
-                    </div>
-                </div>
-
-            </div><!-- /.escm-collaboration-frame -->
+            <!-- 多板块业务协作示意图：切图 module_architecture.svg (1001×385) -->
+            <div class="escm-image-placeholder placeholder-collab" data-node-id="47385:8452">
+                <img src="images/escm/module_architecture.svg" alt="多板块业务协作示意图" width="1001" height="385">
+            </div>
 
         </section>
 
@@ -261,16 +193,14 @@
                 <h2 class="escm-title-secondary" data-node-id="47386:8490">RBAC权限体系</h2>
             </div>
 
-            <!-- [image 84] 图片占位 (w:1000 h:456) -->
-            <div class="escm-image-placeholder placeholder-rbac" data-name="image 84" data-node-id="47388:8540"
-                style="aspect-ratio: 1000 / 456; max-width: 1000px;">
-                <span class="placeholder-text">待切图 · RBAC 权限模型结构图 (1000 × 456)</span>
+            <!-- RBAC 权限模型结构图 -->
+            <div class="escm-image-placeholder placeholder-rbac" data-name="image 84" data-node-id="47388:8540">
+                <img src="images/escm/diagram-RBAC_system.png" alt="RBAC 权限模型结构图">
             </div>
 
-            <!-- [image 85] 图片占位 (w:1000 h:485) -->
-            <div class="escm-image-placeholder placeholder-rbac" data-name="image 85" data-node-id="47388:8543"
-                style="aspect-ratio: 1000 / 485; max-width: 1000px;">
-                <span class="placeholder-text">待切图 · 权限配置界面截图 (1000 × 485)</span>
+            <!-- 权限配置界面截图 -->
+            <div class="escm-image-placeholder placeholder-rbac" data-name="image 85" data-node-id="47388:8543">
+                <img src="images/escm/RBAC-images.png" alt="权限配置界面截图">
             </div>
 
         </section>
@@ -490,6 +420,39 @@
                 rafId = requestAnimationFrame(frame);
             }
             rafId = requestAnimationFrame(frame);
+        })();
+    </script>
+    <script>
+        (function () {
+            var btn = document.getElementById('escm-mobile-menu-btn');
+            var panel = document.getElementById('escm-mobile-menu');
+            var backdrop = document.getElementById('escm-mobile-menu-backdrop');
+            if (!btn || !panel || !backdrop) return;
+            function openMenu() {
+                panel.classList.add('is-open');
+                backdrop.classList.add('is-open');
+                btn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                panel.classList.remove('is-open');
+                backdrop.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+            btn.addEventListener('click', function () {
+                if (panel.classList.contains('is-open')) closeMenu(); else openMenu();
+            });
+            backdrop.addEventListener('click', closeMenu);
+            [].forEach.call(panel.querySelectorAll('.escm-mobile-menu-link'), function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    closeMenu();
+                    var id = link.getAttribute('href').slice(1);
+                    var el = document.getElementById(id);
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
         })();
     </script>
 
