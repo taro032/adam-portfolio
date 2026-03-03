@@ -1,0 +1,792 @@
+/* ===================================================================
+   portfolio-interaction_system.css
+   适用于「原子化组件交互规范系统」作品页面
+   依赖 portfolio-escm.css 中的 Navbar / Footer / Layout 基础样式
+   =================================================================== */
+
+/* ------------------------------------------------------------------
+   1. DotGrid Background
+   ------------------------------------------------------------------ */
+.dot-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1000px;
+    pointer-events: auto;
+    z-index: 0;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+}
+
+.dot-grid-bg canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------------------------------------------------------
+   1b. Hero Section
+   ------------------------------------------------------------------ */
+.is-hero-section {
+    padding-top: calc(var(--escm-navbar-h) + 80px);
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    opacity: 0;
+    transform: translateY(28px);
+    animation: escm-fade-in 0.65s cubic-bezier(0.4, 0, 0.2, 1) 0.05s forwards;
+}
+
+.is-hero-section > *:not(.dot-grid-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+.is-hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.is-hero-title {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 72px;
+    color: var(--escm-text-main);
+    text-align: center;
+    margin: 0;
+}
+
+.is-hero-title .highlight {
+    color: var(--escm-primary);
+}
+
+.is-hero-subtitle {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--escm-text-muted);
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.is-value-tags {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.is-value-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 9px 17px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.is-value-tag-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.is-value-tag-text {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #0f172a;
+    white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------
+   2. Main Content (左右双栏)
+   ------------------------------------------------------------------ */
+.is-main-content {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    width: 100%;
+    min-height: 575px;
+    opacity: 0;
+    transform: translateY(28px);
+    animation: escm-fade-in 0.65s cubic-bezier(0.4, 0, 0.2, 1) 0.15s forwards;
+}
+
+/* ------------------------------------------------------------------
+   3. Methodology Timeline (左侧)
+   ------------------------------------------------------------------ */
+.is-methodology-timeline {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.is-heading-3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.is-heading-3-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.is-heading-3-text {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--escm-text-main);
+}
+
+.is-methodology-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 单个层级条目（卡片式）--- */
+.is-methodology-item {
+    display: flex;
+    flex-direction: column;
+    padding-left: 32px;
+    padding-bottom: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.is-methodology-item:last-child {
+    padding-bottom: 0;
+}
+
+/* 时间线竖线 */
+.is-methodology-item::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e5e7eb;
+}
+
+.is-methodology-item:first-child::before {
+    top: 26px;
+}
+
+.is-methodology-item:last-child::before {
+    bottom: auto;
+    height: 100%;
+}
+
+/* 节点圆圈 */
+.is-methodology-node {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 9999px;
+    background: #fff;
+    border: 1.5px solid #9a9aaf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5px;
+    z-index: 1;
+    transition: border-color 0.25s ease;
+}
+
+.is-methodology-item.is-active .is-methodology-node,
+.is-methodology-item:hover .is-methodology-node {
+    border-color: var(--escm-primary);
+}
+
+.is-methodology-node-icon {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+}
+
+/* 卡片容器 */
+.is-methodology-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 13.5px 17.5px;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(230, 247, 255, 0.16);
+    border: 1.5px solid #e5e6e9;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.is-methodology-item.is-active .is-methodology-card,
+.is-methodology-item:hover .is-methodology-card {
+    background: rgba(230, 247, 255, 0.6);
+    border-color: rgba(6, 135, 239, 0.6);
+}
+
+.is-methodology-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.is-methodology-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.is-methodology-title {
+    flex: 1;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--escm-text-main);
+    transition: color 0.25s ease;
+}
+
+.is-methodology-title-en {
+    flex: 1;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--escm-primary);
+    opacity: 0.3;
+    text-align: right;
+    transition: opacity 0.25s ease;
+}
+
+.is-methodology-item.is-active .is-methodology-title-en,
+.is-methodology-item:hover .is-methodology-title-en {
+    opacity: 0.6;
+}
+
+.is-methodology-desc {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    color: var(--escm-text-muted);
+}
+
+/* illustration 容器（卡片内固定高度）*/
+.is-methodology-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+    border-radius: 8px;
+    background: #f9fafb;
+    border: 1px solid #f2f3f7;
+    gap: 8px;
+}
+
+.is-methodology-illustration.is-illust-fixed-h {
+    height: 64px;
+    padding: 9px 17px;
+}
+
+/* ------------------------------------------------------------------
+   3a. 激活 / Hover 状态（标题）
+   ------------------------------------------------------------------ */
+.is-methodology-item.is-active .is-methodology-title,
+.is-methodology-item:hover .is-methodology-title {
+    color: var(--escm-primary);
+}
+
+/* ------------------------------------------------------------------
+   3b. Illustration 小插画
+   ------------------------------------------------------------------ */
+
+/* -- Atoms (卡片内两行布局) -- */
+.is-illust-atoms-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.is-illust-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex: 1;
+    min-height: 0;
+}
+
+.is-illust-atoms .is-illust-row .is-illust-dropdown,
+.is-illust-atoms .is-illust-row .is-illust-btn {
+    flex: 1;
+    min-width: 0;
+}
+
+.is-illust-atoms .is-illust-row .is-illust-dropdown-item {
+    flex: 1;
+    min-width: 0;
+}
+
+.is-illust-btn {
+    flex: 1;
+    height: 24px;
+    background: var(--escm-primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-illust-btn-inner {
+    width: 19px;
+    height: 4px;
+    background: #fff;
+    opacity: 0.4;
+    border-radius: 10px;
+}
+
+.is-illust-dropdown {
+    flex: 1;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #e5e6e9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.is-illust-dropdown-bar {
+    flex: 1;
+    height: 4px;
+    background: #f2f3f7;
+    border-radius: 10px;
+}
+
+.is-illust-dropdown-arrow {
+    width: 6px;
+    height: 4px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.is-illust-dropdown-item {
+    flex: 1;
+    height: 24px;
+    background: #e6f7ff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px 0 8px;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.is-illust-checkbox {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.is-illust-text-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(6, 135, 239, 0.6);
+    opacity: 0.4;
+    border-radius: 10px;
+}
+
+/* -- Molecules (卡片内单表格) -- */
+.is-illust-molecules.is-illust-fixed-h .is-illust-table {
+    width: 100%;
+    height: 100%;
+}
+
+.is-illust-table {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #f2f3f7;
+    border-radius: 2px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.is-illust-table-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+}
+
+.is-illust-table-checkbox {
+    width: 8px;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.is-illust-table-bar {
+    flex: 1;
+    height: 4px;
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.is-illust-table-bar-fixed {
+    width: 48px;
+    height: 4px;
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+/* -- Organisms (卡片内多表+分隔) -- */
+.is-illust-organisms-inner {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 13px;
+}
+
+.is-illust-organisms-inner .is-illust-table-simple {
+    flex: 1;
+    min-width: 0;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.is-illust-separator {
+    width: 10px;
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.is-illust-table-simple {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #f2f3f7;
+    border-radius: 2px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+/* -- Templates (卡片内侧栏+内容) -- */
+.is-illust-templates-inner {
+    display: flex;
+    gap: 4px;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    padding: 0 13px;
+}
+
+.is-illust-templates-inner .is-illust-sidebar {
+    align-self: stretch;
+}
+
+.is-illust-templates-inner .is-illust-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.is-illust-templates-inner .is-illust-header-bar {
+    flex-shrink: 0;
+}
+
+.is-illust-templates-inner .is-illust-content-table {
+    flex: 1;
+    min-height: 0;
+}
+
+.is-illust-sidebar {
+    width: 20px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    align-self: stretch;
+}
+
+.is-illust-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.is-illust-header-bar {
+    height: 16px;
+    background: #fff;
+    border: 1px solid #f2f3f7;
+    border-radius: 2px;
+}
+
+.is-illust-content-table {
+    background: #fff;
+    border: 1px solid #f2f3f7;
+    border-radius: 2px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.is-illust-content-bar {
+    width: 100%;
+    height: 4px;
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+/* ------------------------------------------------------------------
+   4. Canvas (右侧)
+   ------------------------------------------------------------------ */
+.is-canvas-card {
+    flex: 1;
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.is-canvas-header {
+    height: 48px;
+    background: rgba(230, 247, 255, 0.6);
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.is-canvas-header-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.is-canvas-header-text {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0f172a;
+}
+
+.is-canvas-body {
+    flex: 1;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    position: relative;
+    min-height: 500px;
+}
+
+.is-canvas-placeholder {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--escm-text-muted);
+}
+
+.is-canvas-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    inset: 0;
+}
+
+/* canvas 内容面板：默认隐藏, 激活时显示 */
+.is-canvas-panel {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-canvas-panel.is-active {
+    display: flex;
+}
+
+/* ------------------------------------------------------------------
+   5. Stats Footer
+   ------------------------------------------------------------------ */
+.is-stats-section {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(28px);
+    animation: escm-fade-in 0.65s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards;
+}
+
+.is-stat-card {
+    flex: 1;
+    background: #f2f3f7;
+    border-radius: 8px;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    min-height: 99px;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.is-stat-card:hover {
+    box-shadow: var(--escm-shadow-hover);
+    transform: translateY(-4px);
+    outline: 1px valid rgb(11, 112, 194);
+}
+
+.is-stat-label {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--escm-text-muted);
+}
+
+.is-stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--escm-primary);
+}
+
+/* ------------------------------------------------------------------
+   6. Section 间距 (对应 Figma: gap 120px between sections)
+   ------------------------------------------------------------------ */
+.is-sections-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+/* ------------------------------------------------------------------
+   7. 响应式
+   ------------------------------------------------------------------ */
+@media (max-width: 1100px) {
+    .is-hero-title {
+        font-size: 44px;
+        line-height: 56px;
+    }
+}
+
+@media (max-width: 800px) {
+    .is-hero-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .is-hero-subtitle {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .is-value-tags {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Main Content: 竖向堆叠 (方案A) */
+    .is-main-content {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .is-methodology-timeline {
+        width: 100%;
+    }
+
+    .is-canvas-card {
+        min-height: 350px;
+    }
+
+    .is-canvas-body {
+        min-height: 300px;
+    }
+
+    /* Stats: 竖向堆叠 */
+    .is-stats-section {
+        flex-direction: column;
+    }
+
+    .is-sections-wrapper {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .is-hero-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .is-hero-subtitle {
+        font-size: 15px;
+    }
+
+    .is-methodology-timeline {
+        width: 100%;
+    }
+}

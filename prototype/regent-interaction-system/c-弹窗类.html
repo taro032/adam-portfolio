@@ -1,0 +1,3050 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>C-弹窗类</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/c-弹窗类/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/c-弹窗类/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u566" class="ax_default _14小标题 transition notrs">
+        <div id="u566_div" class=""></div>
+        <div id="u566_text" class="text ">
+          <p><span>C01 - 基础toast提示弹窗</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u567" class="ax_default _12文本 transition notrs">
+        <div id="u567_div" class=""></div>
+        <div id="u567_text" class="text ">
+          <p><span style="color:#333333;">从中间顶部出现,5s后自动消失;也可手动关闭；</span></p><p><span style="color:#333333;">共有四种提示类型:成功/警告/消息/错误;</span></p><p><span style="color:#353535;">未另作说明的时候默认均按此实现，有改动会在需求方案上另作说明;</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u568" class="ax_default" data-left="20" data-top="544" data-width="1760" data-height="761" layer-opacity="1">
+
+        <!-- Unnamed (Group) -->
+        <div id="u569" class="ax_default" data-left="20" data-top="652" data-width="400" data-height="150" layer-opacity="1">
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u570" class="ax_default box-弹窗底 transition notrs">
+            <div id="u570_div" class=""></div>
+            <div id="u570_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Group) -->
+          <div id="u571" class="ax_default" data-left="30" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+            <!-- Unnamed (Group) -->
+            <div id="u572" class="ax_default" data-left="30" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+              <!-- Unnamed (Ellipse) -->
+              <div id="u573" class="ax_default ellipse transition notrs">
+                <svg data="images/c-弹窗类/u573.svg" id="u573_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u573_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u573_img_cl286">
+      <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -30 -667 )">
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="nonzero" fill="rgba(72, 189, 104, 1)" stroke="none" transform="matrix(1 0 0 1 30 667 )" class="fill" />
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 30 667 )" class="stroke" mask="url(#u573_img_cl286)" />
+  </g>
+                </svg>
+                <div id="u573_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Shape) -->
+              <div id="u574" class="ax_default icon transition notrs">
+                <svg data="images/c-弹窗类/u574.svg" id="u574_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u574_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u574_img_cl287">
+      <path d="M 9.819354838709678 1.1043771043771047  C 9.93978494623656 1.2300785634118965  10.000000000000002 1.382716049382716  10 1.5622895622895623  C 10.000000000000002 1.7418630751964077  9.93978494623656 1.8945005611672272  9.819354838709678 2.02020202020202  L 5.148387096774194 6.895622895622895  L 4.270967741935484 7.811447811447811  C 4.150537634408603 7.937149270482604  4.004301075268818 8  3.8322580645161293 8  C 3.660215053763441 8  3.5139784946236565 7.937149270482604  3.393548387096774 7.811447811447811  L 2.516129032258064 6.895622895622895  L 0.1806451612903226 4.4579124579124585  C 0.06021505376344092 4.332210998877665  0 4.179573512906845  0 4  C 0 3.8204264870931537  0.06021505376344092 3.667789001122334  0.1806451612903226 3.5420875420875424  L 1.0580645161290323 2.6262626262626263  C 1.1784946236559142 2.5005611672278336  1.3247311827956993 2.437710437710437  1.4967741935483871 2.4377104377104377  C 1.6688172043010758 2.437710437710437  1.8150537634408603 2.5005611672278336  1.935483870967742 2.6262626262626263  L 3.8322580645161293 4.6127946127946124  L 8.064516129032258 0.18855218855218858  C 8.18494623655914 0.0628507295173959  8.331182795698926 0  8.503225806451614 0  C 8.675268817204302 0  8.821505376344087 0.0628507295173959  8.941935483870967 0.18855218855218858  L 9.819354838709678 1.1043771043771047  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -35 -673 )">
+    <path d="M 9.819354838709678 1.1043771043771047  C 9.93978494623656 1.2300785634118965  10.000000000000002 1.382716049382716  10 1.5622895622895623  C 10.000000000000002 1.7418630751964077  9.93978494623656 1.8945005611672272  9.819354838709678 2.02020202020202  L 5.148387096774194 6.895622895622895  L 4.270967741935484 7.811447811447811  C 4.150537634408603 7.937149270482604  4.004301075268818 8  3.8322580645161293 8  C 3.660215053763441 8  3.5139784946236565 7.937149270482604  3.393548387096774 7.811447811447811  L 2.516129032258064 6.895622895622895  L 0.1806451612903226 4.4579124579124585  C 0.06021505376344092 4.332210998877665  0 4.179573512906845  0 4  C 0 3.8204264870931537  0.06021505376344092 3.667789001122334  0.1806451612903226 3.5420875420875424  L 1.0580645161290323 2.6262626262626263  C 1.1784946236559142 2.5005611672278336  1.3247311827956993 2.437710437710437  1.4967741935483871 2.4377104377104377  C 1.6688172043010758 2.437710437710437  1.8150537634408603 2.5005611672278336  1.935483870967742 2.6262626262626263  L 3.8322580645161293 4.6127946127946124  L 8.064516129032258 0.18855218855218858  C 8.18494623655914 0.0628507295173959  8.331182795698926 0  8.503225806451614 0  C 8.675268817204302 0  8.821505376344087 0.0628507295173959  8.941935483870967 0.18855218855218858  L 9.819354838709678 1.1043771043771047  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 35 673 )" class="fill" />
+    <path d="M 9.819354838709678 1.1043771043771047  C 9.93978494623656 1.2300785634118965  10.000000000000002 1.382716049382716  10 1.5622895622895623  C 10.000000000000002 1.7418630751964077  9.93978494623656 1.8945005611672272  9.819354838709678 2.02020202020202  L 5.148387096774194 6.895622895622895  L 4.270967741935484 7.811447811447811  C 4.150537634408603 7.937149270482604  4.004301075268818 8  3.8322580645161293 8  C 3.660215053763441 8  3.5139784946236565 7.937149270482604  3.393548387096774 7.811447811447811  L 2.516129032258064 6.895622895622895  L 0.1806451612903226 4.4579124579124585  C 0.06021505376344092 4.332210998877665  0 4.179573512906845  0 4  C 0 3.8204264870931537  0.06021505376344092 3.667789001122334  0.1806451612903226 3.5420875420875424  L 1.0580645161290323 2.6262626262626263  C 1.1784946236559142 2.5005611672278336  1.3247311827956993 2.437710437710437  1.4967741935483871 2.4377104377104377  C 1.6688172043010758 2.437710437710437  1.8150537634408603 2.5005611672278336  1.935483870967742 2.6262626262626263  L 3.8322580645161293 4.6127946127946124  L 8.064516129032258 0.18855218855218858  C 8.18494623655914 0.0628507295173959  8.331182795698926 0  8.503225806451614 0  C 8.675268817204302 0  8.821505376344087 0.0628507295173959  8.941935483870967 0.18855218855218858  L 9.819354838709678 1.1043771043771047  Z " stroke-width="0" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 35 673 )" class="stroke" mask="url(#u574_img_cl287)" />
+  </g>
+                </svg>
+                <div id="u574_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u575" class="ax_default _14小标题 transition notrs">
+            <div id="u575_div" class=""></div>
+            <div id="u575_text" class="text ">
+              <p><span>成功通知</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u576" class="ax_default _12文本 transition notrs">
+            <div id="u576_div" class=""></div>
+            <div id="u576_text" class="text ">
+              <p><span>提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Group) -->
+          <div id="u577" class="ax_default" data-left="393.6360389693209" data-top="670.6360389693209" data-width="12.727922061358129" data-height="12.727922061357958" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u578" class="ax_default box_3 transition notrs">
+              <div id="u578_div" class=""></div>
+              <div id="u578_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u579" class="ax_default box_3 transition notrs">
+              <div id="u579_div" class=""></div>
+              <div id="u579_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u580" class="ax_default btn-__ transition notrs">
+            <div id="u580_div" class=""></div>
+            <div id="u580_text" class="text ">
+              <p><span>我知道了</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u581" class="ax_default _14小标题 transition notrs">
+          <div id="u581_div" class=""></div>
+          <div id="u581_text" class="text ">
+            <p><span>C02 - 基础通知弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u582" class="ax_default _12文本 transition notrs">
+          <div id="u582_div" class=""></div>
+          <div id="u582_text" class="text ">
+            <p><span>从页面中心出现,若出现多条,只展示一条,关掉后在展示下一条,知道没有通知;</span></p><p><span>&nbsp;共有四种提示类型:成功/警告/消息/错误;</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u583" class="ax_default _12文本 transition notrs">
+          <div id="u583_div" class=""></div>
+          <div id="u583_text" class="text ">
+            <p><span>错误提示，当需要提示错误代码时，显示错误提示内容框，内容框代码可一键复制</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (C02-4-错误提示) -->
+        <div id="u584" class="nopointer  ax_default">
+
+          <!-- C02-4 (Group) -->
+          <div id="u585" class="ax_default" data-label="C02-4" data-left="1280" data-top="652" data-width="400" data-height="150" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u586" class="ax_default box-弹窗底 transition notrs">
+              <div id="u586_div" class=""></div>
+              <div id="u586_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u587" class="ax_default" data-left="1290" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+              <!-- Unnamed (Group) -->
+              <div id="u588" class="ax_default" data-left="1290" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+                <!-- Unnamed (Ellipse) -->
+                <div id="u589" class="ax_default ellipse transition notrs">
+                  <svg data="images/c-弹窗类/u589.svg" id="u589_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u589_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u589_img_cl288">
+      <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -10 -15 )">
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="nonzero" fill="rgba(255, 0, 31, 1)" stroke="none" transform="matrix(1 0 0 1 10 15 )" class="fill" />
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 10 15 )" class="stroke" mask="url(#u589_img_cl288)" />
+  </g>
+                  </svg>
+                  <div id="u589_text" class="text ">
+                    <p><span>x</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u590" class="ax_default _14小标题 transition notrs">
+              <div id="u590_div" class=""></div>
+              <div id="u590_text" class="text ">
+                <p><span>错误通知</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u591" class="ax_default _12文本 transition notrs">
+              <div id="u591_div" class=""></div>
+              <div id="u591_text" class="text ">
+                <p><span>提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u592" class="ax_default" data-left="1653.636038969321" data-top="670.636038969321" data-width="12.727922061357958" data-height="12.72792206135793" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u593" class="ax_default box_3 transition notrs">
+                <div id="u593_div" class=""></div>
+                <div id="u593_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u594" class="ax_default box_3 transition notrs">
+                <div id="u594_div" class=""></div>
+                <div id="u594_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u595" class="ax_default btn-__ transition notrs">
+              <div id="u595_div" class=""></div>
+              <div id="u595_text" class="text ">
+                <p><span>确定</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u596" class="ax_default" data-left="1280" data-top="885" data-width="500" data-height="160" layer-opacity="1">
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u597" class="ax_default box-弹窗底 transition notrs">
+            <div id="u597_div" class=""></div>
+            <div id="u597_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Group) -->
+          <div id="u598" class="ax_default" data-left="1290" data-top="900" data-width="20" data-height="20" layer-opacity="1">
+
+            <!-- Unnamed (Group) -->
+            <div id="u599" class="ax_default" data-left="1290" data-top="900" data-width="20" data-height="20" layer-opacity="1">
+
+              <!-- Unnamed (Ellipse) -->
+              <div id="u600" class="ax_default ellipse transition notrs">
+                <svg data="images/c-弹窗类/u589.svg" id="u600_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u600_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u600_img_cl288">
+      <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -10 -15 )">
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="nonzero" fill="rgba(255, 0, 31, 1)" stroke="none" transform="matrix(1 0 0 1 10 15 )" class="fill" />
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 10 15 )" class="stroke" mask="url(#u600_img_cl288)" />
+  </g>
+                </svg>
+                <div id="u600_text" class="text ">
+                  <p><span>x</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u601" class="ax_default _14小标题 transition notrs">
+            <div id="u601_div" class=""></div>
+            <div id="u601_text" class="text ">
+              <p><span>错误通知</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u602" class="ax_default _12文本 transition notrs">
+            <div id="u602_div" class=""></div>
+            <div id="u602_text" class="text ">
+              <p><span>遇到了未知错误（详见错误代码）</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Group) -->
+          <div id="u603" class="ax_default" data-left="1750.636038969321" data-top="903.6360389693209" data-width="12.727922061358186" data-height="12.727922061357958" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u604" class="ax_default box_3 transition notrs">
+              <div id="u604_div" class=""></div>
+              <div id="u604_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u605" class="ax_default box_3 transition notrs">
+              <div id="u605_div" class=""></div>
+              <div id="u605_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u606" class="ax_default btn-__ transition notrs">
+            <div id="u606_div" class=""></div>
+            <div id="u606_text" class="text ">
+              <p><span>关闭</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u607" class="ax_default btn-__1 transition notrs">
+            <div id="u607_div" class=""></div>
+            <div id="u607_text" class="text ">
+              <p><span>详细∨</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u608" class="ax_default btn-__1 transition notrs">
+            <div id="u608_div" class=""></div>
+            <div id="u608_text" class="text ">
+              <p><span>复制错误</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (C02-2 - 消息弹窗) -->
+        <div id="u609" class="nopointer  ax_default">
+
+          <!-- Unnamed (Group) -->
+          <div id="u610" class="ax_default" data-left="440" data-top="652" data-width="400" data-height="150" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u611" class="ax_default box-弹窗底 transition notrs">
+              <div id="u611_div" class=""></div>
+              <div id="u611_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u612" class="ax_default" data-left="450" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+              <!-- Unnamed (Group) -->
+              <div id="u613" class="ax_default" data-left="450" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+                <!-- Unnamed (Ellipse) -->
+                <div id="u614" class="ax_default ellipse transition notrs">
+                  <svg data="images/c-弹窗类/u614.svg" id="u614_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u614_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u614_img_cl289">
+      <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -10 -15 )">
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="nonzero" fill="rgba(0, 152, 255, 1)" stroke="none" transform="matrix(1 0 0 1 10 15 )" class="fill" />
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 10 15 )" class="stroke" mask="url(#u614_img_cl289)" />
+  </g>
+                  </svg>
+                  <div id="u614_text" class="text ">
+                    <p><span>i</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u615" class="ax_default _14小标题 transition notrs">
+              <div id="u615_div" class=""></div>
+              <div id="u615_text" class="text ">
+                <p><span>消息通知</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u616" class="ax_default _12文本 transition notrs">
+              <div id="u616_div" class=""></div>
+              <div id="u616_text" class="text ">
+                <p><span>提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (大x) -->
+            <div id="u617" class="nopointer  ax_default">
+
+              <!-- Unnamed (Group) -->
+              <div id="u618" class="ax_default" data-left="373.6360389693211" data-top="18.63603896932107" data-width="12.727922061357857" data-height="12.727922061357855" layer-opacity="1">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u619" class="ax_default box_3 transition notrs">
+                  <div id="u619_div" class=""></div>
+                  <div id="u619_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u620" class="ax_default box_3 transition notrs">
+                  <div id="u620_div" class=""></div>
+                  <div id="u620_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u621" class="ax_default btn-__ transition notrs">
+              <div id="u621_div" class=""></div>
+              <div id="u621_text" class="text ">
+                <p><span>我知道了</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (C02-3 - 警告弹窗) -->
+        <div id="u622" class="nopointer  ax_default">
+
+          <!-- C02-3 (Group) -->
+          <div id="u623" class="ax_default" data-label="C02-3" data-left="860" data-top="652" data-width="400" data-height="150" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u624" class="ax_default box-弹窗底 transition notrs">
+              <div id="u624_div" class=""></div>
+              <div id="u624_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u625" class="ax_default" data-left="870" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+              <!-- Unnamed (Group) -->
+              <div id="u626" class="ax_default" data-left="870" data-top="667" data-width="20" data-height="20" layer-opacity="1">
+
+                <!-- Unnamed (Ellipse) -->
+                <div id="u627" class="ax_default ellipse transition notrs">
+                  <svg data="images/c-弹窗类/u627.svg" id="u627_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u627_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u627_img_cl290">
+      <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -10 -15 )">
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="nonzero" fill="rgba(254, 173, 37, 1)" stroke="none" transform="matrix(1 0 0 1 10 15 )" class="fill" />
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 10 15 )" class="stroke" mask="url(#u627_img_cl290)" />
+  </g>
+                  </svg>
+                  <div id="u627_text" class="text ">
+                    <p><span>!</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u628" class="ax_default _14小标题 transition notrs">
+              <div id="u628_div" class=""></div>
+              <div id="u628_text" class="text ">
+                <p><span>警告通知</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u629" class="ax_default _12文本 transition notrs">
+              <div id="u629_div" class=""></div>
+              <div id="u629_text" class="text ">
+                <p><span>提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u630" class="ax_default" data-left="1233.636038969321" data-top="670.636038969321" data-width="12.727922061357958" data-height="12.72792206135793" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u631" class="ax_default box_3 transition notrs">
+                <div id="u631_div" class=""></div>
+                <div id="u631_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u632" class="ax_default box_3 transition notrs">
+                <div id="u632_div" class=""></div>
+                <div id="u632_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u633" class="ax_default btn-__3 transition notrs">
+              <div id="u633_div" class=""></div>
+              <div id="u633_text" class="text ">
+                <p><span>确定</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u634" class="ax_default btn-__ transition notrs">
+              <div id="u634_div" class=""></div>
+              <div id="u634_text" class="text ">
+                <p><span>取消</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (C02-5 - 询问弹窗) -->
+        <div id="u635" class="nopointer  ax_default">
+
+          <!-- 弹窗 (Group) -->
+          <div id="u636" class="ax_default" data-label="弹窗" data-left="20" data-top="841" data-width="400" data-height="150" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u637" class="ax_default box-弹窗底 transition notrs">
+              <div id="u637_div" class=""></div>
+              <div id="u637_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u638" class="ax_default _14小标题 transition notrs">
+              <div id="u638_div" class=""></div>
+              <div id="u638_text" class="text ">
+                <p><span>系统提醒</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u639" class="ax_default _12文本 transition notrs">
+              <div id="u639_div" class=""></div>
+              <div id="u639_text" class="text ">
+                <p><span>是否确认保存/删除/提交修改？</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u640" class="ax_default" data-left="393.636038969321" data-top="859.636038969321" data-width="12.727922061357958" data-height="12.72792206135793" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u641" class="ax_default box_3 transition notrs">
+                <div id="u641_div" class=""></div>
+                <div id="u641_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u642" class="ax_default box_3 transition notrs">
+                <div id="u642_div" class=""></div>
+                <div id="u642_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u643" class="ax_default btn-__3 transition notrs">
+              <div id="u643_div" class=""></div>
+              <div id="u643_text" class="text ">
+                <p><span>取消</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u644" class="ax_default" data-left="30" data-top="856" data-width="20" data-height="20" layer-opacity="1">
+
+              <!-- Unnamed (Group) -->
+              <div id="u645" class="ax_default" data-left="30" data-top="856" data-width="20" data-height="20" layer-opacity="1">
+
+                <!-- Unnamed (Ellipse) -->
+                <div id="u646" class="ax_default ellipse transition notrs">
+                  <svg data="images/c-弹窗类/u614.svg" id="u646_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u646_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u646_img_cl289">
+      <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -10 -15 )">
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="nonzero" fill="rgba(0, 152, 255, 1)" stroke="none" transform="matrix(1 0 0 1 10 15 )" class="fill" />
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 10 15 )" class="stroke" mask="url(#u646_img_cl289)" />
+  </g>
+                  </svg>
+                  <div id="u646_text" class="text ">
+                    <p><span>i</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u647" class="ax_default btn-__ transition notrs">
+              <div id="u647_div" class=""></div>
+              <div id="u647_text" class="text ">
+                <p><span>确定</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u648" class="ax_default _12文本 transition notrs">
+          <div id="u648_div" class=""></div>
+          <div id="u648_text" class="text ">
+            <p><span>C02-1 - 成功弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u649" class="ax_default _12文本 transition notrs">
+          <div id="u649_div" class=""></div>
+          <div id="u649_text" class="text ">
+            <p><span>C02-3 - 警告弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u650" class="ax_default _12文本 transition notrs">
+          <div id="u650_div" class=""></div>
+          <div id="u650_text" class="text ">
+            <p><span>C02-2 - 消息弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u651" class="ax_default _12文本 transition notrs">
+          <div id="u651_div" class=""></div>
+          <div id="u651_text" class="text ">
+            <p><span>C02-4 - 错误弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u652" class="ax_default _12文本 transition notrs">
+          <div id="u652_div" class=""></div>
+          <div id="u652_text" class="text ">
+            <p><span>C02-6 - 错误代码弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u653" class="ax_default _12文本 transition notrs">
+          <div id="u653_div" class=""></div>
+          <div id="u653_text" class="text ">
+            <p><span>C02-5 - 询问弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u654" class="ax_default" data-left="1280" data-top="1055" data-width="500" data-height="250" layer-opacity="1">
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u655" class="ax_default box-弹窗底 transition notrs">
+            <div id="u655_div" class=""></div>
+            <div id="u655_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Group) -->
+          <div id="u656" class="ax_default" data-left="1290" data-top="1070" data-width="20" data-height="20" layer-opacity="1">
+
+            <!-- Unnamed (Group) -->
+            <div id="u657" class="ax_default" data-left="1290" data-top="1070" data-width="20" data-height="20" layer-opacity="1">
+
+              <!-- Unnamed (Ellipse) -->
+              <div id="u658" class="ax_default ellipse transition notrs">
+                <svg data="images/c-弹窗类/u589.svg" id="u658_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u658_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u658_img_cl288">
+      <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -10 -15 )">
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " fill-rule="nonzero" fill="rgba(255, 0, 31, 1)" stroke="none" transform="matrix(1 0 0 1 10 15 )" class="fill" />
+    <path d="M 0 10  C 0 4.3999999999999995  4.3999999999999995 0  10 0  C 15.600000000000001 0  20 4.3999999999999995  20 10  C 20 15.600000000000001  15.600000000000001 20  10 20  C 4.3999999999999995 20  0 15.600000000000001  0 10  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 10 15 )" class="stroke" mask="url(#u658_img_cl288)" />
+  </g>
+                </svg>
+                <div id="u658_text" class="text ">
+                  <p><span>x</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u659" class="ax_default _14小标题 transition notrs">
+            <div id="u659_div" class=""></div>
+            <div id="u659_text" class="text ">
+              <p><span>错误通知</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u660" class="ax_default _12文本 transition notrs">
+            <div id="u660_div" class=""></div>
+            <div id="u660_text" class="text ">
+              <p><span>遇到了未知错误（详见错误代码）</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Group) -->
+          <div id="u661" class="ax_default" data-left="1752.636038969321" data-top="1073.636038969321" data-width="12.72792206135773" data-height="12.727922061357958" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u662" class="ax_default box_3 transition notrs">
+              <div id="u662_div" class=""></div>
+              <div id="u662_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u663" class="ax_default box_3 transition notrs">
+              <div id="u663_div" class=""></div>
+              <div id="u663_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u664" class="ax_default btn-__ transition notrs">
+            <div id="u664_div" class=""></div>
+            <div id="u664_text" class="text ">
+              <p><span>关闭</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u665" class="ax_default btn-__1 transition notrs">
+            <div id="u665_div" class=""></div>
+            <div id="u665_text" class="text ">
+              <p><span>详细∧</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u666" class="ax_default btn-__1 transition notrs">
+            <div id="u666_div" class=""></div>
+            <div id="u666_text" class="text ">
+              <p><span>复制错误</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Text area) -->
+          <div id="u667" class="ax_default text_area transition notrs">
+            <div id="u667_div" class=""></div>
+            <textarea id="u667_input" class="u667_input">### Error updating database. Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Truncated incorrect DOUBLE value: '7a6fc484f51a44ffa83f51196c09a47d' ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: insert into report_temporary_data.temp_049a68d5ba7b4ba0bd35997af4883924 SELECT ermpb.id as id, ermpbg.id as bill_detail_id, emp.id as material_plan_id, (CASE left(ermpb.bill_no,2) WHEN 'CB' THEN '成衣备料单' ELSE '投产单' END ) AS '系统单据类型', ermpb.bill_no as '单号', ermpb.bill_no as 'bill_no', DATE_FORMAT(ermpb.maker_time, '%Y-%m-%d' ) as '制单日期' , ermpb.emergency_id as 'emergency_id' , ermpb.process_type_id as 'process_type_id', ermpb.place_order_type_id as 'place_order_type_id', ermpb.year_id as 'year_id', ermpb.brand_id as 'brand_id', ermpb.season_id as 'season_id', ermpbg.style_id as 'style_id', t1.attribute_value as '下单类型', t2.attribute_value as '加工类型', t3.attribute_value as '紧急度', t4.attribute_value as '下单品牌', t5.attribute_value as '下单年份', t6.attribute_value as '下单季节', t3.emergency_color_value as 'emergencyColorValue', ermpbg.quantity as '数量', concat('http://image.eifini.com/index?goodsno=' , cgs.style_no) as '商品图片', cgs.style_no as '商品款号', cgs.style_name as '商品名称', DATE_FORMAT(ermpbg.delivery_date, '%Y-%m-%d' ) as '商品要求货期' , ermpbg.delivery_date as 'delivery_date' , (CASE cgs.develop_bom_complete_sign WHEN '0' THEN '否' WHEN '1' THEN '是' ELSE '' END ) AS '开发BOM完整标识', (CASE cgs.goods_bom_complete_sign WHEN '0' THEN '否' WHEN '1' THEN '是' ELSE '' END ) AS '大货BOM完整标识', (CASE bom.id IS NULL WHEN true THEN '无' ELSE '有BOM' END ) AS '商品BOM状态', (CASE 1=1 WHEN emp.business_status = 1 THEN '手动完成' WHEN (check_sum_view.check_sum_count &gt; 0 and check_sum_view.check_sum_count = check_view.check_count) || (check_view.check_count &gt; 0 and check_sum_view.check_sum_count is null) THEN '已核料' WHEN check_view.check_count &gt; 0 and check_view.check_count &lt; check_sum_view.check_sum_count THEN '部分核料' ELSE '未核料' END ) as '物料计划状态', (CASE 1=1 WHEN emp.business_status = 1 THEN 3 WH</textarea>
+          </div>
+
+          <!-- Unnamed (Image) -->
+          <div id="u668" class="ax_default image transition notrs">
+            <img id="u668_img" class="img " src="images/a-输入框类/u182.png"/>
+            <div id="u668_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u669" class="ax_default" data-left="20" data-top="1048" data-width="612" data-height="357" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u670" class="ax_default _14小标题 transition notrs">
+          <div id="u670_div" class=""></div>
+          <div id="u670_text" class="text ">
+            <p><span>C03 - 表单输入弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u671" class="ax_default _12文本 transition notrs">
+          <div id="u671_div" class=""></div>
+          <div id="u671_text" class="text ">
+            <p><span>固定Padding,不同宽度下自适应弹窗大小;</span></p><p><span>上下24px, 左右32px;</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (C03 - 表单输入弹窗) -->
+        <div id="u672" class="nopointer  ax_default">
+
+          <!-- 表单输入弹窗 (Group) -->
+          <div id="u673" class="ax_default" data-label="表单输入弹窗" data-left="20" data-top="1122" data-width="612" data-height="283" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u674" class="ax_default box-弹窗底栏 transition notrs">
+              <div id="u674_div" class=""></div>
+              <div id="u674_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u675" class="ax_default box-弹窗标题栏 transition notrs">
+              <div id="u675_div" class=""></div>
+              <div id="u675_text" class="text ">
+                <p><span>弹窗标题</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u676" class="ax_default _12文本 transition notrs">
+              <div id="u676_div" class=""></div>
+              <div id="u676_text" class="text ">
+                <p><span>说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u677" class="ax_default" data-left="604.6360389693211" data-top="1136.6360389693211" data-width="12.72792206135773" data-height="12.727922061357845" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u678" class="ax_default box_3 transition notrs">
+                <div id="u678_div" class=""></div>
+                <div id="u678_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u679" class="ax_default box_3 transition notrs">
+                <div id="u679_div" class=""></div>
+                <div id="u679_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u680" class="ax_default" data-left="20" data-top="1357" data-width="612" data-height="48" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u681" class="ax_default box-弹窗底栏 transition notrs">
+                <div id="u681_div" class=""></div>
+                <div id="u681_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u682" class="ax_default btn-__ transition notrs">
+                <div id="u682_div" class=""></div>
+                <div id="u682_text" class="text ">
+                  <p><span>确定</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u683" class="ax_default btn-__1 transition notrs">
+                <div id="u683_div" class=""></div>
+                <div id="u683_text" class="text ">
+                  <p><span>取消</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u684" class="ax_default" data-left="36" data-top="1228" data-width="260" data-height="28" layer-opacity="1">
+
+              <!-- Unnamed (Text field) -->
+              <div id="u685" class="ax_default text_field transition notrs">
+                <div id="u685_div" class=""></div>
+                <input id="u685_input" type="text" value="" class="u685_input" maxlength="20"/>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u686" class="ax_default _12文本 transition notrs">
+                <div id="u686_div" class=""></div>
+                <div id="u686_text" class="text ">
+                  <p><span>字段标题：</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u687" class="ax_default" data-left="356" data-top="1228" data-width="260" data-height="28" layer-opacity="1">
+
+              <!-- Unnamed (Text field) -->
+              <div id="u688" class="ax_default text_field transition notrs">
+                <div id="u688_div" class=""></div>
+                <input id="u688_input" type="text" value="" class="u688_input" maxlength="20"/>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u689" class="ax_default _12文本 transition notrs">
+                <div id="u689_div" class=""></div>
+                <div id="u689_text" class="text ">
+                  <p><span>字段标题：</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u690" class="ax_default" data-left="35" data-top="1266" data-width="581" data-height="28" layer-opacity="1">
+
+              <!-- Unnamed (Text field) -->
+              <div id="u691" class="ax_default text_field transition notrs">
+                <div id="u691_div" class=""></div>
+                <input id="u691_input" type="text" value="" class="u691_input"/>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u692" class="ax_default _12文本 transition notrs">
+                <div id="u692_div" class=""></div>
+                <div id="u692_text" class="text ">
+                  <p><span>字段标题：</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u693" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0" layer-opacity="1">
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u694" class="ax_default _14小标题 transition notrs">
+        <div id="u694_div" class=""></div>
+        <div id="u694_text" class="text ">
+          <p><span>C05 - 图片上传弹窗</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u695" class="ax_default" data-left="20" data-top="1895" data-width="464" data-height="235" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u696" class="ax_default _14小标题 transition notrs">
+          <div id="u696_div" class=""></div>
+          <div id="u696_text" class="text ">
+            <p><span>C06 - 气泡提示</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u697" class="ax_default _12文本 transition notrs">
+          <div id="u697_div" class=""></div>
+          <div id="u697_text" class="text ">
+            <p><span>气泡提示用于显示不能显示完全的单元格的全部文本内容，或者对被指向对象如图标/图形/链接等进行进一步提示说明，</span></p><p><span>鼠标移入单元格或者问号图标显示，鼠标移出自动消失;</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u698" class="ax_default box_1 transition notrs">
+          <div id="u698_div" class=""></div>
+          <div id="u698_text" class="text ">
+            <p><span>单元格内容较多...</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u699" class="ax_default" data-left="20" data-top="2018" data-width="240" data-height="112" layer-opacity="1">
+
+          <!-- Unnamed (Shape) -->
+          <div id="u700" class="ax_default bubble-__ transition notrs">
+            <svg data="images/c-弹窗类/u700.svg" id="u700_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u700_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u700_img_cl291">
+      <path d="M 5 7  L 13.5 7  L 20.499984851506383 1.5148493730521294E-05  L 27.49996992787939 7  L 235 7  C 237.8 7  240 9.199999999999818  240 12  L 240 107  C 240 109.80000000000018  237.8 112  235 112  L 5 112  C 2.200000000000003 112  0 109.80000000000018  0 107  L 0 12  C 0 9.199999999999818  2.200000000000003 7  5 7  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -14 -2014 )">
+    <path d="M 5 7  L 13.5 7  L 20.499984851506383 1.5148493730521294E-05  L 27.49996992787939 7  L 235 7  C 237.8 7  240 9.199999999999818  240 12  L 240 107  C 240 109.80000000000018  237.8 112  235 112  L 5 112  C 2.200000000000003 112  0 109.80000000000018  0 107  L 0 12  C 0 9.199999999999818  2.200000000000003 7  5 7  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 20 2018 )" class="fill" />
+    <path d="M 5 7  L 13.5 7  L 20.499984851506383 1.5148493730521294E-05  L 27.49996992787939 7  L 235 7  C 237.8 7  240 9.199999999999818  240 12  L 240 107  C 240 109.80000000000018  237.8 112  235 112  L 5 112  C 2.200000000000003 112  0 109.80000000000018  0 107  L 0 12  C 0 9.199999999999818  2.200000000000003 7  5 7  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 20 2018 )" class="stroke" mask="url(#u700_img_cl291)" />
+  </g>
+  <style>#u700_img { filter: drop-shadow(0px 2px 3px rgba(170, 170, 170, 1)); }</style>
+            </svg>
+            <div id="u700_text" class="text ">
+              <p><span>单元格内容较多时，用于显示不能显示完全的单元格的全部文本内容，示例文本示例文本示例文本示例文本示例文本示例文本示例文本</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (i) -->
+        <div id="u701" class="nopointer  ax_default">
+
+          <!-- Unnamed (Ellipse) -->
+          <div id="u702" class="ax_default ellipse transition notrs">
+            <svg data="images/c-弹窗类/u702.svg" id="u702_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u702_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u702_img_cl292">
+      <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g>
+    <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 0)" stroke="none" class="fill" />
+    <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(144, 161, 178, 1)" fill="none" class="stroke" mask="url(#u702_img_cl292)" />
+  </g>
+            </svg>
+            <div id="u702_text" class="text ">
+              <p><span>i</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (C06 - 气泡提示) -->
+        <div id="u703" class="nopointer  ax_default">
+
+          <!-- Unnamed (Ellipse) -->
+          <div id="u704" class="ax_default ellipse transition notrs">
+            <svg data="images/c-弹窗类/u702.svg" id="u704_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u704_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u704_img_cl292">
+      <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g>
+    <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 0)" stroke="none" class="fill" />
+    <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(144, 161, 178, 1)" fill="none" class="stroke" mask="url(#u704_img_cl292)" />
+  </g>
+            </svg>
+            <div id="u704_text" class="text ">
+              <p><span>?</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u705" class="ax_default" data-left="20" data-top="2170" data-width="630" data-height="457" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u706" class="ax_default _14小标题 transition notrs">
+          <div id="u706_div" class=""></div>
+          <div id="u706_text" class="text ">
+            <p><span>C07 - 表格弹窗</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u707" class="ax_default _12文本 transition notrs">
+          <div id="u707_div" class=""></div>
+          <div id="u707_text" class="text ">
+            <p><span>弹窗大小根据表格大小自适应</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (C07-表格弹窗) -->
+        <div id="u708" class="nopointer  ax_default">
+
+          <!-- C07 (Group) -->
+          <div id="u709" class="ax_default" data-label="C07" data-left="20" data-top="2227" data-width="630" data-height="400" layer-opacity="1">
+
+            <!-- Unnamed (Group) -->
+            <div id="u710" class="ax_default" data-left="20" data-top="2227" data-width="630" data-height="400" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u711" class="ax_default box-弹窗底 transition notrs">
+                <div id="u711_div" class=""></div>
+                <div id="u711_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u712" class="ax_default box-弹窗标题栏 transition notrs">
+                <div id="u712_div" class=""></div>
+                <div id="u712_text" class="text ">
+                  <p><span>标题</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Group) -->
+              <div id="u713" class="ax_default" data-left="20" data-top="2579" data-width="630" data-height="48" layer-opacity="1">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u714" class="ax_default box-弹窗底栏 transition notrs">
+                  <div id="u714_div" class=""></div>
+                  <div id="u714_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u715" class="ax_default btn-__ transition notrs">
+                  <div id="u715_div" class=""></div>
+                  <div id="u715_text" class="text ">
+                    <p><span>关闭</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (Group) -->
+              <div id="u716" class="ax_default" data-left="623.6360389693211" data-top="2240.636038969321" data-width="12.72792206135773" data-height="12.727922061357845" layer-opacity="1">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u717" class="ax_default box_3 transition notrs">
+                  <div id="u717_div" class=""></div>
+                  <div id="u717_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u718" class="ax_default box_3 transition notrs">
+                  <div id="u718_div" class=""></div>
+                  <div id="u718_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table) -->
+              <div id="u719" class="ax_default">
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u720" class="ax_default table-__1 transition notrs">
+                  <svg data="images/c-弹窗类/u720.svg" id="u720_img" class="img generatedImage" viewbox="0 0 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" class="stroke" />
+                  </svg>
+                  <div id="u720_text" class="text ">
+                    <p><span>周次</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u721" class="ax_default table-__1 transition notrs">
+                  <svg data="images/c-弹窗类/u721.svg" id="u721_img" class="img generatedImage" viewbox="100 0 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" transform="matrix(1 0 0 1 100 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+                  </svg>
+                  <div id="u721_text" class="text ">
+                    <p><span>均折</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u722" class="ax_default table-__1 transition notrs">
+                  <svg data="images/c-弹窗类/u722.svg" id="u722_img" class="img generatedImage" viewbox="200 0 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" transform="matrix(1 0 0 1 200 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+                  </svg>
+                  <div id="u722_text" class="text ">
+                    <p><span>均价</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u723" class="ax_default table-__1 transition notrs">
+                  <svg data="images/c-弹窗类/u723.svg" id="u723_img" class="img generatedImage" viewbox="300 0 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" transform="matrix(1 0 0 1 300 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+                  </svg>
+                  <div id="u723_text" class="text ">
+                    <p><span>销售数</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u724" class="ax_default table-__1 transition notrs">
+                  <svg data="images/c-弹窗类/u724.svg" id="u724_img" class="img generatedImage" viewbox="400 0 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" transform="matrix(1 0 0 1 400 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 0 )" class="stroke" />
+                  </svg>
+                  <div id="u724_text" class="text ">
+                    <p><span>售罄率</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u725" class="ax_default table-__1 transition notrs">
+                  <svg data="images/c-弹窗类/u725.svg" id="u725_img" class="img generatedImage" viewbox="500 0 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" transform="matrix(1 0 0 1 500 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 0 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 0 )" class="stroke" />
+                  </svg>
+                  <div id="u725_text" class="text ">
+                    <p><span>销售占比</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u726" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u726.svg" id="u726_img" class="img generatedImage" viewbox="0 28 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 28 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 28 )" class="stroke" />
+                  </svg>
+                  <div id="u726_text" class="text ">
+                    <p><span>1</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u727" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u727.svg" id="u727_img" class="img generatedImage" viewbox="100 28 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 28 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 28 )" class="stroke" />
+                  </svg>
+                  <div id="u727_text" class="text ">
+                    <p><span>92%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u728" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u728.svg" id="u728_img" class="img generatedImage" viewbox="200 28 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 28 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 28 )" class="stroke" />
+                  </svg>
+                  <div id="u728_text" class="text ">
+                    <p><span>92</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u729" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u729.svg" id="u729_img" class="img generatedImage" viewbox="300 28 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 28 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 28 )" class="stroke" />
+                  </svg>
+                  <div id="u729_text" class="text ">
+                    <p><span>2</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u730" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u730.svg" id="u730_img" class="img generatedImage" viewbox="400 28 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 28 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 28 )" class="stroke" />
+                  </svg>
+                  <div id="u730_text" class="text ">
+                    <p><span>4%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u731" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u731.svg" id="u731_img" class="img generatedImage" viewbox="500 28 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 28 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 28 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 28 )" class="stroke" />
+                  </svg>
+                  <div id="u731_text" class="text ">
+                    <p><span>15%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u732" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u732.svg" id="u732_img" class="img generatedImage" viewbox="0 56 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 56 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 56 )" class="stroke" />
+                  </svg>
+                  <div id="u732_text" class="text ">
+                    <p><span>2</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u733" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u733.svg" id="u733_img" class="img generatedImage" viewbox="100 56 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 56 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 56 )" class="stroke" />
+                  </svg>
+                  <div id="u733_text" class="text ">
+                    <p><span>90%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u734" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u734.svg" id="u734_img" class="img generatedImage" viewbox="200 56 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 56 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 56 )" class="stroke" />
+                  </svg>
+                  <div id="u734_text" class="text ">
+                    <p><span>90</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u735" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u735.svg" id="u735_img" class="img generatedImage" viewbox="300 56 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 56 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 56 )" class="stroke" />
+                  </svg>
+                  <div id="u735_text" class="text ">
+                    <p><span>5</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u736" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u736.svg" id="u736_img" class="img generatedImage" viewbox="400 56 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 56 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 56 )" class="stroke" />
+                  </svg>
+                  <div id="u736_text" class="text ">
+                    <p><span>78%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u737" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u737.svg" id="u737_img" class="img generatedImage" viewbox="500 56 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 56 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 56 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 56 )" class="stroke" />
+                  </svg>
+                  <div id="u737_text" class="text ">
+                    <p><span>15%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u738" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u738.svg" id="u738_img" class="img generatedImage" viewbox="0 84 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 84 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 84 )" class="stroke" />
+                  </svg>
+                  <div id="u738_text" class="text ">
+                    <p><span>3</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u739" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u739.svg" id="u739_img" class="img generatedImage" viewbox="100 84 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 84 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 84 )" class="stroke" />
+                  </svg>
+                  <div id="u739_text" class="text ">
+                    <p><span>85%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u740" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u740.svg" id="u740_img" class="img generatedImage" viewbox="200 84 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 84 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 84 )" class="stroke" />
+                  </svg>
+                  <div id="u740_text" class="text ">
+                    <p><span>85</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u741" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u741.svg" id="u741_img" class="img generatedImage" viewbox="300 84 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 84 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 84 )" class="stroke" />
+                  </svg>
+                  <div id="u741_text" class="text ">
+                    <p><span>10</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u742" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u742.svg" id="u742_img" class="img generatedImage" viewbox="400 84 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 84 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 84 )" class="stroke" />
+                  </svg>
+                  <div id="u742_text" class="text ">
+                    <p><span>86%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u743" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u743.svg" id="u743_img" class="img generatedImage" viewbox="500 84 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 84 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 84 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 84 )" class="stroke" />
+                  </svg>
+                  <div id="u743_text" class="text ">
+                    <p><span>15%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u744" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u744.svg" id="u744_img" class="img generatedImage" viewbox="0 112 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 112 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 112 )" class="stroke" />
+                  </svg>
+                  <div id="u744_text" class="text ">
+                    <p><span>4</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u745" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u745.svg" id="u745_img" class="img generatedImage" viewbox="100 112 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 112 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 112 )" class="stroke" />
+                  </svg>
+                  <div id="u745_text" class="text ">
+                    <p><span>80%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u746" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u746.svg" id="u746_img" class="img generatedImage" viewbox="200 112 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 112 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 112 )" class="stroke" />
+                  </svg>
+                  <div id="u746_text" class="text ">
+                    <p><span>80</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u747" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u747.svg" id="u747_img" class="img generatedImage" viewbox="300 112 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 112 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 112 )" class="stroke" />
+                  </svg>
+                  <div id="u747_text" class="text ">
+                    <p><span>12</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u748" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u748.svg" id="u748_img" class="img generatedImage" viewbox="400 112 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 112 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 112 )" class="stroke" />
+                  </svg>
+                  <div id="u748_text" class="text ">
+                    <p><span>90%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u749" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u749.svg" id="u749_img" class="img generatedImage" viewbox="500 112 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 112 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 112 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 112 )" class="stroke" />
+                  </svg>
+                  <div id="u749_text" class="text ">
+                    <p><span>67%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u750" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u750.svg" id="u750_img" class="img generatedImage" viewbox="0 140 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 140 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 140 )" class="stroke" />
+                  </svg>
+                  <div id="u750_text" class="text ">
+                    <p><span>5</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u751" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u751.svg" id="u751_img" class="img generatedImage" viewbox="100 140 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 140 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 140 )" class="stroke" />
+                  </svg>
+                  <div id="u751_text" class="text ">
+                    <p><span>75%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u752" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u752.svg" id="u752_img" class="img generatedImage" viewbox="200 140 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 140 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 140 )" class="stroke" />
+                  </svg>
+                  <div id="u752_text" class="text ">
+                    <p><span>75</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u753" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u753.svg" id="u753_img" class="img generatedImage" viewbox="300 140 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 140 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 140 )" class="stroke" />
+                  </svg>
+                  <div id="u753_text" class="text ">
+                    <p><span>10</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u754" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u754.svg" id="u754_img" class="img generatedImage" viewbox="400 140 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 140 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 140 )" class="stroke" />
+                  </svg>
+                  <div id="u754_text" class="text ">
+                    <p><span>92%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u755" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u755.svg" id="u755_img" class="img generatedImage" viewbox="500 140 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 140 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 140 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 140 )" class="stroke" />
+                  </svg>
+                  <div id="u755_text" class="text ">
+                    <p><span>39%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u756" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u756.svg" id="u756_img" class="img generatedImage" viewbox="0 168 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 168 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 168 )" class="stroke" />
+  <path d="M 0 27.5  L 100 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 168 )" class="stroke" />
+                  </svg>
+                  <div id="u756_text" class="text ">
+                    <p><span>6</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u757" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u757.svg" id="u757_img" class="img generatedImage" viewbox="100 168 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 168 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 168 )" class="stroke" />
+  <path d="M 0 27.5  L 100 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 100 168 )" class="stroke" />
+                  </svg>
+                  <div id="u757_text" class="text ">
+                    <p><span>70%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u758" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u758.svg" id="u758_img" class="img generatedImage" viewbox="200 168 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 168 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 168 )" class="stroke" />
+  <path d="M 0 27.5  L 100 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 200 168 )" class="stroke" />
+                  </svg>
+                  <div id="u758_text" class="text ">
+                    <p><span>70</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u759" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u759.svg" id="u759_img" class="img generatedImage" viewbox="300 168 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 168 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 168 )" class="stroke" />
+  <path d="M 0 27.5  L 100 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 300 168 )" class="stroke" />
+                  </svg>
+                  <div id="u759_text" class="text ">
+                    <p><span>8</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u760" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u760.svg" id="u760_img" class="img generatedImage" viewbox="400 168 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 168 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 168 )" class="stroke" />
+  <path d="M 0 27.5  L 100 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 400 168 )" class="stroke" />
+                  </svg>
+                  <div id="u760_text" class="text ">
+                    <p><span>94%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Table cell) -->
+                <div id="u761" class="ax_default table-___ transition notrs">
+                  <svg data="images/c-弹窗类/u761.svg" id="u761_img" class="img generatedImage" viewbox="500 168 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 168 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 168 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 168 )" class="stroke" />
+  <path d="M 0 27.5  L 100 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 500 168 )" class="stroke" />
+                  </svg>
+                  <div id="u761_text" class="text ">
+                    <p><span>1%</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u762" class="ax_default _12文本 transition notrs">
+                <div id="u762_div" class=""></div>
+                <div id="u762_text" class="text ">
+                  <p><span>说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Table) -->
+      <div id="u763" class="ax_default">
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u764" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u764.svg" id="u764_img" class="img generatedImage" viewbox="0 0 240 28">
+
+  <path d="M 1 1  L 240 1  L 240 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 247, 250, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u764_text" class="text ">
+            <p><span>&nbsp;场景</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u765" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u765.svg" id="u765_img" class="img generatedImage" viewbox="240 0 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 247, 250, 1)" stroke="none" transform="matrix(1 0 0 1 240 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 0 )" class="stroke" />
+          </svg>
+          <div id="u765_text" class="text ">
+            <p><span>&nbsp;提示类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u766" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u766.svg" id="u766_img" class="img generatedImage" viewbox="340 0 300 28">
+
+  <path d="M 1 1  L 300 1  L 300 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 247, 250, 1)" stroke="none" transform="matrix(1 0 0 1 340 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 0 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 0 )" class="stroke" />
+          </svg>
+          <div id="u766_text" class="text ">
+            <p><span>&nbsp;提示文案</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u767" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u767.svg" id="u767_img" class="img generatedImage" viewbox="640 0 300 28">
+
+  <path d="M 1 1  L 299 1  L 299 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 247, 250, 1)" stroke="none" transform="matrix(1 0 0 1 640 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 0 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 0 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 0 )" class="stroke" />
+          </svg>
+          <div id="u767_text" class="text ">
+            <p><span>&nbsp;备注</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u768" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u768.svg" id="u768_img" class="img generatedImage" viewbox="0 28 240 38">
+
+  <path d="M 1 1  L 240 1  L 240 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 28 )" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 28 )" class="stroke" />
+          </svg>
+          <div id="u768_text" class="text ">
+            <p><span>&nbsp;操作提交成功（新建、保存、审核等）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u769" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u769.svg" id="u769_img" class="img generatedImage" viewbox="240 28 100 38">
+
+  <path d="M 1 1  L 100 1  L 100 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 240 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 28 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 28 )" class="stroke" />
+          </svg>
+          <div id="u769_text" class="text ">
+            <p><span>&nbsp;成功</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u770" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u770.svg" id="u770_img" class="img generatedImage" viewbox="340 28 300 38">
+
+  <path d="M 1 1  L 300 1  L 300 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 340 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 28 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 28 )" class="stroke" />
+          </svg>
+          <div id="u770_text" class="text ">
+            <p><span>&nbsp;操作成功！</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u771" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u771.svg" id="u771_img" class="img generatedImage" viewbox="640 28 300 38">
+
+  <path d="M 1 1  L 299 1  L 299 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 640 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 28 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 28 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 28 )" class="stroke" />
+          </svg>
+          <div id="u771_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u772" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u772.svg" id="u772_img" class="img generatedImage" viewbox="0 66 240 55">
+
+  <path d="M 1 1  L 240 1  L 240 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 66 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 66 )" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 66 )" class="stroke" />
+          </svg>
+          <div id="u772_text" class="text ">
+            <p><span>&nbsp;新建/编辑提交失败：必填项未填</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u773" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u773.svg" id="u773_img" class="img generatedImage" viewbox="240 66 100 55">
+
+  <path d="M 1 1  L 100 1  L 100 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 240 66 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 66 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 66 )" class="stroke" />
+          </svg>
+          <div id="u773_text" class="text ">
+            <p><span>&nbsp;错误</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u774" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u774.svg" id="u774_img" class="img generatedImage" viewbox="340 66 300 55">
+
+  <path d="M 1 1  L 300 1  L 300 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 340 66 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 66 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 66 )" class="stroke" />
+          </svg>
+          <div id="u774_text" class="text ">
+            <p><span>&nbsp;请填写【字段】！</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u775" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u775.svg" id="u775_img" class="img generatedImage" viewbox="640 66 300 55">
+
+  <path d="M 1 1  L 299 1  L 299 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 640 66 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 66 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 66 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 66 )" class="stroke" />
+          </svg>
+          <div id="u775_text" class="text ">
+            <p><span>&nbsp;【字段】：系统检测到的第一个未填写的必填项的字段名称，</span></p><p><span>例如：请填写商品款号！</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u776" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u776.svg" id="u776_img" class="img generatedImage" viewbox="0 121 240 55">
+
+  <path d="M 1 1  L 240 1  L 240 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 121 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 121 )" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 121 )" class="stroke" />
+          </svg>
+          <div id="u776_text" class="text ">
+            <p><span>&nbsp;新建/编辑提交失败：字段格式错误</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u777" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u777.svg" id="u777_img" class="img generatedImage" viewbox="240 121 100 55">
+
+  <path d="M 1 1  L 100 1  L 100 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 240 121 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 121 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 121 )" class="stroke" />
+          </svg>
+          <div id="u777_text" class="text ">
+            <p><span>&nbsp;错误</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u778" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u778.svg" id="u778_img" class="img generatedImage" viewbox="340 121 300 55">
+
+  <path d="M 1 1  L 300 1  L 300 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 340 121 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 121 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 121 )" class="stroke" />
+          </svg>
+          <div id="u778_text" class="text ">
+            <p><span>&nbsp;【字段】格式错误，请重新填写！</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u779" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u779.svg" id="u779_img" class="img generatedImage" viewbox="640 121 300 55">
+
+  <path d="M 1 1  L 299 1  L 299 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 640 121 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 121 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 121 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 121 )" class="stroke" />
+          </svg>
+          <div id="u779_text" class="text ">
+            <p><span>&nbsp;【字段】：系统检测到的第一个格式错误的字段名称，</span></p><p><span>例如：销售价格式错误，请重新填写！</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u780" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u780.svg" id="u780_img" class="img generatedImage" viewbox="0 176 240 55">
+
+  <path d="M 1 1  L 240 1  L 240 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 176 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 176 )" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 176 )" class="stroke" />
+          </svg>
+          <div id="u780_text" class="text ">
+            <p><span>&nbsp;新建/编辑提交失败：字段查重</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u781" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u781.svg" id="u781_img" class="img generatedImage" viewbox="240 176 100 55">
+
+  <path d="M 1 1  L 100 1  L 100 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 240 176 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 176 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 176 )" class="stroke" />
+          </svg>
+          <div id="u781_text" class="text ">
+            <p><span>&nbsp;错误</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u782" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u782.svg" id="u782_img" class="img generatedImage" viewbox="340 176 300 55">
+
+  <path d="M 1 1  L 300 1  L 300 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 340 176 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 176 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 176 )" class="stroke" />
+          </svg>
+          <div id="u782_text" class="text ">
+            <p><span>&nbsp;【字段】已存在，请重新填写！</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u783" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u783.svg" id="u783_img" class="img generatedImage" viewbox="640 176 300 55">
+
+  <path d="M 1 1  L 299 1  L 299 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 640 176 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 176 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 176 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 176 )" class="stroke" />
+          </svg>
+          <div id="u783_text" class="text ">
+            <p><span>&nbsp;【字段】：系统检测到的第一个不允许重复但查重了的的字段名称，</span></p><p><span>例如：商品款号已存在，请重新填写！</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u784" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u784.svg" id="u784_img" class="img generatedImage" viewbox="0 231 240 55">
+
+  <path d="M 1 1  L 240 1  L 240 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 231 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 231 )" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 231 )" class="stroke" />
+          </svg>
+          <div id="u784_text" class="text ">
+            <p><span>&nbsp;操作失败：超时</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u785" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u785.svg" id="u785_img" class="img generatedImage" viewbox="240 231 100 55">
+
+  <path d="M 1 1  L 100 1  L 100 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 240 231 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 231 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 231 )" class="stroke" />
+          </svg>
+          <div id="u785_text" class="text ">
+            <p><span>&nbsp;错误</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u786" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u786.svg" id="u786_img" class="img generatedImage" viewbox="340 231 300 55">
+
+  <path d="M 1 1  L 300 1  L 300 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 340 231 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 231 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 231 )" class="stroke" />
+          </svg>
+          <div id="u786_text" class="text ">
+            <p><span>&nbsp;抱歉！服务器连接超时，请稍候重试。</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u787" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u787.svg" id="u787_img" class="img generatedImage" viewbox="640 231 300 55">
+
+  <path d="M 1 1  L 299 1  L 299 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 640 231 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 231 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 231 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 231 )" class="stroke" />
+          </svg>
+          <div id="u787_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u788" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u788.svg" id="u788_img" class="img generatedImage" viewbox="0 286 240 55">
+
+  <path d="M 1 1  L 240 1  L 240 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 286 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 286 )" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 286 )" class="stroke" />
+          </svg>
+          <div id="u788_text" class="text ">
+            <p><span>&nbsp;操作失败：断网</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u789" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u789.svg" id="u789_img" class="img generatedImage" viewbox="240 286 100 55">
+
+  <path d="M 1 1  L 100 1  L 100 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 240 286 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 286 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 286 )" class="stroke" />
+          </svg>
+          <div id="u789_text" class="text ">
+            <p><span>&nbsp;错误</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u790" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u790.svg" id="u790_img" class="img generatedImage" viewbox="340 286 300 55">
+
+  <path d="M 1 1  L 300 1  L 300 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 340 286 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 286 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 286 )" class="stroke" />
+          </svg>
+          <div id="u790_text" class="text ">
+            <p><span>&nbsp;您的设备无法连接至网络，请检查网络状况后重试。</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u791" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u791.svg" id="u791_img" class="img generatedImage" viewbox="640 286 300 55">
+
+  <path d="M 1 1  L 299 1  L 299 55  L 1 55  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 640 286 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 286 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 286 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 55  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 286 )" class="stroke" />
+          </svg>
+          <div id="u791_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u792" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u792.svg" id="u792_img" class="img generatedImage" viewbox="0 341 240 84">
+
+  <path d="M 1 1  L 240 1  L 240 83  L 1 83  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 341 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 83  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 341 )" class="stroke" />
+  <path d="M 0 0.5  L 240 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 341 )" class="stroke" />
+  <path d="M 0 83.5  L 240 83.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 341 )" class="stroke" />
+          </svg>
+          <div id="u792_text" class="text ">
+            <p><span>&nbsp;操作失败：其他</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u793" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u793.svg" id="u793_img" class="img generatedImage" viewbox="240 341 100 84">
+
+  <path d="M 1 1  L 100 1  L 100 83  L 1 83  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 240 341 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 83  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 341 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 341 )" class="stroke" />
+  <path d="M 0 83.5  L 100 83.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 240 341 )" class="stroke" />
+          </svg>
+          <div id="u793_text" class="text ">
+            <p><span>&nbsp;错误</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u794" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u794.svg" id="u794_img" class="img generatedImage" viewbox="340 341 300 84">
+
+  <path d="M 1 1  L 300 1  L 300 83  L 1 83  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 340 341 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 83  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 341 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 341 )" class="stroke" />
+  <path d="M 0 83.5  L 300 83.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 340 341 )" class="stroke" />
+          </svg>
+          <div id="u794_text" class="text ">
+            <p><span>&nbsp;操作失败！【失败原因(+建议操作)】</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table cell) -->
+        <div id="u795" class="ax_default table-___ transition notrs">
+          <svg data="images/c-弹窗类/u795.svg" id="u795_img" class="img generatedImage" viewbox="640 341 300 84">
+
+  <path d="M 1 1  L 299 1  L 299 83  L 1 83  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 640 341 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 83  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 341 )" class="stroke" />
+  <path d="M 0 0.5  L 300 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 341 )" class="stroke" />
+  <path d="M 299.5 1  L 299.5 83  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 341 )" class="stroke" />
+  <path d="M 0 83.5  L 300 83.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 640 341 )" class="stroke" />
+          </svg>
+          <div id="u795_text" class="text ">
+            <p><span>【失败原因+建议操作】：由于某些特定的逻辑导致报错，需要简洁地描述失败的原因，必要时建议操作</span></p><p><span>例如：</span></p><p><span>· 操作失败！占用后将导致自由库存变为负数：-20</span></p><p><span>· 操作失败！</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u796" class="ax_default _12文本 transition notrs">
+        <div id="u796_div" class=""></div>
+        <div id="u796_text" class="text ">
+          <p><span>通用提示内容：</span></p>
+        </div>
+      </div>
+
+      <!-- 上传图片弹窗 (Group) -->
+      <div id="u797" class="ax_default" data-label="上传图片弹窗" data-left="20" data-top="1555" data-width="464" data-height="300" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u798" class="ax_default box-弹窗底 transition notrs">
+          <div id="u798_div" class=""></div>
+          <div id="u798_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u799" class="ax_default box-弹窗标题栏 transition notrs">
+          <div id="u799_div" class=""></div>
+          <div id="u799_text" class="text ">
+            <p><span>上传图片</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u800" class="ax_default" data-left="20" data-top="1807" data-width="464" data-height="48" layer-opacity="1">
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u801" class="ax_default box-弹窗底栏 transition notrs">
+            <div id="u801_div" class=""></div>
+            <div id="u801_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u802" class="ax_default btn-__ transition notrs">
+            <div id="u802_div" class=""></div>
+            <div id="u802_text" class="text ">
+              <p><span>确定</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u803" class="ax_default btn-__1 transition notrs">
+            <div id="u803_div" class=""></div>
+            <div id="u803_text" class="text ">
+              <p><span>取消</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u804" class="ax_default shape transition notrs">
+          <svg data="images/c-弹窗类/u804.svg" id="u804_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u804_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u804_img_cl293">
+      <path d="M 0 176  L 0 4  C 0 1.76  1.7599999999999998 0  4 0  L 429 0  C 431.24 0  433 1.76  433 4  L 433 176  C 433 178.24  431.24 180  429 180  L 4 180  C 1.7599999999999998 180  0 178.24  0 176  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -36 -1611 )">
+    <path d="M 0 176  L 0 4  C 0 1.76  1.7599999999999998 0  4 0  L 429 0  C 431.24 0  433 1.76  433 4  L 433 176  C 433 178.24  431.24 180  429 180  L 4 180  C 1.7599999999999998 180  0 178.24  0 176  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 36 1611 )" class="fill" />
+    <path d="M 0 176  L 0 4  C 0 1.76  1.7599999999999998 0  4 0  L 429 0  C 431.24 0  433 1.76  433 4  L 433 176  C 433 178.24  431.24 180  429 180  L 4 180  C 1.7599999999999998 180  0 178.24  0 176  Z " stroke-width="2" stroke-dasharray="9,4" stroke="rgba(217, 217, 217, 1)" fill="none" transform="matrix(1 0 0 1 36 1611 )" class="stroke" mask="url(#u804_img_cl293)" />
+  </g>
+          </svg>
+          <div id="u804_text" class="text ">
+            <p><span style="color:rgba(0, 0, 0, 0.6470588235294118);">将图片拖放到此处上传，或点击</span><span style="color:#499DD2;">上传</span></p><p><span style="color:#666666;">支持选择多张照片上传，支持拖拽上传</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u805" class="ax_default" data-left="456.636038969321" data-top="1568.636038969321" data-width="12.727922061358072" data-height="12.727922061358186" layer-opacity="1">
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u806" class="ax_default box_3 transition notrs">
+            <div id="u806_div" class=""></div>
+            <div id="u806_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Rectangle) -->
+          <div id="u807" class="ax_default box_3 transition notrs">
+            <div id="u807_div" class=""></div>
+            <div id="u807_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u808" class="ax_default _12文本 transition notrs">
+        <div id="u808_div" class=""></div>
+        <div id="u808_text" class="text ">
+          <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-weight:400;">1、点击“点击上传”按钮后，弹出“上传文件”弹窗，弹窗交互与导入弹窗一致，支持从本地目录或者</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;font-weight:650;">微信等</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-weight:400;">直接拖拽图片/文件到弹窗区域，</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;font-weight:650;">支持点击虚线框后直接粘贴上传，</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-weight:400;">或者点击“上传”按钮调浏览器的选择文件弹窗，点击确认后进行上传；</span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-weight:400;">2、通过点击“上传”按钮调浏览器的选择文件时，支持允许多选上传，顺序按照本地目录顺序；</span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-weight:400;">3、单个文件（图片）大小上限20M；</span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-weight:400;">4、最多上传9张。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u809" class="ax_default _文本 transition notrs">
+        <div id="u809_div" class=""></div>
+        <div id="u809_text" class="text ">
+          <p><span>C04 - 导入弹窗组：详见子页面C04</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u810" class="ax_default" data-left="20" data-top="2671" data-width="553" data-height="434" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u811" class="ax_default _14小标题 transition notrs">
+          <div id="u811_div" class=""></div>
+          <div id="u811_text" class="text ">
+            <p><span>C08 - 国际化弹窗（SCM用不了）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u812" class="ax_default _12文本 transition notrs">
+          <div id="u812_div" class=""></div>
+          <div id="u812_text" class="text ">
+            <p><span>用于多语言输入框的填写；外面输入框为系统默认语言的输入框，点击图标出弹窗显示其他语言的输入框。如：系统默认语言为中文，则外面输入框为中文输入框，当系统语言切换为英文的时候，外面输入框应切换为英文输入框</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u813" class="ax_default" data-left="20" data-top="2762" data-width="480" data-height="343" layer-opacity="1">
+
+          <!-- 弹窗 (Group) -->
+          <div id="u814" class="ax_default" data-label="弹窗" data-left="20" data-top="2817" data-width="480" data-height="288" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u815" class="ax_default box-弹窗底 transition notrs">
+              <div id="u815_div" class=""></div>
+              <div id="u815_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- btn (Group) -->
+            <div id="u816" class="ax_default" data-label="btn" data-left="20" data-top="3057" data-width="480" data-height="48" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u817" class="ax_default box-弹窗底栏 transition notrs">
+                <div id="u817_div" class=""></div>
+                <div id="u817_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Shape) -->
+              <div id="u818" class="ax_default btn-__ transition notrs">
+                <svg data="images/c-弹窗类/u818.svg" id="u818_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u818_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u818_img_cl294">
+      <path d="M 0 26  L 0 2  C 0 0.880000000000109  0.8799999999999955 0  2 0  L 38 0  L 78 0  C 79.12 0  80 0.880000000000109  80 2  L 80 26  C 80 27.11999999999989  79.12 28  78 28  L 2 28  C 0.8799999999999955 28  0 27.11999999999989  0 26  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -404 -3067 )">
+    <path d="M 0 26  L 0 2  C 0 0.880000000000109  0.8799999999999955 0  2 0  L 38 0  L 78 0  C 79.12 0  80 0.880000000000109  80 2  L 80 26  C 80 27.11999999999989  79.12 28  78 28  L 2 28  C 0.8799999999999955 28  0 27.11999999999989  0 26  Z " fill-rule="nonzero" fill="rgba(255, 169, 20, 1)" stroke="none" transform="matrix(1 0 0 1 404 3067 )" class="fill" />
+    <path d="M 0 26  L 0 2  C 0 0.880000000000109  0.8799999999999955 0  2 0  L 38 0  L 78 0  C 79.12 0  80 0.880000000000109  80 2  L 80 26  C 80 27.11999999999989  79.12 28  78 28  L 2 28  C 0.8799999999999955 28  0 27.11999999999989  0 26  Z " stroke-width="0" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 3067 )" class="stroke" mask="url(#u818_img_cl294)" />
+  </g>
+                </svg>
+                <div id="u818_text" class="text ">
+                  <p><span>确 定</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u819" class="ax_default btn-__3 transition notrs">
+                <div id="u819_div" class=""></div>
+                <div id="u819_text" class="text ">
+                  <p><span>取 消</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- title (Group) -->
+            <div id="u820" class="ax_default" data-label="title" data-left="20" data-top="2817" data-width="480" data-height="40" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u821" class="ax_default box-弹窗标题栏 transition notrs">
+                <div id="u821_div" class=""></div>
+                <div id="u821_text" class="text ">
+                  <p><span>国际化</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Group) -->
+              <div id="u822" class="ax_default" data-left="471.6360389693209" data-top="2830.636038969321" data-width="12.727922061358186" data-height="12.727922061358186" layer-opacity="1">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u823" class="ax_default box_3 transition notrs">
+                  <div id="u823_div" class=""></div>
+                  <div id="u823_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u824" class="ax_default box_3 transition notrs">
+                  <div id="u824_div" class=""></div>
+                  <div id="u824_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u825" class="ax_default" data-left="40" data-top="2872" data-width="440" data-height="50" layer-opacity="1">
+
+              <!-- Unnamed (Text area) -->
+              <div id="u826" class="ax_default text_area transition notrs">
+                <div id="u826_div" class=""></div>
+                <textarea id="u826_input" class="u826_input"></textarea>
+              </div>
+
+              <!-- Unnamed (Image) -->
+              <div id="u827" class="ax_default image transition notrs">
+                <img id="u827_img" class="img " src="images/a-输入框类/u182.png"/>
+                <div id="u827_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u828" class="ax_default _12文本 transition notrs">
+                <div id="u828_div" class=""></div>
+                <div id="u828_text" class="text ">
+                  <p><span>English：</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u829" class="ax_default" data-left="40" data-top="2932" data-width="440" data-height="50" layer-opacity="1">
+
+              <!-- Unnamed (Text area) -->
+              <div id="u830" class="ax_default text_area transition notrs">
+                <div id="u830_div" class=""></div>
+                <textarea id="u830_input" class="u830_input"></textarea>
+              </div>
+
+              <!-- Unnamed (Image) -->
+              <div id="u831" class="ax_default image transition notrs">
+                <img id="u831_img" class="img " src="images/a-输入框类/u182.png"/>
+                <div id="u831_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u832" class="ax_default _12文本 transition notrs">
+                <div id="u832_div" class=""></div>
+                <div id="u832_text" class="text ">
+                  <p><span>日本語：</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u833" class="ax_default" data-left="40" data-top="2992" data-width="440" data-height="50" layer-opacity="1">
+
+              <!-- Unnamed (Text area) -->
+              <div id="u834" class="ax_default text_area transition notrs">
+                <div id="u834_div" class=""></div>
+                <textarea id="u834_input" class="u834_input"></textarea>
+              </div>
+
+              <!-- Unnamed (Image) -->
+              <div id="u835" class="ax_default image transition notrs">
+                <img id="u835_img" class="img " src="images/a-输入框类/u182.png"/>
+                <div id="u835_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u836" class="ax_default _12文本 transition notrs">
+                <div id="u836_div" class=""></div>
+                <div id="u836_text" class="text ">
+                  <p><span style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo', sans-serif;">한국어</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">：</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (Group) -->
+          <div id="u837" class="ax_default" data-left="20" data-top="2762" data-width="200" data-height="50" layer-opacity="1">
+
+            <!-- Unnamed (Text field) -->
+            <div id="u838" class="ax_default text_field transition notrs">
+              <div id="u838_div" class=""></div>
+              <input id="u838_input" type="text" value="" class="u838_input" maxlength="20"/>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u839" class="ax_default _12文本 transition notrs">
+              <div id="u839_div" class=""></div>
+              <div id="u839_text" class="text ">
+                <p><span>标题：</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Image) -->
+            <div id="u840" class="ax_default _图像 transition notrs">
+              <img id="u840_img" class="img " src="images/c-弹窗类/u840.png"/>
+              <div id="u840_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Connector) -->
+      <div id="u841" class="ax_default _连接符">
+        <img id="u841_seg0" class="img " src="images/c-弹窗类/u841_seg0.svg" alt="u841_seg0"/>
+        <img id="u841_seg1" class="img " src="images/c-弹窗类/u841_seg1.svg" alt="u841_seg1"/>
+        <img id="u841_seg2" class="img " src="images/c-弹窗类/u841_seg2.svg" alt="u841_seg2"/>
+        <div id="u841_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (C09-带列表保存弹窗) -->
+      <div id="u842" class="nopointer  ax_default">
+
+        <!-- C07 (Group) -->
+        <div id="u843" class="ax_default" data-label="C07" data-left="20" data-top="3226" data-width="380" data-height="323" layer-opacity="1">
+
+          <!-- Unnamed (Group) -->
+          <div id="u844" class="ax_default" data-left="20" data-top="3226" data-width="380" data-height="323" layer-opacity="1">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u845" class="ax_default box-弹窗底 transition notrs">
+              <div id="u845_div" class=""></div>
+              <div id="u845_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u846" class="ax_default box-弹窗标题栏 transition notrs">
+              <div id="u846_div" class=""></div>
+              <div id="u846_text" class="text ">
+                <p><span>错误通知</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u847" class="ax_default" data-left="20" data-top="3501" data-width="380" data-height="48" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u848" class="ax_default box-弹窗底栏 transition notrs">
+                <div id="u848_div" class=""></div>
+                <div id="u848_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u849" class="ax_default btn-__ transition notrs">
+                <div id="u849_div" class=""></div>
+                <div id="u849_text" class="text ">
+                  <p><span>关闭</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u850" class="ax_default" data-left="373.6360389693211" data-top="3239.636038969321" data-width="12.727922061357901" data-height="12.727922061357845" layer-opacity="1">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u851" class="ax_default box_3 transition notrs">
+                <div id="u851_div" class=""></div>
+                <div id="u851_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u852" class="ax_default box_3 transition notrs">
+                <div id="u852_div" class=""></div>
+                <div id="u852_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Table) -->
+            <div id="u853" class="ax_default">
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u854" class="ax_default table-__1 transition notrs">
+                <svg data="images/c-弹窗类/u854.svg" id="u854_img" class="img generatedImage" viewbox="0 0 150 28">
+
+  <path d="M 1 1  L 150 1  L 150 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" class="stroke" />
+                </svg>
+                <div id="u854_text" class="text ">
+                  <p><span>系统单据类型</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u855" class="ax_default table-__1 transition notrs">
+                <svg data="images/c-弹窗类/u855.svg" id="u855_img" class="img generatedImage" viewbox="150 0 200 28">
+
+  <path d="M 1 1  L 199 1  L 199 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 245, 247, 1)" stroke="none" transform="matrix(1 0 0 1 150 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 150 0 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 150 0 )" class="stroke" />
+  <path d="M 199.5 1  L 199.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 150 0 )" class="stroke" />
+                </svg>
+                <div id="u855_text" class="text ">
+                  <p><span>单据编号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u856" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u856.svg" id="u856_img" class="img generatedImage" viewbox="0 28 150 28">
+
+  <path d="M 1 1  L 150 1  L 150 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 0 28 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 0 28 )" class="stroke" />
+                </svg>
+                <div id="u856_text" class="text ">
+                  <p><span>物料送货通知单</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u857" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u857.svg" id="u857_img" class="img generatedImage" viewbox="150 28 200 28">
+
+  <path d="M 1 1  L 199 1  L 199 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 28 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 28 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 28 )" class="stroke" />
+  <path d="M 199.5 1  L 199.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 28 )" class="stroke" />
+                </svg>
+                <div id="u857_text" class="text ">
+                  <p><span>xxxxxxxxxxx</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u858" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u858.svg" id="u858_img" class="img generatedImage" viewbox="0 56 150 28">
+
+  <path d="M 1 1  L 150 1  L 150 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 0 56 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 0 56 )" class="stroke" />
+                </svg>
+                <div id="u858_text" class="text ">
+                  <p><span>物料送货通知单</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u859" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u859.svg" id="u859_img" class="img generatedImage" viewbox="150 56 200 28">
+
+  <path d="M 1 1  L 199 1  L 199 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 56 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 56 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 56 )" class="stroke" />
+  <path d="M 199.5 1  L 199.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 56 )" class="stroke" />
+                </svg>
+                <div id="u859_text" class="text ">
+                  <p><span>xxxxxxxxxxx</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u860" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u860.svg" id="u860_img" class="img generatedImage" viewbox="0 84 150 28">
+
+  <path d="M 1 1  L 150 1  L 150 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 84 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 84 )" class="stroke" />
+                </svg>
+                <div id="u860_text" class="text ">
+                  <p><span>物料预收单</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u861" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u861.svg" id="u861_img" class="img generatedImage" viewbox="150 84 200 28">
+
+  <path d="M 1 1  L 199 1  L 199 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 84 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 84 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 84 )" class="stroke" />
+  <path d="M 199.5 1  L 199.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 84 )" class="stroke" />
+                </svg>
+                <div id="u861_text" class="text ">
+                  <p><span>xxxxxxxxxxx</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u862" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u862.svg" id="u862_img" class="img generatedImage" viewbox="0 112 150 28">
+
+  <path d="M 1 1  L 150 1  L 150 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 112 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 112 )" class="stroke" />
+                </svg>
+                <div id="u862_text" class="text ">
+                  <p><span>物料预收单</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u863" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u863.svg" id="u863_img" class="img generatedImage" viewbox="150 112 200 28">
+
+  <path d="M 1 1  L 199 1  L 199 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 112 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 112 )" class="stroke" />
+  <path d="M 199.5 1  L 199.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 112 )" class="stroke" />
+                </svg>
+                <div id="u863_text" class="text ">
+                  <p><span>xxxxxxxxxxx</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u864" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u864.svg" id="u864_img" class="img generatedImage" viewbox="0 140 150 28">
+
+  <path d="M 1 1  L 150 1  L 150 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 140 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 140 )" class="stroke" />
+  <path d="M 0 27.5  L 150 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 0 140 )" class="stroke" />
+                </svg>
+                <div id="u864_text" class="text ">
+                  <p><span>物料入库单</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Table cell) -->
+              <div id="u865" class="ax_default table-___ transition notrs">
+                <svg data="images/c-弹窗类/u865.svg" id="u865_img" class="img generatedImage" viewbox="150 140 200 28">
+
+  <path d="M 1 1  L 199 1  L 199 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 140 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 140 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 140 )" class="stroke" />
+  <path d="M 199.5 1  L 199.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 140 )" class="stroke" />
+  <path d="M 0 27.5  L 200 27.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(223, 230, 236, 1)" fill="none" transform="matrix(1 0 0 1 150 140 )" class="stroke" />
+                </svg>
+                <div id="u865_text" class="text ">
+                  <p><span>xxxxxxxxxxx</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u866" class="ax_default _12文本 transition notrs">
+              <div id="u866_div" class=""></div>
+              <div id="u866_text" class="text ">
+                <p><span>提示语提示语提示语提示语提示语提示语提示语：</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u867" class="ax_default _14小标题 transition notrs">
+        <div id="u867_div" class=""></div>
+        <div id="u867_text" class="text ">
+          <p><span>C09 - 带列表报错弹窗</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u868" class="ax_default _12文本 transition notrs">
+        <div id="u868_div" class=""></div>
+        <div id="u868_text" class="text ">
+          <p><span>常用于做反审核、作废、删除等操作时，检查到被下游单据引用，而不允许执行的场景。列出具体的单据类型和单号，方便用户查找对应的下游单据，从末端往回作废。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u869" class="ax_default _12文本 transition notrs">
+        <div id="u869_div" class=""></div>
+        <div id="u869_text" class="text ">
+          <p><span>C01-1-成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u870" class="ax_default _12文本 transition notrs">
+        <div id="u870_div" class=""></div>
+        <div id="u870_text" class="text ">
+          <p><span>C01-2-信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u871" class="ax_default _12文本 transition notrs">
+        <div id="u871_div" class=""></div>
+        <div id="u871_text" class="text ">
+          <p><span>C01-3-警告</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u872" class="ax_default _12文本 transition notrs">
+        <div id="u872_div" class=""></div>
+        <div id="u872_text" class="text ">
+          <p><span>C01-4-错误</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u873" class="ax_default" data-left="95" data-top="168" data-width="294" data-height="40" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u874" class="ax_default _形状 transition notrs">
+          <div id="u874_div" class=""></div>
+          <div id="u874_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u875" class="ax_default label transition notrs">
+          <div id="u875_div" class=""></div>
+          <div id="u875_text" class="text ">
+            <p><span>这是一条成功提示，5秒后主动消失。</span></p>
+          </div>
+        </div>
+
+        <!-- toast_tick (Group) -->
+        <div id="u876" class="ax_default" data-label="toast_tick" data-left="109" data-top="180" data-width="16" data-height="16" layer-opacity="1">
+
+          <!-- 矩形 (Rectangle) -->
+          <div id="u877" class="ax_default _形状 transition notrs" data-label="矩形">
+            <div id="u877_div" class=""></div>
+            <div id="u877_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 路径 (Shape) -->
+          <div id="u878" class="ax_default _形状 transition notrs" data-label="路径">
+            <svg data="images/c-弹窗类/路径_u878.svg" id="u878_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u878_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u878_img_cl295">
+      <path d="M 5.30330086 8.131728  C 5.498563 8.3269901  5.81514549 8.3269901  6.01040764 8.131728  L 13.4350288 0.7071067800000002  C 13.8255531 0.31658249000000005  14.4587181 0.31658249000000005  14.8492424 0.7071067800000002  C 15.2397667 1.0976310700000003  15.2397667 1.7307960500000001  14.8492424 2.1213203399999996  L 6.36396103 10.6066017  C 5.97343674 10.997126  5.34027176 10.997126  4.94974747 10.6066017  L 0.707106781 6.3639610300000005  C 0.316582489 5.97343674  0.316582489 5.34027176  0.707106781 4.94974747  C 1.09763107 4.55922318  1.73079605 4.55922318  2.12132034 4.94974747  L 5.30330086 8.131728  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -109 -183 )">
+    <path d="M 5.30330086 8.131728  C 5.498563 8.3269901  5.81514549 8.3269901  6.01040764 8.131728  L 13.4350288 0.7071067800000002  C 13.8255531 0.31658249000000005  14.4587181 0.31658249000000005  14.8492424 0.7071067800000002  C 15.2397667 1.0976310700000003  15.2397667 1.7307960500000001  14.8492424 2.1213203399999996  L 6.36396103 10.6066017  C 5.97343674 10.997126  5.34027176 10.997126  4.94974747 10.6066017  L 0.707106781 6.3639610300000005  C 0.316582489 5.97343674  0.316582489 5.34027176  0.707106781 4.94974747  C 1.09763107 4.55922318  1.73079605 4.55922318  2.12132034 4.94974747  L 5.30330086 8.131728  Z " fill-rule="nonzero" fill="rgba(35, 200, 17, 1)" stroke="none" transform="matrix(1 0 0 1 109 183 )" class="fill" />
+    <path d="M 5.30330086 8.131728  C 5.498563 8.3269901  5.81514549 8.3269901  6.01040764 8.131728  L 13.4350288 0.7071067800000002  C 13.8255531 0.31658249000000005  14.4587181 0.31658249000000005  14.8492424 0.7071067800000002  C 15.2397667 1.0976310700000003  15.2397667 1.7307960500000001  14.8492424 2.1213203399999996  L 6.36396103 10.6066017  C 5.97343674 10.997126  5.34027176 10.997126  4.94974747 10.6066017  L 0.707106781 6.3639610300000005  C 0.316582489 5.97343674  0.316582489 5.34027176  0.707106781 4.94974747  C 1.09763107 4.55922318  1.73079605 4.55922318  2.12132034 4.94974747  L 5.30330086 8.131728  Z " stroke-width="0" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 109 183 )" class="stroke" mask="url(#u878_img_cl295)" />
+  </g>
+            </svg>
+            <div id="u878_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u879" class="ax_default" data-left="95" data-top="226" data-width="294" data-height="40" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u880" class="ax_default _形状 transition notrs">
+          <div id="u880_div" class=""></div>
+          <div id="u880_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u881" class="ax_default label transition notrs">
+          <div id="u881_div" class=""></div>
+          <div id="u881_text" class="text ">
+            <p><span>这是一条温馨提示，5秒后主动消失。</span></p>
+          </div>
+        </div>
+
+        <!-- toast_tips (Group) -->
+        <div id="u882" class="ax_default" data-label="toast_tips" data-left="109" data-top="238" data-width="16" data-height="16" layer-opacity="1">
+
+          <!-- 矩形 (Rectangle) -->
+          <div id="u883" class="ax_default _形状 transition notrs" data-label="矩形">
+            <div id="u883_div" class=""></div>
+            <div id="u883_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 矩形备份 12 (Rectangle) -->
+          <div id="u884" class="ax_default _形状 transition notrs" data-label="矩形备份 12">
+            <div id="u884_div" class=""></div>
+            <div id="u884_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 矩形 (Rectangle) -->
+          <div id="u885" class="ax_default _形状 transition notrs" data-label="矩形">
+            <div id="u885_div" class=""></div>
+            <div id="u885_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 矩形备份 4 (Rectangle) -->
+          <div id="u886" class="ax_default _形状 transition notrs" data-label="矩形备份 4">
+            <div id="u886_div" class=""></div>
+            <div id="u886_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u887" class="ax_default" data-left="95" data-top="284" data-width="294" data-height="40" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u888" class="ax_default _形状 transition notrs">
+          <div id="u888_div" class=""></div>
+          <div id="u888_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u889" class="ax_default label transition notrs">
+          <div id="u889_div" class=""></div>
+          <div id="u889_text" class="text ">
+            <p><span>这是一条警告提示，5秒后主动消失。</span></p>
+          </div>
+        </div>
+
+        <!-- toast_warning (Group) -->
+        <div id="u890" class="ax_default" data-label="toast_warning" data-left="109" data-top="296" data-width="16" data-height="16" layer-opacity="1">
+
+          <!-- 矩形 (Rectangle) -->
+          <div id="u891" class="ax_default _形状 transition notrs" data-label="矩形">
+            <div id="u891_div" class=""></div>
+            <div id="u891_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 矩形备份 12 (Rectangle) -->
+          <div id="u892" class="ax_default _形状 transition notrs" data-label="矩形备份 12">
+            <div id="u892_div" class=""></div>
+            <div id="u892_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 矩形 (Rectangle) -->
+          <div id="u893" class="ax_default _形状 transition notrs" data-label="矩形">
+            <div id="u893_div" class=""></div>
+            <div id="u893_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 矩形备份 4 (Rectangle) -->
+          <div id="u894" class="ax_default _形状 transition notrs" data-label="矩形备份 4">
+            <div id="u894_div" class=""></div>
+            <div id="u894_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u895" class="ax_default" data-left="95" data-top="342" data-width="294" data-height="40" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u896" class="ax_default _形状 transition notrs">
+          <div id="u896_div" class=""></div>
+          <div id="u896_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u897" class="ax_default label transition notrs">
+          <div id="u897_div" class=""></div>
+          <div id="u897_text" class="text ">
+            <p><span>这是一条异常消息，5秒后主动消失。</span></p>
+          </div>
+        </div>
+
+        <!-- toast_close (Group) -->
+        <div id="u898" class="ax_default" data-label="toast_close" data-left="109" data-top="354" data-width="16" data-height="16" layer-opacity="1">
+
+          <!-- 矩形 (Rectangle) -->
+          <div id="u899" class="ax_default _形状 transition notrs" data-label="矩形">
+            <div id="u899_div" class=""></div>
+            <div id="u899_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 路径 (Shape) -->
+          <div id="u900" class="ax_default _形状 transition notrs" data-label="路径">
+            <svg data="images/c-弹窗类/路径_u900.svg" id="u900_img" class="img generatedImage">
+
+  <defs>
+    <pattern id="u900_img_bgp" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+    <mask fill="white" id="u900_img_cl296">
+      <path d="M 7.778174590000002 6.3639610300000005  L 12.0208153 10.6066017  C 12.4113396 10.997126  12.4113396 11.630291  12.0208153 12.0208153  C 11.630291 12.4113396  10.997126 12.4113396  10.6066017 12.0208153  L 6.3639610300000005 7.778174590000002  L 2.1213203399999996 12.0208153  C 1.73079605 12.4113396  1.0976310699999998 12.4113396  0.7071067800000002 12.0208153  C 0.31658249000000005 11.630291  0.31658249000000005 10.997126  0.7071067800000002 10.6066017  L 4.94974747 6.3639610300000005  L 0.7071067800000002 2.1213203399999996  C 0.31658249000000005 1.73079605  0.31658249000000005 1.0976310699999998  0.7071067800000002 0.7071067800000002  C 1.0976310699999998 0.31658249000000005  1.73079605 0.31658249000000005  2.1213203399999996 0.7071067800000002  L 6.3639610300000005 4.94974747  L 10.6066017 0.7071067800000002  C 10.997126 0.31658249000000005  11.630291 0.31658249000000005  12.0208153 0.7071067800000002  C 12.4113396 1.0976310699999998  12.4113396 1.73079605  12.0208153 2.1213203399999996  L 7.778174590000002 6.3639610300000005  Z " fill-rule="evenodd" />
+    </mask>
+  </defs>
+  <g transform="matrix(1 0 0 1 -111 -356 )">
+    <path d="M 7.778174590000002 6.3639610300000005  L 12.0208153 10.6066017  C 12.4113396 10.997126  12.4113396 11.630291  12.0208153 12.0208153  C 11.630291 12.4113396  10.997126 12.4113396  10.6066017 12.0208153  L 6.3639610300000005 7.778174590000002  L 2.1213203399999996 12.0208153  C 1.73079605 12.4113396  1.0976310699999998 12.4113396  0.7071067800000002 12.0208153  C 0.31658249000000005 11.630291  0.31658249000000005 10.997126  0.7071067800000002 10.6066017  L 4.94974747 6.3639610300000005  L 0.7071067800000002 2.1213203399999996  C 0.31658249000000005 1.73079605  0.31658249000000005 1.0976310699999998  0.7071067800000002 0.7071067800000002  C 1.0976310699999998 0.31658249000000005  1.73079605 0.31658249000000005  2.1213203399999996 0.7071067800000002  L 6.3639610300000005 4.94974747  L 10.6066017 0.7071067800000002  C 10.997126 0.31658249000000005  11.630291 0.31658249000000005  12.0208153 0.7071067800000002  C 12.4113396 1.0976310699999998  12.4113396 1.73079605  12.0208153 2.1213203399999996  L 7.778174590000002 6.3639610300000005  Z " fill-rule="nonzero" fill="rgba(250, 65, 80, 1)" stroke="none" transform="matrix(1 0 0 1 111 356 )" class="fill" />
+    <path d="M 7.778174590000002 6.3639610300000005  L 12.0208153 10.6066017  C 12.4113396 10.997126  12.4113396 11.630291  12.0208153 12.0208153  C 11.630291 12.4113396  10.997126 12.4113396  10.6066017 12.0208153  L 6.3639610300000005 7.778174590000002  L 2.1213203399999996 12.0208153  C 1.73079605 12.4113396  1.0976310699999998 12.4113396  0.7071067800000002 12.0208153  C 0.31658249000000005 11.630291  0.31658249000000005 10.997126  0.7071067800000002 10.6066017  L 4.94974747 6.3639610300000005  L 0.7071067800000002 2.1213203399999996  C 0.31658249000000005 1.73079605  0.31658249000000005 1.0976310699999998  0.7071067800000002 0.7071067800000002  C 1.0976310699999998 0.31658249000000005  1.73079605 0.31658249000000005  2.1213203399999996 0.7071067800000002  L 6.3639610300000005 4.94974747  L 10.6066017 0.7071067800000002  C 10.997126 0.31658249000000005  11.630291 0.31658249000000005  12.0208153 0.7071067800000002  C 12.4113396 1.0976310699999998  12.4113396 1.73079605  12.0208153 2.1213203399999996  L 7.778174590000002 6.3639610300000005  Z " stroke-width="0" stroke-dasharray="0" stroke="rgba(255, 255, 255, 0)" fill="none" transform="matrix(1 0 0 1 111 356 )" class="stroke" mask="url(#u900_img_cl296)" />
+  </g>
+            </svg>
+            <div id="u900_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Group) -->
+      <div id="u901" class="ax_default" data-left="0" data-top="0" data-width="1980" data-height="50" layer-opacity="1">
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u902" class="ax_default box_2 transition notrs">
+          <div id="u902_div" class=""></div>
+          <div id="u902_text" class="text ">
+            <p><span>C-弹窗类</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

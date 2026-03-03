@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原子化组件交互规范系统 | Portfolio - Shi Zheng</title>
+    <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
+    <meta name="description" content="原子化组件交互规范系统——一个全面、可扩展的组件库，确保 50+ 企业模块交互一致性">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20260303">
+    <link rel="stylesheet" href="portfolio-escm.css?v=20260303">
+    <link rel="stylesheet" href="portfolio-interaction_system.css?v=20260303">
+</head>
+
+<body class="escm-theme-light" data-name="portfolio-interaction_system">
+
+    <!-- ===================== Navigation ===================== -->
+    <nav id="navbar" class="escm-navbar scrolled-always">
+        <div class="escm-nav-inner">
+            <div class="escm-nav-brand">
+                <div class="escm-nav-logo font-outfit" onclick="window.location.href='index.html'">
+                    SHI <span>ZHENG</span>
+                </div>
+                <div class="escm-nav-breadcrumb">
+                    <span class="breadcrumb-label">Portfolio Case</span>
+                    <div class="breadcrumb-divider"></div>
+                    <span class="breadcrumb-page">交互规范系统</span>
+                </div>
+            </div>
+            <div class="escm-nav-links">
+                <div class="contact-wrapper">
+                    <a href="javascript:void(0)" class="escm-nav-cta">联系我</a>
+                    <div class="contact-popup">
+                        <div class="contact-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">taro032@live.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Phone / Wechat</div>
+                            <div class="contact-value">17612001458</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="escm-nav-mobile">
+                <div class="contact-wrapper">
+                    <a href="javascript:void(0)" class="escm-nav-cta escm-nav-cta-mobile">联系我</a>
+                    <div class="contact-popup">
+                        <div class="contact-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">taro032@live.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Phone / Wechat</div>
+                            <div class="contact-value">17612001458</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.escm-nav-inner -->
+    </nav>
+
+    <!-- ===================== 主体区域 ===================== -->
+    <main class="escm-main-container">
+        <div class="is-sections-wrapper">
+
+            <!-- ====== Section 1: Hero ====== -->
+            <section id="hero" class="is-hero-section" data-name="hero text">
+                <!-- DotGrid Background (vanilla Canvas, ported from ReactBits) -->
+                <div class="dot-grid-bg" id="dotGridBg" aria-hidden="true">
+                    <canvas id="dotGridCanvas"></canvas>
+                </div>
+                <div class="is-hero-text" data-node-id="47460:2966">
+                    <h1 class="is-hero-title" data-node-id="47460:2967">原子化组件交互<span class="highlight">规范系统</span></h1>
+                    <p class="is-hero-subtitle" data-node-id="47460:2968">一个全面、可扩展的库，旨在确保 50 多个企业模块在交互和基础功能上的一致性，通过封装复用提升产研效率</p>
+                    <div class="is-value-tags" data-name="value" data-node-id="47460:2969">
+                        <div class="is-value-tag" data-node-id="47458:3645">
+                            <img class="is-value-tag-icon" src="images/interaction/icon-uptrend.svg" alt="">
+                            <span class="is-value-tag-text">+50% 研发效能</span>
+                        </div>
+                        <div class="is-value-tag" data-node-id="47460:2971">
+                            <img class="is-value-tag-icon" src="images/interaction/icon-4square.svg" alt="">
+                            <span class="is-value-tag-text">支持4个业务部门</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== Section 2: Main Content ====== -->
+            <section id="main-content" class="is-main-content" data-name="Main Content" data-node-id="47460:2992">
+
+                <!-- 左侧: Methodology Timeline -->
+                <div class="is-methodology-timeline" data-name="Methodology Timeline" data-node-id="47460:2993">
+                    <div class="is-heading-3" data-node-id="47460:2994">
+                        <img class="is-heading-3-icon" src="images/interaction/icon-hierarchical.svg" alt="">
+                        <span class="is-heading-3-text" data-node-id="47460:2996">系统层级架构</span>
+                    </div>
+
+                    <div class="is-methodology-list" data-name="methodology" data-node-id="47460:2997">
+
+                        <!-- Atoms (默认激活) -->
+                        <div class="is-methodology-item is-active" data-layer="atoms" data-node-id="47460:2998">
+                            <div class="is-methodology-node" data-node-id="47460:3019">
+                                <img class="is-methodology-node-icon" src="images/interaction/icon-atoms.svg" alt="">
+                            </div>
+                            <div class="is-methodology-card" data-node-id="47472:4325">
+                                <div class="is-methodology-texts" data-node-id="47472:4326">
+                                    <div class="is-methodology-title-row" data-node-id="47472:4327">
+                                        <span class="is-methodology-title" data-node-id="47472:4328">原子层</span>
+                                        <span class="is-methodology-title-en" data-node-id="47472:4329">Atoms</span>
+                                    </div>
+                                    <p class="is-methodology-desc" data-node-id="47472:4330">基础元素：按钮、输入框、下拉菜单等</p>
+                                </div>
+                                <div class="is-methodology-illustration is-illust-atoms is-illust-fixed-h" data-node-id="47472:4332">
+                                    <div class="is-illust-atoms-inner">
+                                        <div class="is-illust-row">
+                                            <div class="is-illust-dropdown">
+                                                <div class="is-illust-dropdown-bar"></div>
+                                            </div>
+                                            <div class="is-illust-btn">
+                                                <div class="is-illust-btn-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="is-illust-row">
+                                            <div class="is-illust-dropdown-item">
+                                                <img class="is-illust-checkbox" src="images/interaction/icon-checkbox.svg" alt="">
+                                                <div class="is-illust-text-bar"></div>
+                                            </div>
+                                            <div class="is-illust-dropdown">
+                                                <div class="is-illust-dropdown-bar"></div>
+                                                <img class="is-illust-dropdown-arrow" src="images/interaction/icon-arrow-down.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Molecules -->
+                        <div class="is-methodology-item" data-layer="molecules" data-node-id="47460:3021">
+                            <div class="is-methodology-node" data-node-id="47460:3037">
+                                <img class="is-methodology-node-icon" src="images/interaction/icon-molecules.svg" alt="">
+                            </div>
+                            <div class="is-methodology-card" data-node-id="47472:4352">
+                                <div class="is-methodology-texts" data-node-id="47472:4353">
+                                    <div class="is-methodology-title-row" data-node-id="47472:4354">
+                                        <span class="is-methodology-title" data-node-id="47472:4355">分子层</span>
+                                        <span class="is-methodology-title-en" data-node-id="47472:4356">Molecules</span>
+                                    </div>
+                                    <p class="is-methodology-desc" data-node-id="47472:4357">元素组合：级联选择器、表单、表格等</p>
+                                </div>
+                                <div class="is-methodology-illustration is-illust-molecules is-illust-fixed-h" data-node-id="47472:4379">
+                                    <div class="is-illust-table">
+                                        <div class="is-illust-table-row" data-node-id="47472:4381">
+                                            <div class="is-illust-table-checkbox"></div>
+                                            <div class="is-illust-table-bar"></div>
+                                        </div>
+                                        <div class="is-illust-table-row" data-node-id="47472:4384">
+                                            <div class="is-illust-table-checkbox"></div>
+                                            <div class="is-illust-table-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Organisms -->
+                        <div class="is-methodology-item" data-layer="organisms" data-node-id="47460:3039">
+                            <div class="is-methodology-node" data-node-id="47460:3059">
+                                <img class="is-methodology-node-icon" src="images/interaction/icon-organism.svg" alt="">
+                            </div>
+                            <div class="is-methodology-card" data-node-id="47472:4509">
+                                <div class="is-methodology-texts" data-node-id="47472:4510">
+                                    <div class="is-methodology-title-row" data-node-id="47472:4511">
+                                        <span class="is-methodology-title" data-node-id="47472:4512">有机体</span>
+                                        <span class="is-methodology-title-en" data-node-id="47472:4513">Organisms</span>
+                                    </div>
+                                    <p class="is-methodology-desc" data-node-id="47472:4514">复杂组件：标准列表、业务通用组件等</p>
+                                </div>
+                                <div class="is-methodology-illustration is-illust-organisms is-illust-fixed-h" data-node-id="47472:4540">
+                                    <div class="is-illust-organisms-inner">
+                                        <div class="is-illust-table-simple">
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                        </div>
+                                        <div class="is-illust-separator"></div>
+                                        <div class="is-illust-table-simple">
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                        </div>
+                                        <div class="is-illust-separator"></div>
+                                        <div class="is-illust-table-simple">
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                            <div class="is-illust-table-bar-fixed"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Templates -->
+                        <div class="is-methodology-item" data-layer="templates" data-node-id="47460:3061">
+                            <div class="is-methodology-node" data-node-id="47460:3077">
+                                <img class="is-methodology-node-icon" src="images/interaction/icon-template.svg" alt="">
+                            </div>
+                            <div class="is-methodology-card" data-node-id="47472:4556">
+                                <div class="is-methodology-texts" data-node-id="47472:4557">
+                                    <div class="is-methodology-title-row" data-node-id="47472:4558">
+                                        <span class="is-methodology-title" data-node-id="47472:4559">模板层</span>
+                                        <span class="is-methodology-title-en" data-node-id="47472:4560">Templates</span>
+                                    </div>
+                                    <p class="is-methodology-desc" data-node-id="47472:4561">标准方案：布局、标准增删改查页面等</p>
+                                </div>
+                                <div class="is-methodology-illustration is-illust-templates is-illust-fixed-h" data-node-id="47472:4578">
+                                    <div class="is-illust-templates-inner">
+                                        <div class="is-illust-sidebar" data-node-id="47472:4579"></div>
+                                        <div class="is-illust-content" data-node-id="47472:4580">
+                                            <div class="is-illust-header-bar" data-node-id="47472:4581"></div>
+                                            <div class="is-illust-content-table" data-node-id="47472:4583">
+                                                <div class="is-illust-content-bar" data-node-id="47472:4584"></div>
+                                                <div class="is-illust-content-bar" data-node-id="47472:4585"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 右侧: Canvas -->
+                <div class="is-canvas-card" data-name="Right Column: Canvas" data-node-id="47460:3079">
+                    <div class="is-canvas-header" data-node-id="47460:3080">
+                        <img class="is-canvas-header-icon" src="images/interaction/icon-axure.svg" alt="">
+                        <span class="is-canvas-header-text" data-node-id="47460:3083">原型方案节选</span>
+                    </div>
+                    <div class="is-canvas-body" data-node-id="47460:3084">
+                        <iframe id="prototype-iframe" class="is-canvas-iframe" title="原型方案"
+                            src="prototype/regent-interaction-system/start.html#id=bdha57&p=a-输入框类"></iframe>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ====== Section 3: Stats Footer ====== -->
+            <section id="stats" class="is-stats-section" data-name="Section - Stats Footer" data-node-id="47460:3086">
+                <div class="is-stat-card" data-node-id="47458:3632">
+                    <span class="is-stat-label">组件数量</span>
+                    <span class="is-stat-value">108</span>
+                </div>
+                <div class="is-stat-card" data-node-id="47460:3088">
+                    <span class="is-stat-label">复用率</span>
+                    <span class="is-stat-value">100%</span>
+                </div>
+                <div class="is-stat-card" data-node-id="47460:3090">
+                    <span class="is-stat-label">节省研发时间</span>
+                    <span class="is-stat-value">~120工时/月</span>
+                </div>
+            </section>
+
+        </div><!-- /.is-sections-wrapper -->
+
+        <!-- ====== CTA / 返回主页 + 联系我 ====== -->
+        <section class="escm-cta-section">
+            <div class="escm-cta-buttons">
+                <a href="index.html#portfolio" class="escm-back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 19-7-7 7-7" />
+                        <path d="M19 12H5" />
+                    </svg>
+                    返回主页
+                </a>
+                <div class="contact-wrapper">
+                    <a href="javascript:void(0)" class="escm-cta-contact">联系我</a>
+                    <div class="contact-popup">
+                        <div class="contact-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">taro032@live.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Phone / Wechat</div>
+                            <div class="contact-value">17612001458</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="escm-footer">
+        <div class="escm-footer-inner">
+            <div class="escm-footer-copy">
+                Designed &amp; Vibe Coded by SHI ZHENG © 2026 ALL RIGHTS RESERVED
+            </div>
+            <div class="escm-footer-dots">
+                <div class="dot dot-blue animate-pulse-slow"></div>
+                <div class="dot dot-cyan animate-pulse-slow" style="animation-delay: 0.2s"></div>
+                <div class="dot dot-purple animate-pulse-slow" style="animation-delay: 0.4s"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== Scripts ===================== -->
+    <script>
+        /* ---- Methodology Timeline 层级切换 + 原型 iframe（保留 Axure 内链切换，左侧与 iframe 同步）---- */
+        (function () {
+            var items = document.querySelectorAll('.is-methodology-item');
+            var iframe = document.getElementById('prototype-iframe');
+            var BASE = 'prototype/regent-interaction-system/start.html';
+            var layerUrls = {
+                atoms: BASE + '#id=bdha57&p=a-输入框类',
+                molecules: BASE + '#id=w3hgou&p=e-表格类',
+                organisms: BASE + '#id=14jdtn&p=hs02-1-货品富筛选弹窗',
+                templates: BASE + '#id=97njcj&p=is01-标准列表页'
+            };
+            /* 根据 Axure hash 中的 p= 参数反推层级 */
+            var pageToLayer = {
+                'a-输入框类': 'atoms',
+                'e-表格类': 'molecules',
+                'hs02-1-货品富筛选弹窗': 'organisms',
+                'is01-标准列表页': 'templates'
+            };
+
+            function setActiveItem(layerName) {
+                items.forEach(function (item) {
+                    if (item.getAttribute('data-layer') === layerName) {
+                        item.classList.add('is-active');
+                    } else {
+                        item.classList.remove('is-active');
+                    }
+                });
+            }
+
+            function activateLayer(layerName) {
+                setActiveItem(layerName);
+                if (iframe && layerUrls[layerName]) {
+                    iframe.src = layerUrls[layerName];
+                }
+            }
+
+            /* iframe 每次加载后（含 Axure 内链跳转）根据 hash 中 p= 同步左侧激活态 */
+            if (iframe) {
+                iframe.addEventListener('load', function () {
+                    try {
+                        var hash = iframe.contentWindow.location.hash || '';
+                        var match = hash.match(/[#&]p=([^&]*)/);
+                        if (match) {
+                            var pageName = decodeURIComponent(match[1]);
+                            var layer = pageToLayer[pageName];
+                            if (layer) setActiveItem(layer);
+                        }
+                    } catch (e) {
+                        /* 跨域时忽略 */
+                    }
+                });
+            }
+
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var layer = item.getAttribute('data-layer');
+                    activateLayer(layer);
+
+                    if (window.innerWidth <= 800) {
+                        var canvas = document.querySelector('.is-canvas-card');
+                        if (canvas) {
+                            canvas.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    }
+                });
+            });
+        })();
+
+        /* ---- DotGrid Background (ported from ReactBits DotGrid) ---- */
+        (function () {
+            var container = document.getElementById('dotGridBg');
+            var canvas = document.getElementById('dotGridCanvas');
+            if (!container || !canvas) return;
+
+            var DOT_SIZE = 14;
+            var GAP = 28;
+            var BASE_COLOR = { r: 230, g: 247, b: 255 };
+            var ACTIVE_COLOR = { r: 150, g: 215, b: 255 };
+            var PROXIMITY = 140;
+            var SHOCK_RADIUS = 200;
+            var SHOCK_STRENGTH = 4;
+            var SPRING = 0.08;
+            var DAMPING = 0.85;
+
+            var dots = [];
+            var pointer = { x: -9999, y: -9999 };
+            var proxSq = PROXIMITY * PROXIMITY;
+            var dpr = Math.min(window.devicePixelRatio || 1, 2);
+            var ctx = canvas.getContext('2d');
+
+            var circlePath = new Path2D();
+            circlePath.arc(0, 0, DOT_SIZE / 2, 0, Math.PI * 2);
+
+            function buildGrid() {
+                var rect = container.getBoundingClientRect();
+                var w = rect.width;
+                var h = rect.height;
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+                canvas.width = w * dpr;
+                canvas.height = h * dpr;
+                canvas.style.width = w + 'px';
+                canvas.style.height = h + 'px';
+                ctx.scale(dpr, dpr);
+
+                var cell = DOT_SIZE + GAP;
+                var cols = Math.floor((w + GAP) / cell);
+                var rows = Math.floor((h + GAP) / cell);
+                var gridW = cell * cols - GAP;
+                var gridH = cell * rows - GAP;
+                var startX = (w - gridW) / 2 + DOT_SIZE / 2;
+                var startY = (h - gridH) / 2 + DOT_SIZE / 2;
+
+                dots = [];
+                for (var r = 0; r < rows; r++) {
+                    for (var c = 0; c < cols; c++) {
+                        dots.push({
+                            cx: startX + c * cell,
+                            cy: startY + r * cell,
+                            ox: 0, oy: 0,
+                            vx: 0, vy: 0
+                        });
+                    }
+                }
+            }
+
+            function draw() {
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                var px = pointer.x;
+                var py = pointer.y;
+
+                for (var i = 0; i < dots.length; i++) {
+                    var dot = dots[i];
+                    dot.vx += (-dot.ox) * SPRING;
+                    dot.vy += (-dot.oy) * SPRING;
+                    dot.vx *= DAMPING;
+                    dot.vy *= DAMPING;
+                    dot.ox += dot.vx;
+                    dot.oy += dot.vy;
+
+                    var dx = dot.cx - px;
+                    var dy = dot.cy - py;
+                    var dsq = dx * dx + dy * dy;
+
+                    var r = BASE_COLOR.r, g = BASE_COLOR.g, b = BASE_COLOR.b;
+                    if (dsq <= proxSq) {
+                        var dist = Math.sqrt(dsq);
+                        var t = 1 - dist / PROXIMITY;
+                        r = Math.round(BASE_COLOR.r + (ACTIVE_COLOR.r - BASE_COLOR.r) * t);
+                        g = Math.round(BASE_COLOR.g + (ACTIVE_COLOR.g - BASE_COLOR.g) * t);
+                        b = Math.round(BASE_COLOR.b + (ACTIVE_COLOR.b - BASE_COLOR.b) * t);
+                    }
+
+                    ctx.save();
+                    ctx.translate(dot.cx + dot.ox, dot.cy + dot.oy);
+                    ctx.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
+                    ctx.fill(circlePath);
+                    ctx.restore();
+                }
+
+                requestAnimationFrame(draw);
+            }
+
+            container.addEventListener('mousemove', function (e) {
+                var rect = canvas.getBoundingClientRect();
+                pointer.x = e.clientX - rect.left;
+                pointer.y = e.clientY - rect.top;
+            });
+            container.addEventListener('mouseleave', function () {
+                pointer.x = -9999;
+                pointer.y = -9999;
+            });
+            container.addEventListener('click', function (e) {
+                var rect = canvas.getBoundingClientRect();
+                var cx = e.clientX - rect.left;
+                var cy = e.clientY - rect.top;
+                for (var i = 0; i < dots.length; i++) {
+                    var dot = dots[i];
+                    var dist = Math.hypot(dot.cx - cx, dot.cy - cy);
+                    if (dist < SHOCK_RADIUS) {
+                        var falloff = Math.max(0, 1 - dist / SHOCK_RADIUS);
+                        dot.vx += (dot.cx - cx) * SHOCK_STRENGTH * falloff * 0.15;
+                        dot.vy += (dot.cy - cy) * SHOCK_STRENGTH * falloff * 0.15;
+                    }
+                }
+            });
+
+            buildGrid();
+            requestAnimationFrame(draw);
+
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(buildGrid, 150);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

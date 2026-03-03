@@ -1,0 +1,111 @@
+﻿body {
+  margin:0px;
+  background-color:rgba(246, 246, 246, 1);
+  background-image:none;
+  position:relative;
+  left:-0px;
+  width:1980px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+.form_sketch {
+  border-color:transparent;
+  background-color:transparent;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u1219_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:27px;
+  height:19px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border-radius:0px;
+  filter:drop-shadow(none);
+  transition:none;
+  color:#AAAAAA;
+}
+#u1219 {
+  border-width:0px;
+  position:absolute;
+  left:20px;
+  top:71px;
+  width:27px;
+  height:19px;
+  display:flex;
+  transition:none;
+  transform-origin:50% 50%;
+  color:#AAAAAA;
+}
+#u1219 .text {
+  position:absolute;
+  align-self:flex-start;
+  padding:0px 0px 0px 0px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u1219_text {
+  border-width:0px;
+  white-space:nowrap;
+  text-transform:none;
+}
+#u1220 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u1221_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1980px;
+  height:50px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 1);
+  border-radius:2px;
+  filter:drop-shadow(none);
+  transition:none;
+  font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+  font-weight:650;
+  font-style:normal;
+  font-size:16px;
+  text-align:left;
+}
+#u1221 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1980px;
+  height:50px;
+  display:flex;
+  transition:none;
+  transform-origin:50% 50%;
+  font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+  font-weight:650;
+  font-style:normal;
+  font-size:16px;
+  text-align:left;
+}
+#u1221 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 6px 2px 16px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u1221_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+}

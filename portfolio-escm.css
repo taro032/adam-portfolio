@@ -808,10 +808,42 @@ body.escm-theme-light {
     text-align: center;
 }
 
+.escm-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.escm-cta-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 12px 28px;
+    background: var(--escm-primary);
+    color: #fff;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(6, 135, 239, 0.25);
+}
+
+.escm-cta-contact:hover {
+    background: var(--escm-primary-dark);
+    box-shadow: 0 6px 24px rgba(6, 135, 239, 0.35);
+    transform: translateY(-2px);
+}
+
 .escm-back-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+    min-width: 140px;
     padding: 12px 28px;
     border: 1.5px solid var(--escm-border-strong);
     border-radius: 100px;
