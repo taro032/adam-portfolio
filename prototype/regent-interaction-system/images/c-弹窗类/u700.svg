@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="252px" height="124px" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="BGPattern" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
-    <mask fill="white" id="Clip291">
-      <path d="M 5 7  L 13.5 7  L 20.499984851506383 1.5148493730521294E-05  L 27.49996992787939 7  L 235 7  C 237.8 7  240 9.199999999999818  240 12  L 240 107  C 240 109.80000000000018  237.8 112  235 112  L 5 112  C 2.200000000000003 112  0 109.80000000000018  0 107  L 0 12  C 0 9.199999999999818  2.200000000000003 7  5 7  Z " fill-rule="evenodd" />
+    <mask fill="white" id="Clip460">
+      <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " fill-rule="evenodd" />
     </mask>
   </defs>
-  <g transform="matrix(1 0 0 1 -14 -2014 )">
-    <path d="M 5 7  L 13.5 7  L 20.499984851506383 1.5148493730521294E-05  L 27.49996992787939 7  L 235 7  C 237.8 7  240 9.199999999999818  240 12  L 240 107  C 240 109.80000000000018  237.8 112  235 112  L 5 112  C 2.200000000000003 112  0 109.80000000000018  0 107  L 0 12  C 0 9.199999999999818  2.200000000000003 7  5 7  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 20 2018 )" class="fill" />
-    <path d="M 5 7  L 13.5 7  L 20.499984851506383 1.5148493730521294E-05  L 27.49996992787939 7  L 235 7  C 237.8 7  240 9.199999999999818  240 12  L 240 107  C 240 109.80000000000018  237.8 112  235 112  L 5 112  C 2.200000000000003 112  0 109.80000000000018  0 107  L 0 12  C 0 9.199999999999818  2.200000000000003 7  5 7  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(229, 230, 233, 1)" fill="none" transform="matrix(1 0 0 1 20 2018 )" class="stroke" mask="url(#Clip291)" />
+  <g>
+    <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 0)" stroke="none" class="fill" />
+    <path d="M 0 8  C 0 3.5199999999999996  3.5199999999999996 0  8 0  C 12.48 0  16 3.5199999999999996  16 8  C 16 12.48  12.48 16  8 16  C 3.5199999999999996 16  0 12.48  0 8  Z " stroke-width="2" stroke-dasharray="0" stroke="rgba(144, 161, 178, 1)" fill="none" class="stroke" mask="url(#Clip460)" />
   </g>
-  <style>svg { filter: drop-shadow(0px 2px 3px rgba(170, 170, 170, 1)); }</style>
 </svg>

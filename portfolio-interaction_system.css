@@ -234,7 +234,7 @@
 .is-methodology-card {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     padding: 13.5px 17.5px;
     border-radius: 8px;
     backdrop-filter: blur(8px);
@@ -303,16 +303,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 9px 17px;
-    border-radius: 8px;
-    background: #f9fafb;
-    border: 1px solid #f2f3f7;
-    gap: 8px;
 }
 
 .is-methodology-illustration.is-illust-fixed-h {
-    height: 64px;
-    padding: 9px 17px;
+    height: auto;
+}
+
+.is-methodology-illustration .is-illust-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 /* ------------------------------------------------------------------
