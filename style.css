@@ -144,6 +144,7 @@ body {
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+    z-index: -1;
 }
 
 .glass-card:hover {
@@ -183,6 +184,15 @@ body {
     box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7),
         0 0 20px -5px rgba(0, 0, 0, 0.3);
     border-color: rgba(148, 163, 184, 0.3);
+}
+
+/* --- 首屏 Hero：Aurora 背景在底层，标题与文案在上层 --- */
+#about {
+    position: relative;
+}
+#about > div {
+    position: relative;
+    z-index: 1;
 }
 
 /* --- Reveal Animations --- */

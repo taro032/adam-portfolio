@@ -2,5 +2,13 @@
   "name": "adam-portfolio",
   "dependencies": {
     "ogl": "^1.0.11"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.0.0"
+  },
+  "scripts": {
+    "pdf": "node pdf/generate-pdf.js cn",
+    "pdf:cn": "node pdf/generate-pdf.js cn",
+    "pdf:en": "node pdf/generate-pdf.js en"
   }
 }
