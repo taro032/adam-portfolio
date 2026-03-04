@@ -163,6 +163,8 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-top: 0.06em;
+    line-height: 1.25;
 }
 
 .description {

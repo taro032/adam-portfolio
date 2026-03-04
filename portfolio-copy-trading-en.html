@@ -28,11 +28,18 @@
                     fontFamily: {
                         sans: ['"Space Grotesk"', '"Noto Sans SC"', 'Inter', 'sans-serif'],
                         outfit: ['Outfit', 'sans-serif'],
+                        muller: ['Muller', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Muller 字体（与 portfolio-traderscan 一致） */
+        .font-muller {
+            font-family: 'Muller', sans-serif;
+        }
+    </style>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css?v=20260302">
@@ -121,12 +128,10 @@
         </div>
 
         <section class="max-w-6xl mx-auto px-6 py-20">
-            <div class="texts mb-20 flex flex-col items-center text-center">
-                <h1 class="text-5xl md:text-7xl font-outfit font-black mb-8 tracking-tight gradient-title">Smart Money
-                    Execution Engine</h1>
-                <p class="description mx-auto max-w-3xl text-slate-400 text-lg">Developed based on a decoupled Strategy
-                    + Investment architecture. High-frequency on-chain signals are converted into standardized trading
-                    commands through a pluggable risk control matrix.</p>
+            <div class="texts mb-20 flex flex-col items-center text-center gap-0">
+                <h1 class="text-4xl md:text-5xl font-muller md:text-[56px] leading-[1.2] tracking-tight gradient-title">Smart Money
+                    Copy Trading Engine</h1>
+                <p class="description mx-auto max-w-3xl text-lg text-slate-400 mt-5">Decoupled Strategy + Investment design turns on-chain signals into standardized trading commands through a pluggable risk-control matrix.</p>
             </div>
 
             <!-- Strategies Grid -->
@@ -259,14 +264,14 @@
                                 <div id="view-buy" class="flow-view active">
                                     <div
                                         class="w-full flex justify-center bg-slate-900/20 p-12 rounded-xl border border-dashed border-white/10 overflow-hidden transition-all duration-500">
-                                        <img src="images/copy_buy_execution-light.svg" alt="Copy Buy Flow"
+                                        <img src="images/copy_buy_execution-en.svg" alt="Copy Buy Flow"
                                             class="w-full h-auto object-contain max-h-[800px] opacity-90">
                                     </div>
                                 </div>
                                 <div id="view-sell" class="flow-view hidden opacity-0 translate-y-4">
                                     <div
                                         class="w-full flex justify-center bg-slate-900/20 p-12 rounded-xl border border-dashed border-white/10 overflow-hidden transition-all duration-500">
-                                        <img src="images/copy_sell_execution.svg" alt="Copy Sell Flow"
+                                        <img src="images/copy_sell_execution-en.svg" alt="Copy Sell Flow"
                                             class="w-full h-auto object-contain max-h-[800px] opacity-90">
                                     </div>
                                 </div>
@@ -279,7 +284,7 @@
             <!-- Features -->
             <section class="features-section">
                 <div class="texts mb-12">
-                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight"><span class="text-white">Smart
+                    <h2 class="text-[40px] font-muller font-bold mb-4 tracking-tight leading-[1.2]"><span class="text-white">Smart
                             suite lets you</span> <span class="text-primary">break free</span></h2>
                 </div>
                 <div class="features-grid">
@@ -317,7 +322,7 @@
             <!-- Demo -->
             <section id="mobile-demo" class="mobile-demo-section">
                 <div class="texts mb-12">
-                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white">Mobile Workflow Demo
+                    <h2 class="text-[40px] font-muller font-bold mb-4 tracking-tight leading-[1.2] text-white m-0">Mobile Workflow Demo
                     </h2>
                 </div>
                 <div class="mobile-container" style="background-image: url('images/copy_trading-mobile_demo_bg.png');">
@@ -334,7 +339,7 @@
             <!-- Web Showcase -->
             <section id="web-showcase" class="web-showcase-section">
                 <div class="texts mb-12 text-center items-center flex flex-col">
-                    <h2 class="text-[36px] font-outfit font-black mb-4 tracking-tight text-white text-center">Web Node
+                    <h2 class="text-[40px] font-muller font-bold mb-4 tracking-tight leading-[1.2] text-white text-center m-0">Web Node
                         Pages & Components</h2>
                 </div>
                 <div class="web-image-container">
