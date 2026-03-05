@@ -347,26 +347,6 @@ body {
     margin-right: auto;
 }
 
-.education-heading {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.875rem;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.025em;
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.education-heading-bar {
-    display: inline-block;
-    width: 6px;
-    height: 2rem;
-    background: var(--primary);
-    box-shadow: 0 0 12px rgba(0, 200, 56, 0.6);
-}
-
 .education-card {
     /* uses .glass-card from design system */
 }
@@ -392,17 +372,18 @@ body {
     gap: 1rem;
 }
 
+/* 与“联系我”区块图标一致：圆形容器、绿色浅底、无边框 */
 .education-icon {
     width: 3.5rem;
     height: 3.5rem;
-    border-radius: 1rem;
-    background: rgba(30, 41, 59, 0.5);
-    border: 1px solid #334155;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 9999px;
+    background: rgba(34, 197, 94, 0.1);
+    border: none;
+    box-shadow: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
+    color: #34d399;
 }
 
 .education-icon i {
@@ -446,6 +427,19 @@ body {
     margin-top: 0.75rem;
 }
 
+/* 英文版：年份与 President tag 同一行，分隔线隔开 */
+.education-meta-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+}
+.education-meta-sep {
+    color: #475569;
+    font-weight: 700;
+    user-select: none;
+}
+
 .education-meta {
     display: inline-flex;
     align-items: center;
@@ -484,4 +478,105 @@ body {
     height: 0.875rem;
     background: #475569;
     flex-shrink: 0;
+}
+
+/* ==========================================================================
+   移动端适配
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    /* 2. 仅工作履历内 glass-card：移动端 padding 24px、文本行间距 16px */
+    #experience .glass-card {
+        padding: 24px !important;
+    }
+    #experience .glass-card > div > * {
+        margin-bottom: 16px;
+    }
+    #experience .glass-card > div > *:last-child {
+        margin-bottom: 0;
+    }
+    #experience .glass-card ul.space-y-5 > * + *,
+    #experience .glass-card .space-y-5 > * + * {
+        margin-top: 16px;
+    }
+    #experience .glass-card .flex.gap-4,
+    #experience .glass-card .flex.gap-16 {
+        gap: 16px;
+    }
+
+    /* 4. 工作履历内项目数据：字号至少与卡片标题一致，保持绿色（不覆盖 color） */
+    #experience .glass-card .metric-value {
+        font-size: 1.125rem;
+        font-weight: 800;
+    }
+    #experience .glass-card .metric-label {
+        font-size: 0.8rem;
+    }
+
+    /* 5. 工作履历卡片标题行：标题与“作品展示”可换行，“作品展示”第二行左对齐 */
+    #experience .glass-card .flex.justify-between.items-center {
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    #experience .glass-card .flex.justify-between.items-center a {
+        flex-shrink: 0;
+    }
+}
+
+/* 6. 教育背景：去掉分隔线；两个 tag 一行放得下就一行，否则换行 */
+.education-meta-divider {
+    display: none;
+}
+.education-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+@media (min-width: 768px) {
+    .education-meta {
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+/* 2. 工作履历：分隔线+文本同一行；日期与推荐信同一行 */
+.experience-sep-line {
+    white-space: nowrap;
+}
+
+/* 工作履历内项目数据：去掉左侧图标，3 个数据横向平均分布 */
+#experience .glass-card .experience-metrics-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+#experience .glass-card .experience-metrics-row .experience-metric-item {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+/* 作品精选卡片：标题换行时箭头图标保持尺寸不缩小 */
+#portfolio a.glass-card i[data-lucide="arrow-right"] {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+}
+
+/* 能力矩阵、教育背景卡片 padding 24px */
+#skills .glass-card,
+#education .glass-card {
+    padding: 24px;
+}
+
+/* 7. Footer 文案居中对齐 */
+footer .text-slate-500 {
+    text-align: center;
 }
