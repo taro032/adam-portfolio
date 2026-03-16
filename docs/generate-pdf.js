@@ -44,8 +44,8 @@ async function main() {
   const browser = await puppeteer.launch({ headless: 'new' });
   const page = await browser.newPage();
 
-  // 固定 1440px 桌面视口，避免窄屏/移动端布局
-  await page.setViewport({ width: 1440, height: 2000, deviceScaleFactor: 2 });
+  // 固定 1440px 桌面视口；deviceScaleFactor 用 1 避免 PDF 缩放导致文字发虚
+  await page.setViewport({ width: 1440, height: 2000, deviceScaleFactor: 1 });
 
   await page.goto(fileUrl, {
     waitUntil: ['networkidle0', 'domcontentloaded'],
@@ -53,6 +53,12 @@ async function main() {
   });
 
   await new Promise((r) => setTimeout(r, 2500));
+
+  // 等待网页字体（如 Google Fonts）加载完成，避免卡片正文用回退字体发虚
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+  });
+  await new Promise((r) => setTimeout(r, 500));
 
   // 强制首屏与动画区块在 PDF 中可见
   await page.evaluate(() => {
@@ -127,10 +133,28 @@ async function main() {
       footer.parentNode.removeChild(footer);
     }
 
-    // 4）仅对「工作履历」里的项目卡片在打印时强制两列排列
+    // 4）仅对「工作履历」里的项目卡片在打印时强制两列排列；并提升打印文字锐度
+    // 英文版：卡片改为纯色背景，避免渐变导致文字发虚
+    const cardSolidCss = langInPage === 'en' ? `
+        .glass-card {
+          background: rgba(38, 42, 52, 0.98) !important;
+          backdrop-filter: none !important;
+          box-shadow: inset 0 0 0 1px rgba(78, 78, 94, 0.5) !important;
+        }
+        .glass-card::before {
+          display: none !important;
+        }
+      ` : '';
     const style = document.createElement('style');
     style.textContent = `
       @media print {
+        /* 打印时提升文字锐度，减轻卡片正文发虚 */
+        body, .glass-card, .glass-card * {
+          -webkit-font-smoothing: antialiased !important;
+          -moz-osx-font-smoothing: grayscale !important;
+          text-rendering: geometricPrecision !important;
+        }
+        ${cardSolidCss}
         /* Intelfinity / 丽晶 下的项目卡片网格：两列布局 */
         #experience .grid {
           display: grid !important;

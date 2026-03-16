@@ -9,6 +9,7 @@
   "scripts": {
     "pdf": "node pdf/generate-pdf.js cn",
     "pdf:cn": "node pdf/generate-pdf.js cn",
-    "pdf:en": "node pdf/generate-pdf.js en"
+    "pdf:en": "node pdf/generate-pdf.js en",
+    "img:cn": "node pdf/generate-image-cn.js"
   }
 }
