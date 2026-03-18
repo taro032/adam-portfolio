@@ -24,6 +24,9 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# 本地文档与简历（不推送到远程）
+docs/
+
 # 部署脚本和测试文件
 deploy_from_github.sh
 diag_server.ps1
