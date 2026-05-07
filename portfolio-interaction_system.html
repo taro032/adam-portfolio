@@ -188,6 +188,17 @@
                     <div class="is-canvas-header" data-node-id="47460:3080">
                         <img class="is-canvas-header-icon" src="images/interaction/icon-axure.svg" alt="">
                         <span class="is-canvas-header-text" data-node-id="47460:3083">原型方案节选</span>
+                        <button id="open-prototype-in-new-tab" class="is-canvas-open-btn" type="button"
+                            title="新窗口打开" aria-label="在新窗口打开当前原型页面">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M14 5H19V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10 14L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M19 14V19H5V5H10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
                     <div class="is-canvas-body" data-node-id="47460:3084">
                         <iframe id="prototype-iframe" class="is-canvas-iframe" title="原型方案"
@@ -264,6 +275,7 @@
         (function () {
             var items = document.querySelectorAll('.is-methodology-item');
             var iframe = document.getElementById('prototype-iframe');
+            var openInNewTabButton = document.getElementById('open-prototype-in-new-tab');
             var BASE = '/prototype-regent/start.html';
             var layerUrls = {
                 atoms: BASE + '#id=bdha57&p=a-输入框类',
@@ -271,6 +283,18 @@
                 organisms: BASE + '#id=14jdtn&p=hs02-1-货品富筛选弹窗',
                 templates: BASE + '#id=97njcj&p=is01-标准列表页'
             };
+
+            function getCurrentPrototypeUrl() {
+                if (!iframe) return '';
+                try {
+                    if (iframe.contentWindow && iframe.contentWindow.location) {
+                        return iframe.contentWindow.location.href || iframe.src || '';
+                    }
+                } catch (e) {
+                    /* 跨域时回退到 iframe.src */
+                }
+                return iframe.src || '';
+            }
             /* 根据 Axure hash 中的 p= 参数反推层级 */
             var pageToLayer = {
                 'a-输入框类': 'atoms',
@@ -326,6 +350,14 @@
                     }
                 });
             });
+
+            if (openInNewTabButton) {
+                openInNewTabButton.addEventListener('click', function () {
+                    var targetUrl = getCurrentPrototypeUrl();
+                    if (!targetUrl) return;
+                    window.open(targetUrl, '_blank', 'noopener');
+                });
+            }
         })();
 
         /* ---- DotGrid Background (ported from ReactBits DotGrid) ---- */

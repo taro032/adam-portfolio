@@ -624,6 +624,37 @@
     color: #0f172a;
 }
 
+.is-canvas-open-btn {
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #dbe4ee;
+    border-radius: 8px;
+    background: #fff;
+    color: #475569;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.is-canvas-open-btn:hover {
+    color: #0f172a;
+    border-color: #cbd5e1;
+    background: #f8fafc;
+}
+
+.is-canvas-open-btn:focus-visible {
+    outline: 2px solid #00c838;
+    outline-offset: 2px;
+}
+
+.is-canvas-open-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
 .is-canvas-body {
     flex: 1;
     background: #f8fafc;
