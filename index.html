@@ -8,7 +8,7 @@
     <!-- 标签页图标 -->
     <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
     <!-- SEO Meta Tags -->
-    <meta name="description" content="施政的个人官网，展示从 Web3 交易终端到大规模 SaaS 供应链系统的产品架构与设计案例。">
+    <meta name="description" content="施政 | 8年深耕供应链数字化与数据分析中后台产品，擅长将复杂业务抽象为可配置、可扩展的中后台模块能力，推动跨部门协作下的稳定交付。">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,10 +59,11 @@
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-10 font-semibold text-slate-400">
+                <a href="#about" class="nav-link hover:text-white transition-all">简介</a>
                 <a href="#experience" class="nav-link hover:text-white transition-all">工作履历</a>
                 <a href="#portfolio" class="nav-link hover:text-white transition-all">精选作品</a>
-                <a href="#skills" class="nav-link hover:text-white transition-all">能力矩阵</a>
                 <a href="#education" class="nav-link hover:text-white transition-all">教育背景</a>
+                <a href="v1/" class="nav-link hover:text-white transition-all whitespace-nowrap" title="Web3 叙事与作品集">Web3 完整版</a>
                 <a href="#contact"
                     class="px-6 py-2.5 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all font-bold">联系我</a>
             </div>
@@ -80,15 +81,16 @@
     <!-- 移动端菜单移出 nav，避免 nav 的 backdrop-filter 导致 fixed 定位基准错误、背景“上移” -->
     <div id="mobile-menu-backdrop" class="fixed inset-0 top-20 z-30 bg-black/60 hidden md:hidden" aria-hidden="true"></div>
     <div id="mobile-menu" class="fixed top-20 left-0 right-0 bottom-0 z-40 flex flex-col gap-2 py-6 px-6 bg-[#000212]/40 backdrop-blur-xl hidden md:!hidden" role="dialog" aria-label="导航菜单">
+        <a href="#about" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">简介</a>
         <a href="#experience" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">工作履历</a>
         <a href="#portfolio" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">精选作品</a>
-        <a href="#skills" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">能力矩阵</a>
         <a href="#education" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">教育背景</a>
+        <a href="v1/" class="mobile-menu-link py-3 px-4 text-white font-semibold rounded-lg hover:bg-white/10 hover:text-primary transition-colors">Web3 完整版</a>
     </div>
 
     <main>
         <!-- Hero Section -->
-        <section id="about" class="pt-32 md:pt-48 pb-20 px-6 relative">
+        <section id="about" class="pt-32 md:pt-48 pb-10 px-6 relative">
             <div class="max-w-6xl mx-auto">
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
 
@@ -112,44 +114,43 @@
                                 class="px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-medium tracking-tight border border-green-500/20">System
                                 Architect</span>
                             <span
-                                class="px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-medium tracking-tight border border-green-500/20">Founder
-                                Mindset</span>
+                                class="px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-medium tracking-tight border border-green-500/20">Ownership</span>
                         </div>
 
                         <h1
                             class="text-3xl md:text-[44px] font-outfit font-black mb-5 tracking-tight leading-tight text-white flex flex-col gap-3">
                             <span>Hi,&nbsp;&nbsp;我是施政,</span>
-                            <span>4年Web3产品合伙人,&nbsp;&nbsp;3年SaaS产品总监</span>
+                            <span>8年<span class="text-green-400">B端中后台/SaaS/数据产品</span>经验</span>
                         </h1>
 
                         <div class="text-lg text-slate-400 mb-0 leading-relaxed max-w-3xl font-medium">
-                            <span
-                                class="text-primary font-bold">擅长在复杂中构建秩序</span>：从SaaS中台到数据交易引擎，在快节奏迭代中拆解业务，构建标准化产品体系，打通从商业需求到产品交付的完整价值闭环。
+                            长期负责供应链/业务中台/数据分析平台建设，将海量数据、多角色、多流程协同场景抽象为可视化、可配置、易扩展的平台能力，在快节奏迭代中拆解复杂业务，推动跨部门协作下的稳定交付与持续优化
                         </div>
                             </div>
 
                         <!-- Horizontal Metrics -->
-                        <div class="order-3 w-full flex flex-wrap gap-12 mt-12 pt-12 border-t border-slate-800/50 lg:mt-12 lg:pt-12">
-                            <!-- Web3 Metrics -->
+                        <div class="order-3 w-full flex flex-wrap gap-12 mt-8 lg:mt-10">
+                            <!-- 供应链数字化中台 -->
                             <div class="space-y-2">
                                 <div
                                     class="text-[12px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
-                                    <i data-lucide="rocket" class="w-3 h-3 text-primary"></i> Web3项目成绩
+                                    <i data-lucide="layout" class="w-3 h-3 text-primary"></i> 供应链数字化中台
                                 </div>
                                 <div class="flex gap-6 items-baseline">
-                                    <div class="metric-value">$2.1M+ <span class="metric-label ml-1">融资</span></div>
-                                    <div class="metric-value">$500k+ <span class="metric-label ml-1">ARR</span></div>
+                                    <div class="metric-value">伊芙丽/雅鹿 <span class="metric-label ml-1">等头部品牌落地</span></div>
+                                    <div class="metric-value">千万级<span class="metric-label ml-1">软件营收</span></div>
+                                    <div class="metric-value">日均百万级<span class="metric-label ml-1">产能数据</span></div>
                                 </div>
                             </div>
-                            <!-- SaaS Metrics -->
+                            <!-- SaaS数据分析平台 -->
                             <div class="space-y-2">
                                 <div
                                     class="text-[12px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
-                                    <i data-lucide="layout" class="w-3 h-3 text-primary"></i> SaaS商业表现
+                                    <i data-lucide="rocket" class="w-3 h-3 text-primary"></i> 链上数据分析平台
                                 </div>
-                                <div class="flex gap-10 items-baseline">
-                                    <div class="metric-value">千万级<span class="metric-label ml-1">营收</span></div>
-                                    <div class="metric-label">交付5+ <span class="metric-value ml-1">百万级 KA</span></div>
+                                <div class="flex gap-6 items-baseline">
+                                    <div class="metric-value">¥300w+ <span class="metric-label ml-1">ARR</span></div>
+                                    <div class="metric-value">31,000+ <span class="metric-label ml-1">月度活跃用户</span></div>
                                 </div>
                             </div>
                         </div>
@@ -168,17 +169,85 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="py-24 px-5">
+        <!-- Skills Section（移至 Hero 与工作履历之间，去除标题） -->
+        <section id="skills" class="pt-6 pb-12 px-5">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-20 flex items-center gap-4 tracking-tight font-outfit text-white">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="glass-card reveal">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="database" class="w-3 h-3 text-primary" stroke-width="2.5"></i>
+                            <h3 class="text-[12px] font-black text-slate-500 uppercase tracking-widest">产品领域</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">中后台架构</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">供应链</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">数据分析</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">MES</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">ERP</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">PLM</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">RBAC权限</span>
+                        </div>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="code" class="w-3 h-3 text-primary" stroke-width="2.5"></i>
+                            <h3 class="text-[12px] font-black text-slate-500 uppercase tracking-widest">专业技能</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">UI/UX</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Figma</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Axure</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Cursor</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Codex</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Google Stitch</span>
+                        </div>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="award" class="w-3 h-3 text-primary" stroke-width="2.5"></i>
+                            <h3 class="text-[12px] font-black text-slate-500 uppercase tracking-widest">通用能力</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">AI应用</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">敏捷开发管理</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">跨部门协作</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">系统性思维</span>
+                            <span
+                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Ownership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 px-5">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-black mb-10 flex items-center gap-4 tracking-tight font-outfit text-white">
                     <div class="w-1.5 h-8 bg-primary shadow-[0_0_12px_rgba(0,200,56,0.6)]"></div> 工作履历
                 </h2>
 
-                <div class="space-y-28">
+                <div class="space-y-14">
 
                     <!-- Intelfinity -->
-                    <div class="relative pl-0 md:pl-16 group reveal">
+                    <div class="relative pl-0 md:pl-16 group">
                         <div class="hidden md:block absolute left-6 top-2 bottom-0 w-0.5 bg-slate-800"></div>
                         <div
                             class="hidden md:block absolute left-[17px] top-2 w-4 h-4 rounded-full bg-[#09090b] border-4 border-primary group-hover:scale-125 group-hover:shadow-[0_0_15px_rgba(0,200,56,0.8)] transition-all duration-300 z-10">
@@ -186,20 +255,17 @@
 
                         <div class="flex flex-wrap md:flex-row md:items-center mb-3 gap-x-4 gap-y-2 experience-header">
                             <h3 class="text-2xl font-black text-white">Intelfinity Labs Limited</h3>
-                            <span class="experience-sep-line"><span class="text-slate-700">|</span> <span class="text-slate-400 font-bold text-sm">Web3 数据分析和交易终端</span></span>
-                            <span class="experience-sep-line"><span class="text-slate-700">|</span> <span class="text-slate-400 font-bold text-sm">获 BoostVC/AllianceDAO 等累计<span class="text-green-400"> $2.1M+ 投资</span></span></span>
+                            <span class="experience-header-meta font-bold text-sm text-slate-400"><span class="text-slate-700">|</span>Web3 数据分析和跟单平台<span class="text-slate-700">|</span>获<span class="text-green-400">$2.1M+ 投资</span></span>
                         </div>
                         <div class="flex flex-wrap items-center gap-3 mb-3 experience-meta">
                             <span
-                                class="text-green-400 font-black bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-lg text-sm tracking-tight">Product
-                                Lead & Co-founder</span>
+                                class="text-green-400 font-black bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-lg text-sm tracking-tight">产品合伙人</span>
                             <span class="experience-sep-line"><span class="text-slate-500 font-bold text-sm">2021.09 - 2026.01</span> 
                             <!-- <span class="text-slate-500">|</span> <a href="pdf/Recommendation_Letter.pdf" target="_blank" rel="noopener noreferrer" class="text-slate-500 text-sm font-bold hover:text-primary transition-colors">推荐信</a></span> -->
                         </div>
 
                         <div class="text-slate-400 mb-5 text-sm md:text-base leading-relaxed">
-                            作为合伙人从0到1搭建产品与10+人研发团队，主导 Candlestick.io
-                            两款核心产品从概念到商业化落地，涵盖跟单算法、智能钱包、swap/限价单、交易员战绩分析、token指标等业务，累计实现<span class="text-green-400"> $500k+ ARR</span>。
+                            搭建并管理10+人分布式研发团队，建立敏捷开发流程与模块化组件规范，负责两款核心产品的0-1设计与研发落地，累计实现<span class="text-green-400"> ¥300w+ ARR</span>。
                         </div>
 
                         <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
@@ -208,7 +274,7 @@
                                     <div class="flex justify-between items-center mb-6">
                                         <h4
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
-                                            Copy Trading 多链自动跟单平台
+                                            自动化策略执行平台
                                         </h4>
                                         <a href="portfolio-copy-trading.html" target="_blank"
                                             class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">作品展示
@@ -219,27 +285,27 @@
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>基于数据分析优势，主导从“信息层”向“交易层”的战略转型，设计多链跟单引擎，帮用户一键复刻聪明钱的盈利战绩。</span>
+                                            <span>主导产品从“数据分析层”向“业务执行层”的战略升级，设计自动化执行引擎，将数据洞察转化为落地的收益策略；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>集成token安全信息服务和自研模型建立风控引擎，保障高净值交易安全。</span>
+                                            <span>构建多维风控模型，为托管资金的每一步操作建立安全保障。</span>
                                         </li>
                                     </ul>
                                     <div class="experience-metrics-row">
                                         <div class="experience-metric-item">
-                                            <div class="metric-value text-green-400 mb-0.5">$1.2M+</div>
-                                            <div class="metric-label">AUM (管理资产)</div>
+                                            <div class="metric-value text-green-400 mb-0.5">¥840w+</div>
+                                            <div class="metric-label">托管资产规模</div>
                                         </div>
                                         <div class="experience-metric-item">
-                                            <div class="metric-value text-green-400 mb-0.5">$7M+</div>
-                                            <div class="metric-label">单月交易额</div>
+                                            <div class="metric-value text-green-400 mb-0.5">¥5000w+</div>
+                                            <div class="metric-label">月平台流水</div>
                                         </div>
                                         <div class="experience-metric-item">
-                                            <div class="metric-value text-green-400 mb-0.5">$400K+</div>
-                                            <div class="metric-label">跟单分润峰值</div>
+                                            <div class="metric-value text-green-400 mb-0.5">¥250w+</div>
+                                            <div class="metric-label">托管利润峰值</div>
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +315,7 @@
                                     <div class="flex justify-between items-center mb-6">
                                         <h4
                                             class="text-lg font-bold text-white flex items-center gap-3 transition-colors">
-                                            TraderScan 链上数据分析产品
+                                            多源数据分析SaaS产品
                                         </h4>
                                         <a href="portfolio-traderscan.html" target="_blank"
                                             class="flex items-center gap-1 text-slate-500 font-bold text-xs hover:text-primary group-hover/card:text-primary transition-colors">作品展示
@@ -260,19 +326,18 @@
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>针对链上数据复杂难读的痛点，主导研发 TraderScan 核心算法，清洗并解析 1亿+ 链上地址，将trader战绩可视化。</span>
+                                            <span>主导核心数据算法研发，完成1亿+条多源异构数据的清洗与结构化解析，建立三层模型使数据逐渐易解读；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>构建 Smart Money
-                                                多维画像模型（胜率/PnL/交易风格），将海量数据转化为可执行的交易信号，打造职业交易员的“生产力桌面”。</span>
+                                            <span>构建"Smart Money"多维画像模型，将海量数据转化为可视化的决策支持工具，打造职业交易员的数据工作台。</span>
                                         </li>
                                     </ul>
                                     <div class="experience-metrics-row">
                                         <div class="experience-metric-item">
-                                            <div class="metric-value text-green-400 mb-0.5">$22k+</div>
+                                            <div class="metric-value text-green-400 mb-0.5">¥15w+</div>
                                             <div class="metric-label">SaaS月收入</div>
                                         </div>
                                         <div class="experience-metric-item">
@@ -294,12 +359,7 @@
                                     <li
                                         class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                         <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                        <span>建立敏捷开发流程与工程化标准，推行模块化组件库，提升代码复用率与 50% 迭代速度。</span>
-                                    </li>
-                                    <li
-                                        class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
-                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                        <span>主导产品生命周期管理，交付 20+ 次重大版本更新与 100+ 次功能迭代。</span>
+                                        <span>主导产品全生命周期管理，推行模块化组件库，提升代码复用率与50%迭代效率，累计交付20+次重大版本更新与100+次功能迭代。</span>
                                     </li>
                                 </ul>
                             </div>
@@ -315,7 +375,7 @@
 
                         <div class="flex flex-wrap md:flex-row md:items-center mb-3 gap-x-4 gap-y-2 experience-header">
                             <h3 class="text-2xl font-black text-white">广州丽晶软件</h3>
-                            <span class="experience-sep-line"><span class="text-slate-700">|</span> <span class="text-slate-400 font-bold text-sm">服装行业头部 ERP/SaaS 供应商</span></span>
+                            <span class="experience-sep-line font-bold text-sm text-slate-400"><span class="text-slate-700">|</span>服装行业头部 ERP/SaaS 供应商</span>
                         </div>
                         <div class="flex flex-wrap items-center gap-3 mb-3 experience-meta">
                             <span
@@ -324,8 +384,7 @@
                         </div>
 
                         <div class="text-slate-400 mb-5 text-sm md:text-base leading-relaxed">
-                            协同 50+ 人团队负责公司云供应链部门的需求研发与大客户支持，同时带领 10+ 人产品团队主导传统 ERP
-                            向“云+中台”架构的数字化转型，支撑公司每年千万级营收盘子。
+                            协同50+人研发团队负责云供应链产品线的需求研发、SaaS平台建设、KA交付，同时带领10人产品团队主导传统ERP向“云+中台”架构的数字化转型，支撑部门千万级软件营收。
                         </div>
 
                         <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
@@ -345,25 +404,25 @@
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>主导研发涵盖 企划-PLM-物料-MES 的大规模业务协同系统，实现供应链全链路数字化。</span>
+                                            <span>从0-1主导建设<span class="text-green-400">企划-PLM-PMC-MES</span>的大规模业务协同系统，实现<span class="text-green-400">供应链全链路数字化</span>管理；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>将不同客户的差异化需求提炼成乐高式组合的 SaaS 配置方案，构建了高适配度的业务抽象模型。</span>
+                                            <span>将不同客户的差异化业务场景抽象为乐高式组合的高适配度SaaS配置方案，显著降低定制开发比例；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>深度参与售前支持，输出产品白皮书和项目实施SOP等，作为核心专家助力销售团队拿下伊芙丽、梦燕、雅鹿等头部品牌百万级大单。</span>
+                                            <span>输出产品白皮书、行业解决方案和实施SOP，联合销售/实施团队推动伊芙丽、雅鹿等KA项目的签约和成功落地；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>服务 10+ 头部品牌及近百家 ODM 工厂，日均处理百万级 MES 产能数据，成为公司第二增长曲线。</span>
+                                            <span>服务10+头部品牌及数百家ODM工厂，日均处理百万级MES产能数据，成为公司第二增长曲线。</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -384,19 +443,19 @@
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>建立全公司统一的 B 端标准组件和交互规范系统，统一 4 条主业务线的产品设计方法论，显著降低重复开发成本。</span>
+                                            <span>建立全公司统一的B端交互规范和组件库，统一4条业务线的产品设计方法论，显著降低重复开发成本；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>指导业务中台的重构与革新，在底层设施、大型业务等关键难题上提供架构设计与方案兜底，提升系统的快速扩展性。</span>
+                                            <span>指导业务中台的重构升级，在底层设施、大型业务等关键难题上提供架构设计与方案兜底，提升系统可扩展性与多业务线复用能力；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>搭建产品经理内训体系和胜任力模型，培养并向各业务线输送 10+ 名骨干产品经理。</span>
+                                            <span>搭建产品经理胜任力模型与内训体系，从0培养并向各业务线输送10+名骨干产品经理。</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -412,11 +471,11 @@
                         </div>
                         <div class="flex flex-wrap md:flex-row md:items-center mb-3 gap-x-4 gap-y-2 experience-header">
                             <h3 class="text-2xl font-black text-white">广州巨旺互联网技术有限公司</h3>
-                            <span class="experience-sep-line"><span class="text-slate-700">|</span> <span class="text-slate-400 font-bold text-sm">头部移动端批发管理工具</span></span>
+                            <span class="experience-sep-line font-bold text-sm text-slate-400"><span class="text-slate-700">|</span>头部移动端批发管理工具</span>
                         </div>
                         <div class="flex flex-wrap items-center gap-3 mb-3 experience-meta">
                             <span
-                                class="text-green-400 font-black bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-lg text-sm tracking-widest">产品经理</span>
+                                class="text-green-400 font-black bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-lg text-sm tracking-widest">UI/产品经理</span>
                             <span class="text-slate-500 font-bold text-sm">2015.11 - 2017.07</span>
                         </div>
 
@@ -437,13 +496,13 @@
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>主导产品 0-1 搭建与功能迭代，帮助传统服装档口实现移动化管理。</span>
+                                            <span>主导产品 0-1 搭建与功能迭代，帮助传统服装档口实现移动化管理；</span>
                                         </li>
                                         <li
                                             class="text-slate-400 leading-relaxed flex items-start gap-4 text-sm md:text-base">
                                             <i data-lucide="check-circle-2"
                                                 class="w-4 h-4 text-primary shrink-0 mt-1"></i>
-                                            <span>推动产品从种子期发展至行业市占率前三，实现月开单金额数亿级，客户年续费率超 90%。</span>
+                                            <span>推动产品从种子期发展至行业市占率前三，实现月开单金额数亿级，客户年续费率超80%。</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -456,50 +515,14 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="py-24 px-5">
+        <section id="portfolio" class="py-16 px-5">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-20 flex items-center gap-4 tracking-tight font-outfit text-white">
+                <h2 class="text-3xl font-black mb-10 flex items-center gap-4 tracking-tight font-outfit text-white">
                     <div class="w-1.5 h-8 bg-primary shadow-[0_0_12px_rgba(0,200,56,0.6)]"></div> 精选作品
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Item 1: Copy Trading -->
-                    <a href="portfolio-copy-trading.html" target="_blank"
-                        class="glass-card !p-6 group flex flex-col justify-between">
-                        <div>
-                            <div class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/50">
-                                <img src="images/thumbnails-copy_trading.png" alt="Copy Trading System"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
-                                    Copy Trading 自动跟单系统
-                                </h4>
-                                <i data-lucide="arrow-right"
-                                    class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Item 2: Candlestick.io / TraderScan -->
-                    <a href="portfolio-traderscan.html" target="_blank"
-                        class="glass-card !p-6 group flex flex-col justify-between">
-                        <div>
-                            <div class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/50">
-                                <img src="images/thumbnails-TraderScan.png" alt="Candlestick.io"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
-                                    Candlestick.io - TraderScan 链上数据分析
-                                </h4>
-                                <i data-lucide="arrow-right"
-                                    class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Item 3: e-SCM -->
+                    <!-- Item 1: e-SCM -->
                     <a href="portfolio-escm.html" target="_blank"
                         class="glass-card !p-6 group flex flex-col justify-between">
                         <div>
@@ -509,7 +532,43 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
-                                    e-SCM云供应链 (全业务 0-1)
+                                    e-SCM云供应链（全业务0-1）
+                                </h4>
+                                <i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 2: CopyTrading -->
+                    <a href="portfolio-copy-trading.html" target="_blank"
+                        class="glass-card !p-6 group flex flex-col justify-between">
+                        <div>
+                            <div class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/50">
+                                <img src="images/thumbnails-copy_trading.png" alt="CopyTrading 自动化策略执行平台"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                    CopyTrading 自动化策略执行平台
+                                </h4>
+                                <i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 3: TraderScan -->
+                    <a href="portfolio-traderscan.html" target="_blank"
+                        class="glass-card !p-6 group flex flex-col justify-between">
+                        <div>
+                            <div class="-mx-6 -mt-6 mb-6 relative aspect-video overflow-hidden bg-slate-900/50">
+                                <img src="images/thumbnails-TraderScan.png" alt="TraderScan 多源数据分析产品"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                    TraderScan 多源数据分析产品
                                 </h4>
                                 <i data-lucide="arrow-right"
                                     class="w-5 h-5 text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
@@ -538,88 +597,10 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-32 px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-20 flex items-center gap-4 tracking-tight font-outfit text-white">
-                    <div class="w-1.5 h-8 bg-primary shadow-[0_0_12px_rgba(0,200,56,0.6)]"></div> 能力矩阵
-                </h2>
-                <div class="grid md:grid-cols-3 gap-4">
-                    <div class="glass-card reveal">
-                        <div class="flex items-center gap-2 mb-4 text-primary">
-                            <i data-lucide="database" class="w-6 h-6 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
-                                stroke-width="2.5"></i>
-                            <h3 class="font-bold text-xl text-white tracking-tight">产品领域</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-3">
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">链上数据分析</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">交易策略</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">SaaS</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">2B产品</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">供应链</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">复杂系统架构</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">权限体系</span>
-                        </div>
-                    </div>
-                    <div class="glass-card reveal">
-                        <div class="flex items-center gap-2 mb-4 text-primary">
-                            <i data-lucide="code" class="w-6 h-6 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
-                                stroke-width="2.5"></i>
-                            <h3 class="font-bold text-xl text-white tracking-tight">专业技能</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-3">
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">UI/UX</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Notion</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Figma</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Axure</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Cursor</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Codex</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Google Stitch</span>
-                        </div>
-                    </div>
-                    <div class="glass-card reveal">
-                        <div class="flex items-center gap-2 mb-4 text-primary">
-                            <i data-lucide="award" class="w-6 h-6 filter drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
-                                stroke-width="2.5"></i>
-                            <h3 class="font-bold text-xl text-white tracking-tight">通用能力</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-3">
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">项目全生命周期管理</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">跨部门协作</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">系统性思维</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">逻辑建模</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">极速学习</span>
-                            <span
-                                class="px-4 py-2 bg-green-500/10 text-green-400 text-sm font-medium rounded-xl border border-green-500/10">Ownership</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Education Section -->
         <section id="education" class="education-section">
             <div class="education-inner">
-                <h2 class="text-3xl font-black mb-20 flex items-center gap-4 tracking-tight font-outfit text-white">
+                <h2 class="text-3xl font-black mb-10 flex items-center gap-4 tracking-tight font-outfit text-white">
                     <div class="w-1.5 h-8 bg-primary shadow-[0_0_12px_rgba(0,200,56,0.6)]"></div> 教育背景
                 </h2>
                 <div class="glass-card reveal education-card">
@@ -644,8 +625,8 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-32 px-6">
-            <div class="max-w-4xl mx-auto text-center reveal border-t border-slate-800/50 pt-24">
+        <section id="contact" class="py-16 px-6">
+            <div class="max-w-4xl mx-auto text-center reveal border-t border-slate-800/50 pt-16">
                 <h2
                     class="text-4xl md:text-5xl font-outfit font-black mb-[60px] tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
                     联系我，开启合作</h2>

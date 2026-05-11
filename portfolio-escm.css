@@ -382,9 +382,19 @@ body.escm-theme-light {
 }
 
 .escm-title-secondary {
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 72px;
+    line-height: 44px;
+    color: var(--escm-primary);
+    text-align: center;
+    margin: 0;
+}
+
+/* 大章节下的子标题（如协同区内二级图示标题） */
+.escm-subsection-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
     color: var(--escm-primary);
     text-align: center;
     margin: 0;
@@ -398,6 +408,19 @@ body.escm-theme-light {
     color: var(--escm-text-main);
     opacity: 0.8;
     text-align: center;
+}
+
+/* Hero 标签行：与标题、副标题同列居中排布 */
+.escm-hero-tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 12px;
+    max-width: 100%;
 }
 
 .escm-text-muted {
@@ -500,6 +523,21 @@ body.escm-theme-light {
     width: 100%;
 }
 
+/* 子标题与供应链业务图：间距为原约 56px 的 1/3（见 .escm-supply-chain-stack） */
+.placeholder-supply-chain {
+    max-width: 100%;
+    margin-top: 0;
+}
+
+/* 收紧「供应链数字化全链路业务流程」标题与其图示的纵向间距 */
+.escm-supply-chain-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 19px;
+}
+
 .placeholder-rbac {
 }
 
@@ -557,14 +595,43 @@ body.escm-theme-light {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    justify-content: center;
+    /* 居顶对齐：等高拉伸时文案少的卡片与前两张首行齐平 */
+    justify-content: flex-start;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* 首行：左侧 tag、右侧英文水印，垂直居中；左右边界由卡片 padding 统一留白（与 padding-inline 一致） */
+.escm-method-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* 覆盖全局 .method-tag 的 align-self:flex-start，否则无法与同行水印垂直居中 */
+.escm-method-card-head .method-tag {
+    align-self: center;
+}
+
+/* 英文水印：字号同 .method-tag，贴齐内容区右缘（即距卡片右缘 = padding-right） */
+.escm-method-watermark {
+    flex-shrink: 0;
+    font-family: var(--escm-font);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0.3px;
+    color: rgba(126, 126, 143, 0.45);
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
 }
 
 .escm-method-card:hover {
     box-shadow: var(--escm-shadow-hover);
     transform: translateY(-4px);
-    outline: 1px valid rgb(11, 112, 194);
 }
 
 .escm-method-card p {
@@ -950,7 +1017,13 @@ body.escm-theme-light {
     }
 
     .escm-title-secondary {
-        font-size: 32px;
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .escm-subsection-title {
+        font-size: 20px;
+        line-height: 28px;
     }
 }
 
@@ -998,7 +1071,13 @@ body.escm-theme-light {
     }
 
     .escm-title-secondary {
-        font-size: 26px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .escm-subsection-title {
+        font-size: 18px;
+        line-height: 26px;
     }
 
     .escm-desc-main {

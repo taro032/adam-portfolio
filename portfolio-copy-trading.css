@@ -371,6 +371,12 @@ body {
     margin-bottom: 0 !important;
 }
 
+/* 跟单泳道图：高度随 SVG  intrinsic 自适应，不设最大高度上限 */
+#detail-execution .swimlane-img {
+    height: auto;
+    max-height: none;
+}
+
 .card-text h2 span {
     color: var(--brand-green);
 }
