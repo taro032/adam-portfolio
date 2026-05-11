@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TraderScan | 作品集-TraderScan</title>
+    <title>TraderScan 多源数据分析产品 | 作品集 - 施政</title>
     <!-- 标签页图标 -->
     <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
+    <meta name="description" content="TraderScan — 多源异构数据分析 SaaS 平台，完成 1 亿+ 条数据的结构化解析，构建交易员多维画像模型，31,000+ 月活用户。">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -204,28 +205,57 @@
             <img src="images/first-screen-bottom-linear.png" alt="Bottom Linear" class="bottom-gradient">
         </div>
         <!-- Hero Section -->
-        <section class="relative w-full flex flex-col items-center py-20">
-            <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl px-6">
+        <section class="relative w-full flex flex-col items-center py-16">
+            <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-[1200px] px-6 mx-auto">
                 <div class="flex flex-col items-center text-center w-full mb-15">
                     <h1
-                        class="text-4xl md:text-5xl font-muller font-bold md:text-[56px] leading-[1.2] tracking-tight gradient-text-traderscan m-0">
-                        Candlestick.io - TraderScan
+                        class="text-4xl md:text-5xl font-muller font-bold md:text-[56px] leading-[72px] tracking-tight gradient-text-traderscan m-0 text-center overflow-visible py-1">
+                        TraderScan - 链上交易员画像分析
                     </h1>
-                    <p class="font-sans text-lg text-slate-400 leading-relaxed max-w-3xl m-0 mt-5">
-                        首创三级数据结构可视化交易战绩，构建1亿+链上交易员画像
-                    </p>
+                    <!-- 副标题：数据流水线，带箭头样式 -->
+                    <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 mt-6 max-w-4xl">
+                        <span class="font-sans text-base md:text-lg text-slate-300">海量原始异构数据</span>
+                        <span class="text-primary text-lg font-bold">→</span>
+                        <span class="font-sans text-base md:text-lg text-slate-300">清洗+结构化解析</span>
+                        <span class="text-primary text-lg font-bold">→</span>
+                        <span class="font-sans text-base md:text-lg text-slate-300">三级数据架构建立Trader多维画像</span>
+                        <span class="text-primary text-lg font-bold">→</span>
+                        <span class="font-sans text-base md:text-lg text-slate-300">面向用户的可视化数据决策工具</span>
+                    </div>
                 </div>
 
+                <!-- 产品示意图（等比放大至内容区宽度） -->
                 <div
-                    class="relative w-full max-w-5xl mt-8 flex justify-center transform hover:scale-[1.02] transition-transform duration-500">
+                    class="relative w-full mt-4 flex justify-center transform hover:scale-[1.02] transition-transform duration-500">
                     <img src="images/traderscan-diagram-cn.png" alt="TraderScan Architecture Diagram"
                         class="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                 </div>
+
+                <!-- 指标条（示意图下方） -->
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6 mt-10 w-full max-w-3xl">
+                    <div class="stats-card flex flex-col items-center px-6 py-4 flex-1 min-w-[140px]">
+                        <div class="font-muller font-bold text-2xl md:text-3xl text-primary">¥15w+</div>
+                        <div class="font-sans text-xs text-slate-500 mt-1">SaaS月收入</div>
+                    </div>
+                    <div class="stats-card flex flex-col items-center px-6 py-4 flex-1 min-w-[140px]">
+                        <div class="font-muller font-bold text-2xl md:text-3xl text-primary">31,000+</div>
+                        <div class="font-sans text-xs text-slate-500 mt-1">月度独立用户</div>
+                    </div>
+                    <div class="stats-card flex flex-col items-center px-6 py-4 flex-1 min-w-[140px]">
+                        <div class="font-muller font-bold text-2xl md:text-3xl text-primary">1,000+</div>
+                        <div class="font-sans text-xs text-slate-500 mt-1">DAU</div>
+                    </div>
+                </div>
+
+                <!-- 角色说明（指标条下方） -->
+                <p class="font-sans text-lg text-slate-400 leading-relaxed m-0 mt-6 text-center">
+                    作为产品合伙人，从 0 到 1 主导产品规划、数据解析算法、功能模块+UI设计、商业化落地
+                </p>
             </div>
         </section>
 
         <!-- Content Section -->
-        <section id="features" class="relative w-full flex flex-col items-center py-[60px] z-10">
+        <section id="features" class="relative w-full flex flex-col items-center z-10">
             <!-- content-bg_halo -->
             <div
                 class="absolute top-[-160px] left-1/2 -translate-x-1/2 w-[1794px] h-[2940px] z-0 pointer-events-none opacity-60 mix-blend-screen">
@@ -233,10 +263,10 @@
                     class="w-full h-full object-cover mix-blend-screen">
             </div>
 
-            <div class="relative z-10 w-full max-w-[1200px] px-6 mx-auto flex flex-col gap-[120px]">
+            <div class="relative z-10 w-full max-w-[1200px] px-6 mx-auto flex flex-col">
 
                 <!-- Feature 1: Explore Top Addresses -->
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 py-10 w-full">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 py-16 w-full">
                     <div class="flex flex-col gap-6 w-full lg:w-[500px] shrink-0">
                         <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-white m-0">
                             多维度筛选发现<span class="text-primary">顶级Trader</span>
@@ -371,7 +401,7 @@
                 </div>
 
                 <!-- Feature 2: Stealth Money -->
-                <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-10 w-full">
+                <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-16 w-full">
                     <div
                         class="relative w-full lg:w-[611px] h-[320px] shrink-0 flex items-center justify-center -ml-10 group">
                         <img src="images/traderscan/stealth_money.png" alt="Stealth Money Flow"
@@ -383,16 +413,16 @@
                             通过关联地址分析<br>洞察<span class="text-primary">非公开信号</span>
                         </h2>
 
-                        <p class="font-sans font-bold text-base text-[#8A8A98] leading-relaxed m-0 mt-2">
-                            当某个实体试图隐匿其行踪时，通常会通过创建关联地址来实现。我们将细微的资金流向置于雷达之下，让您可以深入挖掘隐藏活动背后的真相。
+                        <p class="font-sans text-lg text-slate-400 leading-relaxed m-0 mt-2">
+                            当同一实体通过多个关联地址分散操作时，系统可自动识别地址间的资金关联关系，将分散的链上行为归集还原为完整画像，帮助用户发现常规视角下难以捕捉的隐性模式。
                         </p>
                     </div>
                 </div>
 
                 <!-- Feature 3: Token Metrics -->
-                <div class="relative w-full flex flex-col items-center gap-10 py-10 mt-10">
+                <div class="relative w-full flex flex-col items-center gap-10 py-16">
                     <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-center text-white m-0">
-                        通过 <span class="text-primary">40+ 动态图表</span>实时监控您的持仓
+                        <span class="text-primary">40+ 可视化图表</span>，实时追踪持仓与市场动态
                     </h2>
 
                     <div
@@ -403,9 +433,9 @@
                 </div>
 
                 <!-- Feature 4: Watchlist & Alerts -->
-                <div class="flex flex-col items-center gap-12 py-10 w-full mt-10">
+                <div class="flex flex-col items-center gap-12 py-16 w-full">
                     <h2 class="font-muller font-bold text-[40px] leading-[1.2] text-center text-white m-0">
-                        自定义观察列表，<span class="text-primary">获取实时信号推送</span>
+                        自定义观察列表，<span class="text-primary">获取实时异动提醒</span>
                     </h2>
 
                     <div class="flex flex-col md:flex-row gap-6 w-full justify-center items-stretch">
@@ -423,7 +453,7 @@
                         <!-- Card 2 -->
                         <div class="feature-card-large flex flex-col p-10 gap-6 w-full md:w-1/2 group overflow-hidden">
                             <h3 class="font-muller font-bold text-2xl text-[#F5F5FF] leading-snug m-0 capitalize">
-                                随时随地接收信号
+                                多端实时推送关键异动
                             </h3>
                             <div class="relative w-full aspect-[2.2/1] mt-auto">
                                 <img src="images/traderscan/alerts.png" alt="Real-time Alerts UI"
