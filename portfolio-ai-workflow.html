@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic PM Workflow | 作品详情</title>
+    <link rel="icon" href="images/logo-sz.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00C838',
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', '"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        outfit: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260302">
+    <style>
+        .placeholder-shell {
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 1.5rem;
+        }
+
+        .placeholder-card {
+            width: min(100%, 980px);
+            text-align: center;
+        }
+
+        .placeholder-illustration {
+            width: 100%;
+            margin: 0 auto 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(15, 23, 42, 0.52);
+            overflow: hidden;
+        }
+
+        .placeholder-illustration img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-[#000212] text-slate-300 selection:bg-primary/30 overflow-x-hidden">
+    <main class="placeholder-shell">
+        <section class="placeholder-card glass-card">
+            <div class="placeholder-illustration">
+                <img src="images/ai-workflow/agentic-pm-workflow.jpeg" alt="Agentic PM Workflow 产品框架图">
+            </div>
+            <div class="text-[11px] font-black uppercase tracking-[0.22em] text-green-400 mb-4">Agentic PM Workflow</div>
+            <h1 class="text-3xl md:text-5xl font-outfit font-black text-white tracking-tight mb-5">Under construction</h1>
+            <p class="text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                作品详情页内容整理中。后续会补充完整的工作流背景、四阶段拆解、人机协同机制、真实样例和交付物展示。
+            </p>
+            <a href="index.html#ai-project"
+                class="inline-flex items-center gap-2 mt-8 px-5 py-2.5 rounded-full bg-white text-slate-900 hover:bg-primary hover:text-white transition-colors font-bold text-sm">
+                返回首页 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </section>
+    </main>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
